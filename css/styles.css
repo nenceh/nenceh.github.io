@@ -1175,9 +1175,6 @@ body main code, body main pre {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.body-content main figure.restrict img {
-  width: auto;
-}
 .body-content main .section-note {
   font-size: smaller;
   margin-top: 64px;
