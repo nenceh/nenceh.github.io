@@ -7,7 +7,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{ scroll-behavior: smooth; }
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 
 #find-me {
     background-color: get-color(main, primary-variant);
@@ -45,59 +48,62 @@ html{ scroll-behavior: smooth; }
     }
 }
 
-.page-banner {
-    background-color: get-color(main, primary);
-    color: get-color(neutral, white);
-    text-align: center;
-    border-radius: 0 0 8px 8px;
-    transition: 0.4s ease-in;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    span{
-        padding-bottom: 2px;
-        &.highlight-1{
-            background: linear-gradient(
-                to bottom,
-                transparent 50%,
-                lightcoral 50%
-            );
-        }
-        &.highlight-2{
-            background: linear-gradient(
-                to bottom,
-                transparent 50%,
-                teal 50%
-            );
-        }
-    }
-
-    &-items{
+body{
+    overflow-x: hidden;
+    .page-banner {
+        background-color: get-color(main, primary);
+        color: get-color(neutral, white);
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+        transition: 0.4s ease-in;
+        display: flex;
         justify-content: center;
         align-items: center;
-    }
-    img{
-        height: 100%; 
-        width: 100%;
-        background-position: center;
-        object-fit: cover;
-    }
-    ul.breadcrumbs{
-        display: flex;
-        list-style-type: none;
-        justify-content: center;
-        li{
-            position: relative;
-            &:not(:first-child):before{
-                transition: border-left-color 0.4s ease-in;
-                position: absolute;
-                left: -16px;
-                top: calc(50% - 6px);
-                border-bottom: 6px solid transparent;
-                border-left: 8px solid get-color(neutral, white);
-                border-top: 6px solid transparent;
-                content: "";
+    
+        span{
+            padding-bottom: 2px;
+            &.highlight-1{
+                background: linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    lightcoral 50%
+                );
+            }
+            &.highlight-2{
+                background: linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    teal 50%
+                );
+            }
+        }
+    
+        &-items{
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 100%; 
+            width: 100%;
+            background-position: center;
+            object-fit: cover;
+        }
+        ul.breadcrumbs{
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            li{
+                position: relative;
+                &:not(:first-child):before{
+                    transition: border-left-color 0.4s ease-in;
+                    position: absolute;
+                    left: -16px;
+                    top: calc(50% - 6px);
+                    border-bottom: 6px solid transparent;
+                    border-left: 8px solid get-color(neutral, white);
+                    border-top: 6px solid transparent;
+                    content: "";
+                }
             }
         }
     }
@@ -106,13 +112,6 @@ html{ scroll-behavior: smooth; }
 .flex-col{
     display: flex;
     flex-flow: column;
-}
-
-.showcase{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    gap: 64px;
 }
 
 @media screen and (max-width: 480px){
@@ -823,6 +822,11 @@ html{ scroll-behavior: smooth; }
 
     section#about-me .section-body #about-me-pic{
         max-width: 60%;
+    }
+
+    .entry-list .portfolio-entry{
+        height: 200px;
+        &-info{width: calc(100% - 8px);}
     }
 }
 

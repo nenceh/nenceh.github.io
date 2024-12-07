@@ -67,6 +67,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -108,7 +109,10 @@ html {
   height: auto;
 }
 
-.page-banner {
+body {
+  overflow-x: hidden;
+}
+body .page-banner {
   background-color: #172427;
   color: #FFF;
   text-align: center;
@@ -118,35 +122,35 @@ html {
   justify-content: center;
   align-items: center;
 }
-.page-banner span {
+body .page-banner span {
   padding-bottom: 2px;
 }
-.page-banner span.highlight-1 {
+body .page-banner span.highlight-1 {
   background: linear-gradient(to bottom, transparent 50%, lightcoral 50%);
 }
-.page-banner span.highlight-2 {
+body .page-banner span.highlight-2 {
   background: linear-gradient(to bottom, transparent 50%, teal 50%);
 }
-.page-banner-items {
+body .page-banner-items {
   justify-content: center;
   align-items: center;
 }
-.page-banner img {
+body .page-banner img {
   height: 100%;
   width: 100%;
   background-position: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.page-banner ul.breadcrumbs {
+body .page-banner ul.breadcrumbs {
   display: flex;
   list-style-type: none;
   justify-content: center;
 }
-.page-banner ul.breadcrumbs li {
+body .page-banner ul.breadcrumbs li {
   position: relative;
 }
-.page-banner ul.breadcrumbs li:not(:first-child):before {
+body .page-banner ul.breadcrumbs li:not(:first-child):before {
   transition: border-left-color 0.4s ease-in;
   position: absolute;
   left: -16px;
@@ -160,13 +164,6 @@ html {
 .flex-col {
   display: flex;
   flex-flow: column;
-}
-
-.showcase {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  gap: 64px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1040,6 +1037,12 @@ html {
   }
   section#about-me .section-body #about-me-pic {
     max-width: 60%;
+  }
+  .entry-list .portfolio-entry {
+    height: 200px;
+  }
+  .entry-list .portfolio-entry-info {
+    width: calc(100% - 8px);
   }
 }
 @media screen and (min-width: 1150px) {
