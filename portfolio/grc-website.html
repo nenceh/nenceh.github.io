@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GRC Website</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/global.js"></script>
+        <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+    </head>
+    
+    <header class = "topnav-container">
+      <div class = "topnav">
+        <a id = name href="../index.html">nancy hao</a>
+        <ul>
+          <li> <a href="../portfolio.html">portfolio</a>
+          <li> <a href="../cv.html">cv</a>
+        </ul>
+      </div>
+    </header>
+    
+    <section id = "find-me">
+      <ul class="flex-col">    
+        <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
+          <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+        </a>
+    
+        <li><a href="https://www.figma.com/@nenceh" target="_blank">
+          <svg style="enable-background:new 0 0 3000 3000;" version="1.1" viewBox="0 0 3000 3000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+            .st0{fill:#0ACF83;}
+            .st1{fill:#A259FF;}
+            .st2{fill:#F24E1E;}
+            .st3{fill:#FF7262;}
+            .st4{fill:#1ABCFE;}
+          </style><path class="st0" d="M1083.333374,2750c230,0,416.666626-186.666748,416.666626-416.666748v-416.666626h-416.666626  c-230.000061,0-416.666687,186.666626-416.666687,416.666626S853.333313,2750,1083.333374,2750z" id="path0_fill"/><path class="st1" d="M666.666687,1500c0-230,186.666626-416.666748,416.666687-416.666748H1500v833.333374  h-416.666626C853.333313,1916.666626,666.666687,1730,666.666687,1500z" id="path1_fill"/><path class="st2" d="M666.666687,666.666626C666.666687,436.666656,853.333313,250,1083.333374,250H1500  v833.333252h-416.666626C853.333313,1083.333252,666.666687,896.666626,666.666687,666.666626z" id="path1_fill_1_"/><path class="st3" d="M1500,250h416.666626c230.000122,0,416.666626,186.666656,416.666626,416.666626  s-186.666504,416.666626-416.666626,416.666626H1500V250z" id="path2_fill"/><path class="st4" d="M2333.333252,1500c0,230-186.666504,416.666626-416.666626,416.666626S1500,1730,1500,1500  s186.666626-416.666748,416.666626-416.666748S2333.333252,1270,2333.333252,1500z" id="path3_fill"/></svg>
+        </a>
+      </ul>
+    </section>
+
+    <aside class="back-to-top">
+      <button id="to-top" class="flex-col">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 3.5a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Zm.47 9.47a.749.749 0 1 0 1.06 1.06l4.97-4.969V21.25a.75.75 0 0 0 1.5 0V9.061l4.97 4.969a.749.749 0 1 0 1.06-1.06l-6.25-6.25a.749.749 0 0 0-1.06 0l-6.25 6.25Z"></path></svg>
+        Top
+      </button>
+    </aside>
+
+  <body>
+    <section class = "page-banner-container">
+        <div class = "page-banner flex-col">
+          <h1>Global Repatriation Council | Marvel Cinematic Universe</h1>
+          <ul class="breadcrumbs">
+            <li>portfolio</li>
+            <li>GRC Website</li>
+          </ul>
+        </div>
+    </section>
+    
+    <section class = "info-container flex-col">
+      <div id="project-info">
+        <div class="project-info-item flex-col">
+          <p class="subtitle">TIMELINE</p>
+          <p>Oct'23 - Mar'24</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">PLATFORM</p>
+          <p> Figma, HTML, CSS, JS<p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">ROLE</p>
+          <p> UX, Developer </p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">DELIVERABLE</p>
+          <a href="https://nenceh.github.io/grc-website/" target="_blank">
+            <p class = "link"><i>📎</i> Website page</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class = "body-content">
+      <nav role="navigation" class="toc">
+        <div class="toc-label">On this page...</div>
+        <ol>
+          <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a>
+          <li><a href="#project-development" class="in-page-link"> Development </a>
+          <li><a href="#project-early-ideation" class="in-page-link"> Early Ideation </a>
+          <li><a href="#project-testing" class="in-page-link"> Testing </a>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a>
+          <li><a href="#project-learned" class="in-page-link"> What I Learned </a>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a>        
+        </ol>
+      </nav>
+  
+      <main class="flex-col">
+        <section id = "project-introduction" class="flex-col">
+          <h2 class="section-title"> 🚀 Intro </h2>
+          <div class="section-body flex-col">
+            <p>The year is 2024: Six months ago, the Earth's mightiest heroes reversed the effects of The Blip, the catastrophic event that caused the vanishing of half of the global population five years ago. This reversal brought back the vanished population, and now Earth is sent into a crisis as everyone is trying to manage the surge in population. In response, select global leaders established the <strong><em>Global Repatriation Council (GRC)</em></strong> to restore order and bring the world back to how it was before The Blip.</p>
+            <p class="break">Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory, but I highly recommend reading them!</p>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-intro">
+                <div class="panel-items">
+                  <p>This reading journey also expects that you are at least aware of the top two highest-grossing Marvel Cinematic Universe movies of all time: Avengers: Infinity War (released in 2018) and Avengers: Endgame (released in 2019). Just that they exist, that's it 😊.</p>
+                  <p>For clarity, the release date of a Marvel movie or show is different from the date/time of the events depicted in the storylines. I will reference a film or show by its official title and release year. I will also reference the in-universe year/date of the events depicted, and will be treating them as if those dates have already passed or are upcoming in real life. Additionally, "The Blip" is used synonymously with "The Snap". The victims of Thanos' snap are referred to as <i>snapped</i> or <i>blipped</i>. "The Blip" is also widely used to reference the five-year time period during which half of the world's population had disappeared. To maintain consistency, I will primarily use the term <em>blip</em> in this project.</p>
+                  
+                  <p>As seen in the film <i>Avengers: Infinity War</i>, supervillain Thanos, with the snap of his fingers, successfully erased half of all living beings in the universe at random in 2018— coincidentally both the release year of the film and the year at which the plot took place. The story was continued after an in-universe five-year time gap in the film <i>Avengers: Endgame</i>, in which the Avengers reversed Thanos' finger snap with their own and won the war against him.</p>
+
+                  <p>Therefore, even though <i>Endgame</i> was released on April 26, 2019 in North America, the plot took place in October 2023. Makes sense so far?</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+
+              <p class="break">The GRC was introduced in the Marvel Cinematic Universe (MCU) television miniseries <i>The Falcon and the Winter Soldier</i> (TFATWS), and played a major role in the overall story of the show. The events of TFATWS took place six months after the in-universe events of Avengers: Endgame. This project will primarily revolve around these story events and explore life directly after The Blip.</p>
+              
+              <p>The Blip led many survivors to relocate to new countries and occupy previously-owned property, jobs, and assets, as these nations required more workers to sustain societies. The audience can infer the extent of social change required to accomplish this. With the return of the "blipped" victims, the GRC believes that the only path forward is to return the world back to how it was before The Blip— by deporting all who had relocated, and restoring all properties, jobs and assets to their original owners. This became a point of contention in the show, especially when blipped victims struggle to reintegrate back into society and resources are taken away from survivors, many of whom are now refugees.</p>
+
+              <p>Years after the show had ended, I was watching a YouTube video discussing the effectiveness of the GRC, which made me think about how the GRC would have advertised their plan and how they might have been perceived by the general public if such a global disaster happened in real life. This led me to reflect on how global corporations were perceived during the COVID-19 pandemic, which reminded how much we relied on the Internet for aid, services and information access. Eventually, I pondered about what a website for the GRC might look like.</p>
+          </div>
+        </section>
+
+        <section id = "project-goal" class="flex-col">
+          <h2 class="section-title"> 🏆 Goals </h2>
+          <div class="section-body flex-col">
+            <p>My goal was to create a comprehensive self-directed project that involved both UX design and front-end programming. I chose to "represent" the GRC in this project, as if I am a developer hired by the GRC, to gain more experience in understanding and exploring the motives and goals of employers and stakeholders. If I align our real-life setting and time with when TFATWS took place, the GRC would likely be very eager to launch an website as quickly as possible.</p>
+            <p>My motivations were to learn more about how it means to have empathy for your users, and gain more experience in applying user journeys to better the overall user experience. As well, this project served as a good opportunity to refresh my skills in web development.</p>
+          </div>
+        </section>
+
+        <section id = "project-development" class="flex-col">
+          <h2 class="section-title"> ⌛ Development </h2>
+          <div class="section-body flex-col">
+            <p>Thankfully, gathering information from a blockbuster media franchise was not a difficult challenge.</p>
+            <p>The GRC made a few minor appearances following TFATWS, but I did not remember when, where and at what timecode. Fortunately, the MCU has a large fanbase and community-driven sites like the <a href="https://marvelcinematicuniverse.fandom.com/wiki/Marvel_Cinematic_Universe_Wiki" target="_blank">Marvel Cinematic Universe Wiki</a> contained all the information I needed. This included, but was not limited to, precise infomation like specific episodes, calendar dates in the MCU timeline, plot summaries, character names, and relevant screenshots and graphics from the films and shows.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-overview.png" alt="An image of a zoomed-out overview of my FigJam file that showcases all my planning.">
+              <figcaption>A zoomed-out overview of my FigJam file</figcaption>
+            </figure>
+
+          <!-- FIGJAM -->
+           <figure class="iframe">
+              <iframe class="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FJRv7Xm28u5DjZSPamKfUek%2FGRC---Brainstorming%3Fnode-id%3D0-1%26t%3DmPrMWAR99dJlJj68-1" allowfullscreen></iframe>
+            </figure>
+
+            <p>Figma's FigJam feature served as a great tool for brainstorming— feel free to browse around my FigJam file with the embedded Figma component above!</p>
+
+            <p>From the Marvel Wiki site and popular forums, I gathered every significant and relevant information I could find, particularly regarding important story beats in TFATWS and the motivations of the different parties involved. This also helped me identify three categories of important users that the GRC website would cater towards:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-3-users.png" alt="An image of a sticky note on my FigJam file showcasing the brainstorm of the 3 types of users.">
+              <figcaption>FigJam brainstorm of the 3 types of users</figcaption>
+            </figure>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-users">
+                <div class="panel-items">
+                  <ol>
+                    <li>Blipped Victim - vanished during The Blip and to reintegrate back into society</li>
+                    <li>Displaced Survivor - survived during The Blip but are now being displaced by the GRC (i.e. about to be sent back to their original residences)</li>
+                    <li>Non-Displaced Survivor - seeking information</li>
+                  </ol>
+                  <p>From the perspective of the GRC, I labeled the half of the population that disappeared during The Blip as <i>blipped victims</i>. Since the GRC was favouring them over the survivors, this label felt most appropriate.</p>
+                  <p>I labeled the half of the population that survived The Blip as <i>displaced survivors</i>. To address the unbalanced treatment between them and the blipped victims, I chose this label, which I believed was neutral or innocuous enough and accurately reflected their situation.</p>
+                  <p>Naturally, there existed survivors who remained in the same location and therefore were not directly impacted by the GRC. However, they would still want to stay informed for themselves or to help someone they know.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-users"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">I had no prior experience designing government-affiliated projects. In addition, I had limited knowledge on what typically existed on government-ran or global corporation websites. This included all aspects of what my goals were. To address this, I sought inspiration by researching well-designed government websites that covered all relevant and necessary functions.</p>
+            
+            <p>Many of my search results highlighted the <a href="https://www.whitehouse.gov/" target="_blank">United States White House</a> website as an example of effective UX design, so I made it my central source of inspiration. As a supplement, I also reviewed the websites of the Government of Canada, Ontario, and Toronto due to their familiarity. By sketching out major layout designs from various pages of these four websites, I gained a better understanding of common layout patterns and the placement and quantity of information.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/sketch-canada.png" alt="An image of my labelled sketches of the Canada.ca website.">
+              <figcaption>Sketches of the <a href="https://www.canada.ca/en.html" target="_blank">Government of Canada</a> website</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/sketch-ontario.png" alt="An image of my labelled sketches of the Ontario.ca website.">
+              <figcaption>Sketches of the <a href="https://www.ontario.ca/page/government-ontario">Government of Ontario</a> website</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/sketch-toronto.png" alt="An image of my labelled sketches of the Toronto.ca website.">
+              <figcaption>Sketches of the <a href="https://www.toronto.ca/" target="_blank">City of Toronto</a> website</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/sketch-whitehouse.png" alt="An image of my labelled sketches of the WhiteHouse.com website.">
+              <figcaption>Sketches of the <a href="whitehouse.com" target="_blank">U.S. White House</a> website</figcaption>
+            </figure>
+
+            <!----------- RED ----------->
+            <p>With more knowledge, I began the design planning for the GRC, to which I named the process: the Workflow Stages.</p>
+            <p class="break">Stage 1 - I consolidated a list of MCU facts that were most relevant to my project from the aforementioned fan-ran site and various forums. This helped me clearly understand the motivations and intentions of both the GRC and the three identified types of users. As a result, I was able to better visualize why the GRC might not achieve longterm success with their current plan of action, which allowed me to identify their strengths and weaknesses.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-workflow-red.png" alt="An image of my first workflow stage showcasing one sticky note. Try also interacting with the FigJam module above!">
+              <figcaption>FigJam brainstorm of why the GRC's plan was doomed to fail, based on what TFATWS presented to the audience</figcaption>
+            </figure>
+
+            <!----------- ORANGE ----------->
+            <p>Stage 2 - I solidified three core details that became the focal points of my project, as well as what I would have presented to real stakeholders:</p>
+            <ol>
+              <li>What is the problem?</li>
+              <li>Who are the types of users?</li>
+              <li>What are the goals?</li>
+            </ol>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-workflow-orange.png" alt="An image of my second workflow stage. Try also interacting with the FigJam module above!">
+              <figcaption>Brainstorm of the problems at hand, types of users and goals from the perspective of the GRC</figcaption>
+            </figure>
+
+            <!----------- YELLOW ----------->
+            <p>Stage 3 - It was also important to empathize with the three types of users I had identified to ensure a user-centered approach. I developed a user persona for each of the three types of users:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-user-personas.png" alt="An image of three crafted user personas.">
+              <figcaption>Three user personas, user portrait image source: <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+                <ol>
+                  <li>Blipped victim: Jasmine, a hardworking college student, feels that society moved on in the blink of an eye without her</li>
+                  <li>Displaced survivor: Seth, a recent graduate and immigrant, feels he is losing his sense of identity</li>
+                  <li>Non-displaced survivor: Marissa, though not directly impacted by the GRC, struggles to balance her personal needs with growing family obligations</li>
+                </ol>
+              </figcaption>
+            </figure>
+
+            <!----------- GREEN ----------->
+            <p>Stage 4 - I crafted my problem statement:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-workflow-green.png" alt="An image of my fourth workflow stage. Try also interacting with the FigJam module above!">
+              <figcaption>Brainstorm of the problem statement</figcaption>
+            </figure>
+
+            <!----------- BLUE ----------->
+            <p>Stage 5 - I brainstormed the ideation of my website. This was comprised of listing the design fundamentals present in successful sites, my goals for the website to be optimal or successful, and site features I wanted to include.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-workflow-blue.png" alt="An image of my fifth workflow stage. Try also interacting with the FigJam module above!">
+              <figcaption>A view of a portion of the brainstorm for this workflow stage</figcaption>
+            </figure>
+
+            <p>Initially, I envisioned the GRC functioning as an all-in-one hub, such that the GRC housed all processes that the users would need to apply for. For example, blipped victims applying for financial help or to regain their citizenship status. However, this idea became impractical since different regions have different financial and legal systems, with different sets of processes, etc. Therefore, the primary goal of the site shifted to information access.</p>
+            <p>Additionally in TFATWS, the GRC was shown to deploy security measures or armed forces to a location when required. Logically, I thought that GRC would offer a list of services that users could request. More information regarding this in <a href="#project-early-ideation"> 📑 ideation</a>.</p>
+
+            <!----------- PURPLE ----------->
+            <p class="break">Stage 6 - Finally, I moved on to building the information architecture, where I spent a lot of time narrowing down and perfecting the structure. <i>Consider interacting with the FigJam module!</i></p>
+            <p>First, I clearly identified the user goals. There would be a priority in information access, as well as how users may interact with the page(s).</p>
+            <p>Second, I identified how users would arrive at any given page— either from the home page, previous navigation, a shared link, or a search engine result.</p>
+            <p>Third, I used purple text boxes in FigJam to map out the task flow, which built upon the aforementioned user goals. With a smaller text size and a lighter shade of purple, I annotated each branch with additional ideas, critiques, comments, or questions. Then, I reviewed those and bolded the points that offered effective solutions to any questions raised.</p>
+            <p>Last, I mapped out the user flow for each user goal identified, using specific shaped text boxes:</p>
+            <ul>
+              <li>Circle: start/end point</li>
+              <li>Rectangle: user steps, viewable pages</li>
+              <li>Diamond: conditional/decision point</li>
+              <li>Parallelogram: actions, inputs, outputs</li>
+            </ul>
+
+            <!----------- DESIGN SYSTEM ----------->
+            <p class="break">After completing my workflow stages, I opened a new Figma file to begin working on the design system!</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/grc-reset-restore-rebuild.png" alt="A screenshot from a GRC advertisement featured in TFATWS">
+              <figcaption>A screenshot from a GRC advertisement featured in TFATWS, image source: <a href="https://marvelcinematicuniverse.fandom.com/wiki/Power_Broker_(episode)/Gallery?file=GRC_Reset_Restore_Rebuild.png" target="_blank">MCU Fandom Wiki</a></figcaption>
+            </figure>
+            
+            <!----------- TYPOGRAPHY ----------->
+            <p>Using screenshots I collected from the MCU Wiki and help from an image-based font identifier site, I was able to identify the font of the text used in the GRC logo as <a href="https://fonts.adobe.com/fonts/adobe-garamond" target="_blank">Adobe Garamond Pro</a> (AGP). I decided to utilize this font family as my primary typeface and obtained it through my Adobe account. I also utilized <a href="https://typescale.com/" target="_blank">TypeScale</a> to help structure my typography.</p>
+            <p>As I worked with AGP, I realized that the font family was not as robust and easily accessible as other free and open source families. I decided to continue using AGP for large text elements (i.e. heading text, large display texts). Otherwise, I decided on using the <a href="https://fonts.google.com/specimen/IBM+Plex+Serif" target="_blank">IBM Plex Serif</a> font for all other text elements (i.e. body text, interactive elements, footer text).</p>
+            <!----------- COLOUR PALETTE ----------->
+            <p class="break">I based my colour palette on the aforementioned screenshots. With the amount of blues used, and the psychology behind the colour, it was logical to adopt blue as the brand colour. I colour-picked around for a shade I liked, and adjusted the HSL levels to identify a dark shade to use as the primary text colour. As well, I wanted to pursue a minimalistic theme, and so, a neutral white colour as the background would be optimal. This allowed me to solidify the colour rule I wanted to follow:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-palette-rule.png" alt="An image of the 60-30-10 color rule, where there is one colour that covers 60%, 30% and 10%.">
+              <figcaption>60-30-10 rule:
+                <ul>
+                  <li>60% of the page = neutral background colour</li>
+                  <li>30% of the page = primary and secondary colours = text colour + brand colour</li>
+                  <li>10% of the page = tertiary and accent colours</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>With my focus on accessibility, I generated a tonal palette for each colour using the <a href="https://www.figma.com/community/plugin/1024452006068794933" target="_blank">Foundation: Color Generator</a> Figma plugin by Jorge Fernandes.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-palette-tonal.png" alt="An image of the tonal palettes generated using the Foundation: Color Generator plugin.">
+              <figcaption>Tonal palettes:
+                <ul>
+                  <li>13 shades of neutral colours (black and white)</li>
+                  <li>10 shades of the primary colour</li>
+                  <li>10 shades of the secondary colour</li>
+                  <li>10 shades of the yellow accent colour</li>
+                  <li>10 shades of the red accent colour</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>Then, I built my full color palette and labeled it as the <i>Light</i> theme. The layout and labels were inspired by the Color Guidance by <a href="https://m3.material.io/" target="_blank">Material Design</a>. The <a href="https://www.figma.com/community/plugin/748533339900865323" target="_blank">Contrast</a> plugin by WillowTree was incredibly useful in selecting approrpiate shades and tones.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-palette-contrast.png" alt="An image of the Contrast plugin in action.">
+              <figcaption>The colours #FFFFFF (white) and <span style="background-color: #173D87; color: white; padding: 0 4px;">#173D87</span> has a contrast ratio of 10.22:1, which is a high enough value such that it is legible enough for normal text, large text and graphics</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-palette-light.png" alt="An image of the light themed colour palette.">
+              <figcaption>View of the light themed colour palette with labels denoting their names and the tonal palette they are retrieved from</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-early-ideation" class="flex-col">
+          <h2 class="section-title"> 📈 Early Ideation </h2>
+          <div class="section-body flex-col">
+            <p>I migrated simple pencil sketches onto FigJam and roughly built the layouts using different shapes.</p>
+
+            <!----------- HEADERS ----------->
+            <p>When designing the main navigation header (located at the top of every page), I aimed to incorporate as much navigation functionality as feasible. As the GRC is a global corporation, users should be able to conveiniently view pages in their preferred language. The offerred languages section is placed separately from the primary navigation. This primary navigation contains a few menu items and a call-to-action (CTA). This CTA button, labeled <i>My next step</i>, serves as an interactive element that allows the user to quickly identify their next course of action. When clicked, it opens a modal that displays three columns of links, each with its own heading.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-sketch-navigation.png" alt="An image of the rough sketch of the main site navigation header.">
+              <figcaption>Screenshot of the FigJam sketches of the main navigation header</figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-sketches-header">
+                <div class="panel-items">
+                  <!-- LANGUAGES -->
+                  <p>Inspired by the <a href="https://www.un.org/" target="_blank">United Nations</a> website, I decided to include a small list of the most common languages in a small section away from the primary navigation.</p>
+
+                  <!-- PRIMARY NAVIGATION -->
+                  <p>On larger screens, the primary navigation on the header contains all five links. This number was determined after my brainstorming process:</p>
+                    <ul>
+                      <li>Brainstormed a list of relevant menu options applicable to any type of user visiting a GRC web page</li>
+                      <li>Categorized the list into different groups based on hierarchy and similarity [via the card sorting method]</li>
+                      <li>Drafted an information architecture</li>
+                      <li>Rearranged items after further testing</li>
+                    </ul>
+
+                  <p>On smaller screens, users need to utilize the menu to interact with the primary navigation.</p>
+
+                  <!-- MENU -->
+                  <p>The menu icon is visible and accessible to open on all screen sizes that cannot display all five menu links. The layout and design of the menu were directly inspired by the U.S. Web Design System. More information regarding this in <a href="#project-testing">📑 project testing</a>.</p>
+                  
+                  <!-- MY NEXT STEP MODAL -->
+                  <p>For the <i>My next step</i> modal, the design and layout was inspired by the City of Toronto website. On their navigation header, they have a CTA with the text <i>I want to...</i>, which opens a modal with 5 curated columns of links.
+                  </p>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-sketches-header"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <!----------- HOME PAGE ----------->
+            <p class="break">I took inspiration from the White House website's landing or home page design for the GRC home page. I divided the design of the GRC home page into five sections:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-sketch-homepage.png" alt="An image of the rough sketch of the home page.">
+              <figcaption>FigJam sketch of the home page comprised of 5 sections<br>
+                <ul>
+                  <li>Left: Layout for large devices</li>
+                  <li>Right: Layout for smaller devices</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-sketches-homepage">
+                <div class="panel-items">
+                  <ol>
+                    <li>Hero - serves as the main viewable item of content, contains two subsections:
+                      <ul>
+                        <li>Major: displays the most recent GRC news announcement or article published onto The Bulletin</li>
+                        <li>Minor: lists a few recent news articles aside from the one featured in major</li>
+                      </ul>
+                    </li>
+                    <li>Information 1 - hints at the user's circumstance (i.e blipped victim or displaced survivor) and provides a corresponding link to a general help page</li>
+                    <li>Information 2 - features a worldwide map and two relevant CTAs</li>
+                    <li>Form - communications form to receive information from the GRC</li>
+                    <li>General graphic - displays a graphic with a generic title and supporting text</li>
+                  </ol>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-sketches-homepage"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <!----------- OTHER PAGES ----------->
+            <p class="break">The layout for all other common pages was inspired by the City of Toronto website. On larger screens, the navigation column is placed to the right of the current page's main content. On smaller screens, this navigation shifts below the main content. The navigation includes an in-page navigation element, and links under a <i>Related Information</i> element, both when applicable. All pages will have the main site navigation header and a footer.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-sketch-otherpages.png" alt="An image of the rough sketches of the other pages.">
+              <figcaption>Generic sketches in FigJam using various shapes</figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-sketches-pages">
+                <div class="panel-items">
+                  <p>There are three additional types of pages besides the home page. On the previous image:</p>
+                  <ul>
+                    <li>Left: Individual/informative - template for pages containing information like articles, general information, etc.</li>
+                    <li>Top right: Menu overview of its options - showcasing the site's entire information architecture, including the primary navigation</li>
+                    <li>Bottom right: The Bulletin</li>
+                  </ul>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-sketches-pages"> Show/Hide for addition, non-critical, information!
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+            </button>
+            </div>
+
+            <!----------- THE BULLETIN ----------->
+            <p class="break">Inspired by the White House's <a href="https://www.whitehouse.gov/briefing-room/" target="_blank">Briefing Room</a> page, I wanted the GRC to have its own dedicated page containing the list of any published announcements or articles directly from the GRC. I decided on the name "The Bulletin" which references the Marvel in-universe New York-based newspaper of the same name. The Bulletin page contains a pagination at the bottom, and a filter/sort interactive element near the top, which affects the display of the list of published news/articles.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figjam-sketch-bulletin.png" alt="An image of the rough sketches of The Bulletin.">
+              <figcaption>Left: FigJam sketch of the layout of The Bulletin for large devices<br>Right: Layout for smaller devices</figcaption>
+            </figure>
+
+            <p>The structure of the responsive layouts was determined using different grid layouts in Figma.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-grid.png" alt="A screenshot of the grid layouts with different frame sizes.">
+              <figcaption>Grid layouts for responsive design of different screen widths</figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-breakpoints">
+                <div class="panel-items">
+                  <p>The breakpoint values (in pixels) are 346, 480, 881 and 1176. Device widths up to and including 880px (ranging from mobile phones to medium-sized tablets) will have a smaller typography that corresponds to smaller devices. Device widths starting at 881px (ranging from larger tablets to desktops) will have a larger typography that corresponds to larger devices.</p>
+                  <p>For device width (in pixels):</p>
+                  <ul>
+                    <li>1441+
+                      <ul>
+                        <li>Column count: 12</li>
+                        <li>Type: Center</li>
+                        <li>Width: 70</li>
+                        <li>Gutter: 40</li>
+                      </ul>
+                    </li>
+                    <li>1176-1440
+                      <ul>
+                        <li>Column count: 12</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 80</li>
+                        <li>Gutter: 40</li>
+                      </ul>
+                    </li>
+                    <li>881-1175
+                      <ul>
+                        <li>Column count: 12</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 40</li>
+                        <li>Gutter: 40</li>
+                      </ul>
+                    </li>
+                    <li>480-880
+                      <ul>
+                        <li>Column count: 8</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 35</li>
+                        <li>Gutter: 24</li>
+                      </ul>
+                    </li>
+                    <li>346-479
+                      <ul>
+                        <li>Column count: 4</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 24</li>
+                        <li>Gutter: 20</li>
+                      </ul>
+                    </li>
+                    <li>&#8804;345
+                      <ul>
+                        <li>Column count: 4</li>
+                        <li>Type: Left</li>
+                        <li>Width: 60</li>
+                        <li>Offset: 24</li>
+                        <li>Gutter: 20</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-breakpoints"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">Next, I moved on to building high fidelity prototypes. Going forward, each element (e.g. text, subtitle, label, icon, etc.) was contained in their respective groups (also known as <strong>frames</strong> in Figma), with size constraints set according to the appropriate grid layout. This ensured that each prototype was responsive to the device size. I began by designing for the 1176-1440px frames (designs on larger screen sizes) and then proceeded to design and build the other frames in descending size order.</p>
+            <p>First, I built the main navigation header. I was able to test and adjusted the text values and the size of the CTA accordingly.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-header-planning.png" alt="A screenshot of different drafts I built when planning for the header.">
+              <figcaption>Went through four iterations until I decided on...</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-header.png" alt="An image of the header design in Figma in all frame sizes.">
+              <figcaption>... this design for the website header!</figcaption>
+            </figure>
+
+            <p>I remembered that I had a copy of the <a href="https://www.figma.com/community/file/809920999413919915/octicons-githubs-icon-set" target="_blank">Octicons - Github's icon set</a> design file on Figma, so I used their icon set as a temporary placeholder. With this, I planned and built a variety of components and variants.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-components.png" alt="An image of the various components I built in Figma.">
+              <figcaption>Components with variants:
+                <ul>
+                  <li>Icon padding (for buttons)</li>
+                  <li>Menu item (on the navigation header)</li>
+                  <li>All CTA buttons (primary, secondary, tertiary, and different states)</li>
+                  <li>Logos (of 3 sizes)</li>
+                  <li>Search components (of 3 sizes)</li>
+                  <li>Variety of input fields</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>I gradually built a high-fidelity prototype of the home page first:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-homepage.png" alt="An image of the home page prototype in Figma.">
+              <figcaption>Each section is its own Figma component with the variants being design in different frame sizes...</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-homepage-hero-component.png" alt="An image of the hero section component in Figma.">
+              <figcaption>... for example, the hero component has 4 variants corresponding to the breakpoints</figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-hifi-homepage">
+                <div class="panel-items">
+                  <p>Even the high-fidelity prototypes went through multiple iterations to achieve the "highest" level of fidelity. I was adjusting sizes, constraints and colours throughout this process, which helped me learn and gain more experience in recognizing various structures and components of a website.</p>
+                  <p>For example, on the landing/home page, the major portion of the hero section was constrained to take up at most around 2/3 of the entire allotted width on larger device sizes. On smaller devices, both major and minor will stretch to fill the entire allotted width:</p>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-homepage-hero-component2.png" alt="A screenshot of the home page hero section on smaller device frames.">
+                    <figcaption>Responsive design example of the hero section on smaller devices</figcaption>
+                  </figure>
+
+                  <p>All long lines of on-screen text (e.g. text inside <code>&lt;p&gt;</code>) were constrained to prevent them from running too long on one line. The constraint was calculated based on the optimal line line length for web text, which is often between 40-80 characters. This is to maximize readability for users.</p>
+
+                  <p>Information 1 is the section that briefly hints the user as to their circumstance (i.e blipped victim or displaced survivor) and includes a corresponding link to a general help page:</p>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-homepage-info1-component.png" alt="A screenshot of Information 1 section on larger device frames.">
+                    <figcaption>For better readability, text lines don't run too long, and each bundle of text are located not too far from the other bundles</figcaption>
+                  </figure>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-homepage-info2-component.png" alt="A screenshot of Information 2 section on smaller device frames.">
+                    <figcaption>Information 2 layout on smaller device frames</figcaption>
+                  </figure>
+
+                  <p>Information 2 contains a worldwide map (currently, a giant grey rectangle) and two relevant CTAs. Initially, I did not know what an organization like the GRC would include besides its main hero section, so I again took inspiration from the White House site. They employ a similar layout of the two rectangular sections, each containing some text and a relevant CTA. More specifically, the first contains interactive elements for contacting the White House by mobile or a general <i>Contact Us</i> button. The second includes small links under the heading <i>Get Involved</i>.</p>
+                  <p>For the GRC, I adapted the design to introduce users to the global reach of the GRC. The map graphic may indicate exact locations of their office buildings and/or headquarters should they realistically have them. The two CTAs can direct users to learn about specific regional efforts, with the link functioning like a store locator on e-commerce sites, and to discover how the GRC has representatives worldwide, with the link leading to the Council page.</p>
+
+                  <p class="break">The section title, section description, four headings and section CTA of Information 1, as well as the map image and the two CTAs of Information 2 will be updated with real content in <a href="#project-final-designs">📑 final designs</a>.</p>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-hifi-homepage"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">Then, I built the general layout/template for all other types of pages:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-otherpages.png" alt="An image of the 3 other pages on larger device frames.">
+              <figcaption>Left: Individual/informative page <br>Top right: menu overview of its options <br>Bottom right: The Bulletin</figcaption>
+            </figure>
+
+            <p>In addition, I built the components for the general communications form and the footer in all frame sizes:</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/figma-hifi-form-footer.png" alt="An image of the form and footer components in Figma.">
+              <figcaption>The generic form asks for a valid email address and the preferred language to receive the email in. The footer is separated into primary and secondary navigation</figcaption>
+            </figure>
+
+            <p>I took inspiration from the White House's footer design. The primary navigation located on the left side includes all the main menu links from the main site header. The secondary navigation located on the right side contains common important links like <i>Contact Us</i> and <i>Privacy Policy</i>, along with four social media icons (currently, placeholder circle icons).</p>
+          </div>
+        </section>
+
+        <section id = "project-testing" class="flex-col">
+          <h2 class="section-title"> 🔬 Testing </h2>
+          <div class="section-body flex-col">
+            <p>The best type of testing is to actually get your hands dirty.</p>
+            <p>I used Figma's prototyping features to add connections and transitions from one frame to another. Although I was able to demo and play around with different types of devices directly in Figma, I felt too restricted within Figma. I thought that building my own webpage demo would be far better to my likings, so I launched <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (VSC), my code editor application, and migrated all pages into individual HTML files.</p>
+            <p>While refreshing my CSS knowledge, I was introduced to <a href="https://sass-lang.com/" target="_blank">Syntactically Awesome Style Sheets</a> (SASS), a popular and powerful CSS preprocessor. It made plain CSS coding more efficient and intuitive, so I decided to try it out for this project.</p>
+
+            <p>Afterward, I had built my own HTML/CSS demo, which provided more clarity in testing both technical and visual aspects. By utilizing the <i>Inspect</i> tool in my web browser, I adjusted some of the layout spacings and font properties of my typography. Consequently, I was able to establish a rule for such spacings and incorporated it into my design system.</p>
+
+            <p>Then, I built the rest of the important pages in Figma, as well as in basic HTML/CSS using VSC. The two VSC extensions that helped me test my code were <a href="https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass" target="_blank">Live Sass Compiler</a> by Glenn Marks and <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> by Ritwick Dey. After some simple JavaScript coding with <code>JQuery</code>, I had successfully built a functional web demo.</p>
+
+            <p>My focus then shifted to UI and UX testing. Regarding the UI, I experiemented with the colours and assigned values to various components such as underlines, elevations, and shadows. I also tested all other font properties and identified the most appropriate spacing values. For example, on the main header, I reduced the top and bottom padding when the current page is being scrolled to free up more screen space. As well, the current language being viewed has a higher font weight compared to the rest of the offered languages to better distinguish which of the elements is considered active.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/prototype-example-header.gif" alt="A GIF of my site header in action.">
+              <figcaption>JS code:
+                <ul>
+                  <li>if <code>scroll-y</code> > 45 pixels, then change padding and enable downward shadow</li>
+                  <li>otherwise, keep regular padding and disable downward shadow</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>One major change made was to have all long lines of on-screen text (e.g. text inside <code>&lt;p&gt;</code>) constrained to prevent them from running too long on one line. The constraint was calculated based on the optimal line line length for web text, which is often between 40-80 characters. This is to maximize readability for users, and allows for responsiveness.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/prototype-example-column-text2.gif" alt="A GIF of the responsive column of main content and constrained text.">
+              <figcaption>Different breakpoints have different constraint values to maintain readability</figcaption>
+            </figure>
+
+            <p>I was greatly inspired by the White House's central column of text, which utlized this readability technique. On larger device screens, this column maintains its different constraints based on different breakpoints.</p>
+
+            <p>While further reviewing the White House website, I found the design system of several U.S.-based websites: <a href="https://designsystem.digital.gov/" target="_blank">U.S. Web Design System</a> (USWDS). To wrap up the testing phase, I explored the components and specifications of their design system and compared them to mine. In Figma, I ended up tweaking the modal designs and incorporated their design of a sticky table of contents (commonly known as an in-page navigation):</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/prototype-example-toc.gif" alt="A GIF of my implementation of the in-page navigation.">
+              <figcaption>My implementation of USWDS's <a href="https://designsystem.digital.gov/components/in-page-navigation/" target="_blank">in-page navigation</a> component</figcaption>
+            </figure>
+          </div>
+        </section>
+  
+        <section id = "project-final-designs" class="flex-col">
+          <h2 class="section-title"> ⭐ Final Designs </h2>
+          <div class="section-body flex-col">
+            <p>After refining my own design system and building the necessary modal elements, I added the changes to my code and updated my demo site pages.</p>
+
+            <p>While working with the White House site as a reference, I was constantly learning from their front-end and back-end designs.</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-final-wh">
+                <div class="panel-items">
+                  <p>The White House's home page has a sticky-padding element that occurs when scrolling the main news spotlight on their home page:</p>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/prototype-example-wh-hero.gif" alt="A GIF of the White House home page.">
+                    <figcaption>The main article stays (or <i>sticks</i>) on screen as the user scrolls through the entire list of the secondary articles on the right</figcaption>
+                  </figure>
+
+                  <p>I incorporated this into my own home page hero section.</p>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/grc-website/prototype-example-hero.gif" alt="A GIF of my implementation of the previous home page feature.">
+                    <figcaption>I was able to mimic the behaviour  using CSS and JS</figcaption>
+                  </figure>
+
+                  <p>Additionally, while using <i>Inspect</i> on my web browser, I noticed that the White House's HTML code frequently included <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">Accessible Rich Internet Applications</a>, also known as <code>aria</code> tags, which are attributes added HTML elements to improve accessibility. I decided to add them into my HTML code and, in the process, learned more about accessibility features and tools.</p>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-final-wh"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">To strengthen the site and add more creative touches, I found ways to include a variety of relevant MCU details. For example, I added:</p>
+            <ul>
+              <li>Key MCU in-universe events and their dates onto a dedicated <i>timeline</i> section on the <i>Protocols</i> page</li>
+              <li>A viewable list of countries with representatives on the council - similar to the United Nations <a href="https://www.un.org/en/about-us/member-states" target="_blank">Members States</a> page</li>
+              <li>An expanded view of those representatives - modeled after the ability to view individual members under the White House <a href="https://www.whitehouse.gov/administration/" target="_blank">Administration</a> page</li>
+              <li>A dedicated information page regarding The Blip - also a menu item on the primary navigation</li>
+            </ul>
+            
+            <p class="break">I utilized free SVG <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> versions of a few icons, and the rest from <a href="https://primer.style/foundations/icons" target="_blank">Octicons</a>. Finally, I replaced some of the placeholder <i>Lorem ipsum</i> text on the home page with real content:</p>
+            <ul>
+              <li>Hero - minor: section title and link located at the top and bottom respectively</li>
+              <li>Information 1: title, description, four headings, and CTA</li>
+              <li>Information 2</li>
+              <li>Form: description</li>
+              <li>General graphic</li>
+            </ul>
+
+            <p>With all these changes, I finally completed my rendition of the GRC website. Check it out <a href="https://nenceh.github.io/grc-website/">here</a>!</p>
+          </div>
+        </section>
+
+        <section id = "project-learned" class="flex-col">
+          <h2 class="section-title"> ❓ What I learned </h2>
+          <div class="section-body flex-col">
+            <p>I achieved my initial goals, but I believe those goals have evolved since their initial state. Yes, objectively, the overall goal was to complete this project. However, "completing" became less of a priority as I progressed. I found myself constantly discovering new ways to improve certain features or expand existing ideas into several others. As time progressed, I also struggled finding a point where I could call quits— wasn't there always something that can be improved?</p>
+            <p>At a certain point, I realized that this mindset was holding me back. After suffering some burnout, I took a month away from this project. When I returned, I was able to examine this project with a refreshed mindset.</p>
+            <p>I reflected on how I did accomplish the goals I had set for myself in the beginning. As well, I was able to explore a multitude of ways to better user experience. With this new mindset, I finally felt ready to close this chapter.</p>
+            <p>And after cleaning up my Figma and coding files, I felt satisfied enough to publish this project.</p>
+          </div>
+        </section>
+
+        <section id = "project-next" class="flex-col">
+          <h2 class="section-title"> 💭 Next steps </h2>
+          <div class="section-body flex-col">
+            <p>As I only used the basic (and bare minimum, really) HTML, CSS, JS coding conventions to build the prototype, advancements could include utilizing frameworks like <code>Flask</code> or <code>Django</code>. Additionally, I would need a better organization system for the web files (i.e. building a specific folder system— an information architecture, if you will).</p>
+            <p>Lastly, there are a few ways to better readability and accessibility. For example, the White House website offered a toggle for a high-contrast color palette, and the City of Toronto website offers a larger text size option. I believe that these would help me (or the GRC) better align with the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">Web Content Accessibility Guidelines</a>.</p>
+          </div>
+        </section>
+      </main>
+
+      <section class = "extra">
+        <p>Last modified: November 24, 2024</p>
+      </section>
+    </div>
+
+    <footer class = "footer">
+      <div class="footer-sitemap">
+        <nav class = "footer-primary">
+          <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../portfolio.html">portfolio</a></li>
+            <li><a href="../cv.html">cv</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-secondary">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank" class="btn-icon"> <!-- linkedin -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </div>
+              /nancyhao
+            </a></li>
+            <li><a href="https://www.figma.com/@nenceh" target="_blank" class="btn-icon"> <!-- figma -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+            <li><a href="https://www.youtube.com/@nenceh" target="_blank" class="btn-icon"> <!-- youtube -->
+              <div class="btn-icon-padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

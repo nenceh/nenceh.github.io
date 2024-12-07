@@ -10,7 +10,7 @@
 html{ scroll-behavior: smooth; }
 
 #find-me {
-    background-color: get-color(main, primary);
+    background-color: get-color(main, primary-variant);
     border-radius: 10px 0 0 10px;
     position: fixed;
     right: 0;
@@ -21,18 +21,22 @@ html{ scroll-behavior: smooth; }
     transition: all .4s;
 
     ul{
-        margin: 10px 10px;
-        gap: 16px;
+        gap: 4px;
         padding: 0;
         list-style-type: none;
         li{
             line-height: 0;
+            transition: background-color .3s ease;
+            border-radius: 10px 0 0 10px;
             svg{
+                margin: 12px;
                 padding: 2px;
                 height: 24px;
                 width: 24px;
                 fill: get-color(neutral, white);
             }
+            &:first-child{border-top-left-radius: 10px;}
+            &:last-child{border-bottom-left-radius: 10px;}
         }
     }
 
@@ -40,8 +44,6 @@ html{ scroll-behavior: smooth; }
         width: 24px;
         height: auto;
     }
-
-    &:hover{background-color: get-color(main, primary-variant);}
 }
 
 .page-banner {
@@ -99,28 +101,6 @@ html{ scroll-behavior: smooth; }
                 content: "";
             }
         }
-    }
-
-    &:hover{
-        background-color: get-color(main, accent);
-        color: get-color(main, primary);
-        span{
-            &.highlight-1{
-                background: linear-gradient(
-                    to bottom,
-                    transparent 50%,
-                    #FCE04F 50%
-                );
-            }
-            &.highlight-2{
-                background: linear-gradient(
-                    to bottom,
-                    transparent 50%,
-                    lightblue 50%
-                );
-            }
-        }
-        ul.breadcrumbs li:before{border-left-color: get-color(neutral,black);}
     }
 }
 
@@ -216,6 +196,10 @@ html{ scroll-behavior: smooth; }
         margin: 0 100px;
         gap: 24px;
         align-items: flex-start;
+        &.landing{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
         main{
             gap: 120px;
             p.break{margin-top: 28px;}
@@ -349,7 +333,27 @@ html{ scroll-behavior: smooth; }
                     rgba(0,0,0,0) 100%
                 );
                 color: white;
+
+                .desc .fa{
+                    font-size: 18px;
+                }
             }
+            &#fs_matcha figure{
+                svg{
+                    margin-left: 40px;
+                    width: 180px;
+                    height: 180px;
+                }
+            }
+        }
+    }
+
+    section#about-me .section-body{
+        flex-direction: column-reverse;
+        gap: 24px;
+        
+        #about-me-pic{
+            width: 280px;
         }
     }
 
@@ -454,7 +458,18 @@ html{ scroll-behavior: smooth; }
         align-self: flex-start;
     }
 
+    section#about-me .section-body{
+        flex-direction: row;
+        gap: 40px;
+        
+        #about-me-pic{
+            width: 260px;
+        }
+    }
+
     .entry-list{
+        padding-top: 80px;
+        padding-bottom: 80px;
         width: 100%;
         .portfolio-entry{
             height: 200px;
@@ -478,6 +493,13 @@ html{ scroll-behavior: smooth; }
                 height: 100%;
                 background: none;
                 color: get-color(main, primary);
+            }
+            &#fs_matcha figure{
+                justify-content: center;
+                svg{
+                    width: 180px;
+                    height: 180px;
+                }
             }
         }
     }
@@ -554,6 +576,11 @@ html{ scroll-behavior: smooth; }
         gap: 80px;
         margin: 0 70px;
 
+        &.landing{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
         ul, ol{
             gap: 12px;
             padding-left: 28px;
@@ -609,6 +636,13 @@ html{ scroll-behavior: smooth; }
         }
     }
 
+    section#about-me .section-body{
+        gap: 24px;
+        #about-me-pic{
+            width: 200px;
+        }
+    }
+
     .panel-container .panel{margin-top: 12px;}
 
     .early-regex{
@@ -660,22 +694,21 @@ html{ scroll-behavior: smooth; }
     }
 
     .entry-list{
+        padding-top: 40px;
+        padding-bottom: 40px;
         gap: 40px;
         .portfolio-entry{
             gap: 20px;
-            height: 160px;
+            height: 180px;
             justify-content: flex-start;
 
             figure{
-                height: 160px;
+                height: 100%;
                 position: static;
                 width: calc(4*(100% + 20px)/8 - 20px);
                 img{
-                    // width: 100%;
-                    // height: auto;
                     border-radius: 0;
                     max-height: 100%;
-                    // object-fit: cover;
                 }
             }
             &-info{
@@ -685,6 +718,17 @@ html{ scroll-behavior: smooth; }
                 height: 100%;
                 background: none;
                 color: get-color(main, primary);
+
+                .desc .fa{
+                    font-size: 16px;
+                }
+            }
+            &#fs_matcha figure{
+                justify-content: center;
+                svg{
+                    width: 164px;
+                    height: 164px;
+                }
             }
         }
     }
@@ -701,6 +745,14 @@ html{ scroll-behavior: smooth; }
         padding: 40px 40px 80px;
         .footer-secondary{padding-right: 24px;}
     }
+
+    section#about-me .section-body{
+        flex-direction: column-reverse;
+        #about-me-pic{
+            max-width: 50%;
+        }
+    }
+            
 
     .body-content{
         margin: 0 40px;
@@ -735,7 +787,15 @@ html{ scroll-behavior: smooth; }
                     rgba(0,0,0,0.5) 50%,
                     rgba(0,0,0,0) 100%
                 );
-                color: white;
+                color: get-color(neutral, white);
+            }
+            &#fs_matcha figure{
+                justify-content: flex-start;
+                svg{
+                    margin-left: 24px;
+                    width: 180px;
+                    height: 180px;
+                }
             }
         }
     }
@@ -757,6 +817,10 @@ html{ scroll-behavior: smooth; }
         height: 240px;
         padding: 0 16px;
     }
+
+    section#about-me .section-body #about-me-pic{
+        max-width: 60%;
+    }
 }
 
 @media screen and (min-width: 1150px){
@@ -771,6 +835,53 @@ html{ scroll-behavior: smooth; }
     // background: yellow;
 }
 
+@media (hover: hover), (-ms-high-contrast:none) and (pointer: fine){
+    a:hover{color: get-color(main, link-hover);}
+    .body-content nav.toc li a:hover{
+        text-decoration: underline;
+        color: get-color(main, link-hover);
+    }
+
+    #find-me li:hover{background-color: get-color(main, primary);}
+    button#to-top:hover{background-color: get-color(main, primary);}
+    
+    .page-banner:hover{
+        background-color: get-color(main, accent);
+        color: get-color(main, primary);
+        span{
+            &.highlight-1{
+                background: linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    #FCE04F 50%
+                );
+            }
+            &.highlight-2{
+                background: linear-gradient(
+                    to bottom,
+                    transparent 50%,
+                    lightblue 50%
+                );
+            }
+        }
+        ul.breadcrumbs li:before{border-left-color: get-color(neutral,black);}
+    }
+
+    .btn-primary:hover{ background-color: get-color(main, link-hover); }
+
+    .entry-list .portfolio-entry:hover{
+        box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+    }
+
+    ul.toggle-filters label:active{ letter-spacing: 0.8px; }
+
+    footer a:hover{
+        color: get-color(main, link-hover);
+        svg{fill: get-color(main, link-hover);}
+    }
+}
+
 /* BODY */
 body {
     // font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -783,7 +894,7 @@ body {
     a{
         color: get-color(main, link);
         transition: color .3s;
-        &:hover{color: get-color(main, link-hover);}
+        &:active{color: get-color(main, link-hover);}
     }
     main {
         ul {
@@ -844,6 +955,7 @@ body {
                 border-radius: 8px;
                 object-fit: cover;
             }
+            &.restrict img{width: auto;}
         }
         .section-note{
             font-size: smaller;
@@ -861,7 +973,6 @@ body {
             font-weight: bold;
             width: fit-content;
         }
-    
         ol{
             display: flex;
             padding: 0 16px;
@@ -871,7 +982,7 @@ body {
                 position: relative;
                 &:first-child:before{top: 2px;}
                 &:last-child:before{bottom: 2px;}
-                a:hover{
+                a:active{
                     text-decoration: underline;
                     color: get-color(main, link-hover);
                 }
@@ -901,11 +1012,11 @@ button#to-top{
     align-items: center;
     border-radius: 100px;
     z-index: 1;
-    background-color: get-color(main, primary);
+    background-color: get-color(main, primary-variant);
     border: none;
     color: get-color(grc-light, on-primary);
     svg{fill: get-color(grc-light, on-primary);}
-    &:hover{background-color: get-color(main, primary-variant);}
+    &:active{background-color: get-color(main, primary);}
 }
 .btn-primary{
     @extend %btn;
@@ -916,7 +1027,7 @@ button#to-top{
 
     svg{fill: white;}
 
-    &:active, &:hover{ background-color: get-color(main, link-hover); }
+    &:active{ background-color: get-color(main, link-hover); }
 
     &.panel-control{
         position: relative;
@@ -995,14 +1106,17 @@ aside.back-to-top{
 }
 
 // HOME PAGE
-#about-me{
+section#about-me{
     .section-body{
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        div#about-me-info{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        #about-me-info{
             ul{
                 list-style: none;
+                width: 100%;
+                padding-left: 0;
                 li{
                     position: relative;
                     &:before{
@@ -1020,7 +1134,6 @@ aside.back-to-top{
         }
         figure#about-me-pic{
             padding: 0;
-            max-width: 40%;
         }
     }
 }
@@ -1041,6 +1154,8 @@ aside.back-to-top{
         &#confident{color: get-color(lassonde, confident);}
         &#ingenious{color: get-color(lassonde, ingenious);}
     }
+
+    p{text-align: center;}
 }
 
 .project-showcase {
@@ -1076,8 +1191,8 @@ aside.back-to-top{
         overflow: hidden;
         box-shadow: 2px 3px 8px 0 rgba(0,0,0,0.2);
     
-        &:hover{
-            box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+        &:active{
+            box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.3);
             border-radius: 0;
         }
         &>a{
@@ -1100,6 +1215,17 @@ aside.back-to-top{
             img{
                 transition: all .4s;
                 min-height: 100%;
+            }
+            
+        }
+        &#fs_matcha figure{
+            background-color: #B7C5C8;
+            display: flex;
+            align-items: center;
+            svg{
+                path{
+                    fill: #135842;
+                }
             }
         }
     }
@@ -1126,7 +1252,7 @@ ul.toggle-filters {
             cursor: pointer;
             line-height: 100%;
             white-space: normal;
-            &:hover, &:active{ letter-spacing: 0.8px; }
+            &:active{ letter-spacing: 0.8px; }
         }
 
         input[type="checkbox"] {
@@ -1262,7 +1388,7 @@ footer.footer{
         transition: fill .4s ease;
         fill: get-color(main, primary-variant);
     }
-    li:hover,a:hover{
+    a:active{
         color: get-color(main, link-hover);
         svg{fill: get-color(main, link-hover);}
     }

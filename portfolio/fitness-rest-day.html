@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Apple Fitness - Rest Day</title>       
+      <link rel="stylesheet" href="../css/styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script type="text/javascript" src="../js/global.js"></script>
+      <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+  </head>
+  
+  <header class = "topnav-container">
+    <div class = "topnav">
+      <a id = name href="../index.html">nancy hao</a>
+      <ul>
+        <li> <a href="../portfolio.html">portfolio</a>
+        <li> <a href="../cv.html">cv</a>
+      </ul>
+    </div>
+  </header>
+    
+  <section id = "find-me">
+    <ul class="flex-col">
+      <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
+        <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+      </a>
+  
+      <li><a href="https://www.figma.com/@nenceh" target="_blank">
+        <svg style="enable-background:new 0 0 3000 3000;" version="1.1" viewBox="0 0 3000 3000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+          .st0{fill:#0ACF83;}
+          .st1{fill:#A259FF;}
+          .st2{fill:#F24E1E;}
+          .st3{fill:#FF7262;}
+          .st4{fill:#1ABCFE;}
+        </style><path class="st0" d="M1083.333374,2750c230,0,416.666626-186.666748,416.666626-416.666748v-416.666626h-416.666626  c-230.000061,0-416.666687,186.666626-416.666687,416.666626S853.333313,2750,1083.333374,2750z" id="path0_fill"/><path class="st1" d="M666.666687,1500c0-230,186.666626-416.666748,416.666687-416.666748H1500v833.333374  h-416.666626C853.333313,1916.666626,666.666687,1730,666.666687,1500z" id="path1_fill"/><path class="st2" d="M666.666687,666.666626C666.666687,436.666656,853.333313,250,1083.333374,250H1500  v833.333252h-416.666626C853.333313,1083.333252,666.666687,896.666626,666.666687,666.666626z" id="path1_fill_1_"/><path class="st3" d="M1500,250h416.666626c230.000122,0,416.666626,186.666656,416.666626,416.666626  s-186.666504,416.666626-416.666626,416.666626H1500V250z" id="path2_fill"/><path class="st4" d="M2333.333252,1500c0,230-186.666504,416.666626-416.666626,416.666626S1500,1730,1500,1500  s186.666626-416.666748,416.666626-416.666748S2333.333252,1270,2333.333252,1500z" id="path3_fill"/></svg>
+      </a>
+    </ul>
+  </section>
+
+  <aside class="back-to-top">
+    <button id="to-top" class="flex-col">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 3.5a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Zm.47 9.47a.749.749 0 1 0 1.06 1.06l4.97-4.969V21.25a.75.75 0 0 0 1.5 0V9.061l4.97 4.969a.749.749 0 1 0 1.06-1.06l-6.25-6.25a.749.749 0 0 0-1.06 0l-6.25 6.25Z"></path></svg>
+      Top
+    </button>
+  </aside>
+
+  <body>
+    <section class = "page-banner-container">
+      <div class = "page-banner flex-col">
+        <h1>
+          <!-- Apple logo -->
+          <i style="margin-right: 4px;" class="fa">&#xf179;</i>
+          Apple Fitness - 'Rest Day'
+        </h1>
+        <ul class="breadcrumbs">
+          <li>portfolio</li>
+            <li>Apple Fitness - Rest Day</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class = "info-container flex-col">
+      <div id="project-info">
+        <div class="project-info-item flex-col">
+          <p class="subtitle">TIMELINE</p>
+          <p>Jun'24</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">PLATFORM</p>
+          <p> Figma<p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">ROLE</p>
+          <p> UX Designer, Developer </p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">DELIVERABLE</p>
+          <a href="https://www.figma.com/design/FkXp71qXMje7vXeGUSbtTh/Apple-Fitness---Rest%2FRecovery-Day-Feature?node-id=281-3062&t=DjMYokImvsZ2ZbXV-1" target="_blank">
+            <p class = "link"><i>📎</i> Figma design file</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class = "body-content">    
+      <nav role="navigation" class="toc">
+        <ol>
+          <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a>
+          <li><a href="#project-development" class="in-page-link"> Development </a>
+          <li><a href="#project-early-ideation" class="in-page-link"> Early Ideation </a>
+          <li><a href="#project-testing" class="in-page-link"> Testing </a>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a>
+          <li><a href="#project-learned" class="in-page-link"> What I Learned </a>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a>        
+        </ol>
+      </nav>
+
+      <main class="flex-col">
+        <section id = "project-introduction" class="flex-col">
+          <h2 class="section-title"> 🚀 Intro </h2>
+          <div class="section-body flex-col">
+            <p>Rest and recovery are important aspects of fitness that can easily be overlooked. Physical activity may lead to short-term soreness, or, at worst, overexertion.</p>
+
+            <p class="disclaimer">As of September 2024, <span class="highlight">Apple publicly released iOS 18</span>, the newest update of Apple's operating system. Under iOS 18, the Apple Fitness application received a <span class="highlight">new design</span> that includes a feature to pause rings for a specified amount of time. <span class="highlight">This project was made using the previous iOS 17 version of Apple Fitness on the iPhone and the watchOS 10 version on the Apple Watch.</span> Check out <a href="https://support.apple.com/en-ca/guide/iphone/ipha5dddb411/18.0/ios/18.0" target="_blank">Apple's iPhone User Guide for Fitness</a>.</p>
+
+            <p class="break">In 2020, I bought an Apple Watch to help start my fitness journey by using the Apple Fitness application on both my iPhone and Watch. I appreciated the psychological effects of completing goals as "closing" (or completing) rings, and the Watch proved to be a convenient device for tracking my activity.</p>
+            <p>It became increasingly difficult to track and plan <i>rest days</i>— the days without high-intensity activities. Whether I felt lethargic or fatigued, or had too busy of a schedule that day, rest days did not always follow an easily recognizable pattern (e.g. fall on the same day(s) in a week). In addition, Apple Fitness did not provide any screen, modal, or features specifically dedicated to rest and recovery. There is no option to log rest days in Fitness or to pause goals only for the current day. Currently, to maintain any streaks, you either have to manually change the goal(s) to a lower value or complete low-intensity workout(s). Otherwise, you proceed with incomplete rings for the day.</p>
+            <p>As Apple Fitness campaigns for the idea of "fitness for everyone", I strongly believe that incorporating basic information about rest is as important as strengthening the catalog of workouts.</p>
+          </div>
+        </section>
+
+        <section id = "project-goal" class="flex-col">
+          <h2 class="section-title"> 🏆 Goal </h2>
+          <div class="section-body flex-col">
+            <p>My main goal was to successfully integrate a "rest day" feature into Apple Fitness. My secondary goals were to learn the UI of Apple applications and understand the iOS design system. This would ensure that any new feature aligns with Apple's design standards.</p>
+            <p>Overall, I chose to focus on accessibility. I wanted to ensure that I could identify how each type of user can benefit from features that promote both activity and rest. While I never prioritized maintaining streaks, I would be lying if I said that I had not thought about how visually appealing streaks are.</p>
+          </div>
+        </section>
+
+        <section id = "project-development" class="flex-col">
+          <h2 class="section-title"> ⌛ Development </h2>
+          <div class="section-body flex-col">
+            <p>My initial source of inspiration was Oura's <a href="https://support.ouraring.com/hc/en-us/articles/360057065433-Rest-Mode" target="_blank">Rest Mode</a>. However, their feature is very intricate, as Oura is primarily a health-focused service. Understanding that Apple Fitness is designed to be very accessible and have a low barrier of entry, I concluded that a "rest" feature for Fitness would need to be seamless and avoid disrupting the strong user journeys that Fitness already established. Additionally, the feature should communicate that taking a time off from high-intensity activities is as important as achieving fitness milestones.</p>
+
+            <p class="break">Just as we do not work or study for seven days straight, the same principle applies to fitness— we need time to mentally and physically recharge. Information on the importance of rest is readily accessible, for example:</p>
+            <ul>
+              <li><a href="https://www.onepeloton.com/en-CA/blog/what-actually-happens-to-your-body-when-you-take-a-recovery-day/" target="_blank">Peloton: Here's What Really Happens to Your Body During a Recovery Day</a></li>
+              <li><a href="https://www.triathlete.com/training/recovery/your-no-days-off-mentality-is-dumb-pointless-and-holding-you-back/" target="_blank">Triathlete: Your "No Days Off" Mentality is Dumb, Pointless, and Holding You Back</a></li>
+              <li><a href="https://www.canr.msu.edu/news/the_importance_of_rest_and_recovery_for_athletes" target="_blank">Michigan State University: The importance of rest and recovery for athletes</a></li>
+              <li><a href="https://doi.org/10.3390%2Fnu13041330" target="_blank">[Journal article] The Sleep and Recovery Practices of Athletes</a></li>
+            </ul>
+
+            <p class="break">But the question then became: would users want a <i>rest</i> feature?</p>
+
+            <p>For research, I examined the opinions of existing Apple Fitness users regarding their attitudes toward rest, their overall experience with the Fitness application, and what a "rest" feature might look like.</p>
+
+            <ul>
+              <li>Apple Watch and Fitness designed to help with motivation
+                <ul>
+                  <li>Everyday fitness support for average person, casual "lifestyle" customers</li>
+                  <li>Therefore, "rings" is just a simple concept</li>
+                </ul>
+              </li>
+              <li>Apple using rings to promote fitness standards should allow rest option [to promote rest]
+                <ul>
+                  <li>Should be prioritizing quality over quantity</li>
+                </ul>
+              </li>
+              <li>Current state of ring completion:
+                <ul>
+                  <li>Gamification, especially during intial use of Fitness</li>
+                  <li>Becomes habit</li>
+                  <li>Provides visual reminders of progress and metrics</li>
+                  <li>Sufficient motivation to keep going and to keep tracking</li>
+                  <li>Start, maintain streaks</li>
+                  <li>Sharable</li>
+                </ul>
+              </li>
+              <li>Did Apple intend for gamification to take over Fitness?</li>
+              <li>Current state of rest days:
+                <ul>
+                  <li>Become active recovery days
+                    <ul>
+                      <li>Low-intensity activities</li>
+                      <li>Meditation</li>
+                    </ul>
+                  </li>
+                  <li>Increase in inconvenience, hassle
+                    <ul>
+                      <li>Lower or ignore goals [but should not have to "lower" goals since not accurate depiction of fitness journey]</li>
+                      <li>Abandon streaks all together</li>
+                      <li>Disable or ignore notifications temporarily</li>
+                      <li>Lead to losing motivation</li>
+                    </ul>
+                  </li>
+                  <li>Not affected by gamification and psychological stimuli
+                    <ul>
+                      <li>Does not care about incomplete rings</li>
+                      <li>Does not prioritize streaks</li>
+                      <li>Does not give much regard to rings overall</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Use third party applications to track/maintain streaks
+                <ul>
+                  <li>Other services often have a variety of more concise metrics and options</li>
+                </ul>
+              </li>
+              <li>"Rest" feature in Fitness could be unbalanced:
+                <ul>
+                  <li>"Rings" do not appear to be intended for serious training - considers walking and serious exercise to be the same thing</li>
+                  <li>"Rings" more of a "minimal level" of something for very casual use - therefore, rest days not a necessity</li>
+                  <li>Adding "rest" could signal that Fitness/rings is part of serious training and scheduling</li>
+                </ul>
+              </li>
+              <li>Ultimately, closing rings is not of utmost urgency in the grand scheme of things
+                <ul>
+                  <li>Should not let rings dictate behaviour</li>
+                  <li>However, as aforementioned, Apple Watch and Fitness designed to aid with motivation</li>
+                  <li>Therefore, it is unproductive to continually disregard the significance of Fitness' core feature</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p class="break">In conclusion, there is merit in having a "rest" feature. A common type of critique usually relied on dismissive statements. For example, the idea that we should not worry about the completion of rings or that wearables should not dictate our lives. While these points seem obvious, they still offer an important perspective.</p>
+
+            <p>Clearly, no electronic or application should dictate our lives. However, this does not equate to neglecting the importance of the rings. Apple Fitness prominently features the rings, making them an integral component of its identity. Consequently, it is counterproductive to consistently overlook the significance of Fitness' core feature. Apple can afford to implement a rest and recovery component, and I believe that a successful rest feature could utilize and transform the concept of rings.</p>
+              
+            <p>As Fitness endorses an everyday fitness service, an equally seamless rest feature should integrate smoothly within Fitness. There would be three types of users:</p>
+            <ol>
+              <li>Users who are engaged enough to find value in the feature</li>
+              <li>Users who are indifferent</li>
+              <li>Users who lack enough interest to find it valuable</li>
+            </ol>
+
+            <p class="break">Thus, a "rest" feature will do the following:</p>
+            <ul>
+              <li>Not interrupt flow</li>
+              <li>Have easy transition to/from "rest mode"</li>
+              <li>Remain an entirely optional feature</li>
+              <li>Easily distinguishable</li>
+              <li>Has lower priority than:
+                <ul>
+                  <li>"Change Goals"— move, activity and stand</li>
+                  <li>Achievements</li>
+                  <li>Viewing activity data/metrics</li>
+                  <li>Fitness+</li>
+                  <li>Sharing (with others)</li>
+                </ul>
+                <li>Has higher priority than:
+                  <ul>
+                    <li>Application/account settings</li>
+                    <li>Change the units of measurement (e.g. metric to imperial)</li>
+                  </ul>
+                </li>
+              </li>
+            </ul>
+            
+            <p class="break">Following that, I opened a new FigJam file to begin brainstorming the user experience for Fitness. I started by outlining four specifications— also feel free to browse around my FigJam file with the embedded Figma component!</p>
+
+            <figure class="iframe">
+              <iframe class="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/board/mzPAQcR4AGIhbNaUg9VZg4/Apple-Fitness-Brainstorm?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+            </figure>
+
+            <ol>
+              <li>Static vs. dynamic components
+                <ul>
+                  <li>Static components, such as the "rest" button, would remain fixed on the activity screen</li>
+                  <li>Entering "rest" would trigger a state change, thus Fitness functionality would be dynamic</li>
+                  <li>Where is the best place to enable/disable the feature?</li>
+                </ul>
+              </li>
+              <li>Impact vs. ignore goals
+                <ul>
+                  <li>If "rest" impacted the goals, what would "rest goals" look like, and how would they differ from regular goals?</li>
+                  <li>Goals would theoretically be lowered, but by how much? Who determines these adjustments?</li>
+                  <li>If users are responsible, then what is the purpose of the "rest" feature? Would users ever set their goals to zero? How frequently would they adjust "rest goals"?</li>
+                  <li>If "rest goals" are calculated based on health metrics, how do we determine appropriate values? How relevant or useful is this for users? Would the majority of users care about this? Would we have to receive user consent to link to their health data? What if the health data is not up to date?</li>
+                  <li>If "rest" ignored the goals, how does this affect user experience? How would we effectively bypass goals without negatively impacting the application's core function?</li>
+                  <li>Should goals and requirements be relaxed, and if so, to what extent? Would the current day's metrics (i.e. calories, activity minutes, stand duration) continue to be tracked?</li>
+                  <li>What role do the rings play in this scenario?</li>
+                </ul>
+              </li>
+              <li>Notifications
+                <ul>
+                  <li>If notifications (e.g. stand reminders) remain active, what purpose do they serve during "rest"? Would maintaining the same notifications undermine the concept of rest?</li>
+                  <li>If notifications are silenced, would this better align with the rest feature? Should all reminders be turned off to encourage genuine recovery?</li>
+                </ul>
+              </li>
+              <li>Differentiating UI
+                <ul>
+                  <li>Need new UI elements and graphics to distinctly represent rest</li>
+                  <li>Alternative "rings" design? Different colour palette?</li>
+                </ul>
+              </li>
+            </ol>
+            
+            <p class="break">Given these considerations, a different UI and layout was necessary after users enable "rest". Enabling and disabling "rest" signified a change of state of the application. This required, at minimum, new icons and symbols, modifying the existing page designs to accommodate a "rest" button, and new layouts for the screens that follow after interacting with the button.</p>
+            <p>The "rest" feature should still allow users to track their activity, as they may choose to perform active recovery or still want to view their metrics for the day. The main purpose is to allow users the opportunity to pause the requirements of each activity goal. Overall, the feature should not rise to become a prominent focus of Fitness. Instead, it should integrate seamlessly with the rings and the central part of Fitness: tracking and viewing your activity metrics.</p>
+          </div>
+        </section>
+
+        <section id = "project-early-ideation" class="flex-col">
+          <h2 class="section-title"> 📈 Early Ideation </h2>
+          <div class="section-body flex-col">
+            <p>The early design processes involved:</p>
+            <ul>
+              <li>Sourcing Figma community design files of recreations of the Apple design system</li>
+              <li>Mapping out user journeys</li>
+              <li>Defining colour palettes, typography, spacings, layouts</li>
+              <li>Introducing new icons</li>
+            </ul>
+
+            <p class="break">The project now officially uses the term <i>Rest Day</i> to denote the "rest" feature. Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory - but I highly recommend reading them!</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-restday">
+                <div class="panel-items">
+                  <p>The decision to adopt Rest <em>Day</em> over alternatives like <i>Rest Mode</i> was made after functional and user-centered considerations.</p>
+                  <p>Rest Day emphasized the feature's intended use as a designed period of recovery. This aligns with the existing daily framework Fitness users are familiar with, where activity and goals are tracked on a day-by-day basis. It also effectively communicates that rest is an integral part of fitness as opposed to a temporary break or mode change. With the focus on <i>day</i>, it reinforces the idea of taking the full day to recover and recharge.</p>
+                  <p>On the other hand, the term Rest Mode is already used by Oura Ring. Under Apple Fitness, <em>Mode</em> implied more of an informal transient state as opposed to being a significant part of the overall fitness routine.</p>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-restday"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p>I used the <a href="https://www.figma.com/community/file/1374213957210316717/apple-fitness-ios" target="_blank">Apple Fitness · iOS</a> Figma design file by Kevin Lanceplaine as my starting point since it was an accurate recreation of the iOS 17 layout of Fitness' main page using the Apple design system. This main application page will be referenced as the Summary tab. In combination with the precisely named variants and frames, I was able to start creating and assigning colour variables within my own design file.</p>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-community-fitness-example.png" alt="A screenshot of Lanceplaine's design of the Summary tab of Apple Fitness.">
+              </div>
+              <figcaption>Summary tab of Apple Fitness; recreated in Figma with appropriate names, components and frames, source: <a href="https://www.figma.com/community/file/1374213957210316717/apple-fitness-ios" target="_blank">Lanceplaine's community Figma design file</a></figcaption>
+            </figure>
+
+            <p>For additional references, I utilized <a href="https://mobbin.com/apps/apple-fitness-ios-f8b3622e-9edd-41af-b49e-41f6528b1da3/773089c0-2aa4-4ea7-bd93-9078664d05fa/screens" target="_blank">Apple Fitness screenshots</a> from <i>Mobbin</i> to gather screenshots of other screens such as onboarding and account settings. Leveraging these, I was able to make mockups of a new Rest Day UI.</p>
+
+            <figure class="media restrict">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-main-activity.png" alt="Side by side view of Lanceplaine's recreation, and a screenshot of the activity screen taken from Mobbin.">
+              </div>
+              <figcaption>Left: Lanceplaine's recreation of the Summary tab<br>Right: Activity screen reached by tapping the Activity rings on the Summary tab, image source: <a href="https://marvelcinematicuniverse.fandom.com/wiki/Power_Broker_(episode)/Gallery?file=GRC_Reset_Restore_Rebuild.png" target="_blank">Mobbin</a></figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/sketch-paper-1.JPG" alt="An image of my sketches on paper">
+              </div>
+              <figcaption>Sketches of new UIs following the layouts of various existing screens</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/sketch-paper-2.JPG" alt="Another image of my sketches on paper">
+              </div>
+              <figcaption>Sketches of custom graphics, icons, and other layouts</figcaption>
+            </figure>
+
+            <p>Back on Figma, I built with Lanceplaine's frames to create different UIs for the Summary tab and Activity pages when Rest Day is enabled.</p>
+
+            <p>I recreated various components by building smaller elements (i.e. text, subtitle, label, icon, etc.) and constraining them within their own groups (also known as <strong>frames</strong> in Figma). They were size-constrained such that they aligned with the existing Fitness layouts.</p>
+
+            <p>On the Summary tab, the rest version of the Activity displaying the current day's progress will hide the goal requirements from the three main fitness metrics. By removing the fractions, it decluttered the interface and reduced the emphasis of goal completion.</p>
+
+            <p>Additionally, I integrated a Rest Day button within the Activity page under the existing <i>Change Goals</i> button. The Summary tab will have a fixed indicator whenever Rest Day is enabled.</p>
+
+            <p class="break">To further differentiate Rest Day, I incorporated a new:</p>
+            <ul>
+              <li>Unique icon/symbol</li>
+            </ul>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-icons">
+                <div class="panel-items">
+                  <p>The new icon featured a symbol representing rest attached to the generic green Fitness ring. Initially, I compiled a list of relevant symbols, including a bed, moon, pause icon, and sleep/snore (zZ). I eliminated the bed and moon as options to avoid any association with the existing iOS Sleep Focus Status. Ultimately, I chose the sleep/snore symbol due to its compact size and because it better conveyed that rest in Fitness would not exclusively mean "pause all activities".</p>
+
+                  <figure class="media">
+                    <div class="img-container">
+                      <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-icons.png" alt="A screenshot of three icons I made in Figma">
+                    </div>
+                    <figcaption>A screenshot of the icons component with three variants<br>Left: Large rest icon<br>Middle: Small rest icon<br>Right: Small recreation of the default/original Fitness rings icon</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-icons"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <ul>
+              <li>Colour palette for the rings (default/original colour in hex → new Rest Day colour in hex)
+                <ul>
+                  <li><span class="fitness move">#FA114F</span> → <span class="fitness move-rest">#FF3288</span></li>
+                  <li><span class="fitness exercise">#A6FF00</span> → <span class="fitness exercise-rest">#9EEF05</span></li>
+                  <li><span class="fitness stand">#00FFF6</span> → <span class="fitness stand-rest">#3EDED8</span></li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-rest-rings">
+                <div class="panel-items">
+                  <p>I spent time ensuring I understood the psychology behind the Fitness rings.</p>
+
+                  <p>As we know, Fitness assists in motivation for fitness. At the start of each day, the rings reset to an empty and unfilled state. When Rest Day is enabled, the rings will appear in a complete and filled state but with an alternate colour palette. This design choice better conveyed the concept of "rest", such that it avoided the visual process of "filling" the rings given that completing workouts and achieving goals are not of upmost priority.</p>
+
+                  <p>While searching for colour inspiration, I came across a <a href="https://www.reddit.com/r/AppleWatch/comments/1764wyl/simple_rest_day_concept/" target="_blank">Reddit post</a> by user <i>ADAMBUNKER</i>, which featured a mockup of a "Rest Day" concept in Fitness. Similarly, they introduced a new colour palette to differentiate the rings (default/original colour in hex → new Rest Day colour in hex).</p>
+                  <ul>
+                    <li><span class="fitness move">#FA114F</span> → <span class="fitness move-rest2">#5AE6B5</span></li>
+                  <li><span class="fitness exercise">#A6FF00</span> → <span class="fitness exercise-rest2">#A167FB</span></li>
+                  <li><span class="fitness stand">#00FFF6</span> → <span class="fitness stand-rest2">#FF5B66</span></li>
+                  </ul>
+
+                  <p>I found the concept compelling and proceeded to recreate and test their palette. Furthermore, I experimented by exchanging some colours with another. However, I soon found that each colour in the current version of the Fitness application already corresponds to a specific metric.</p>
+
+                  <figure class="media restrict">
+                    <div class="img-container">
+                      <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/fitness-trends.PNG" alt="A screenshot of the Trends page in Fitness">
+                    </div>
+                    
+                    <figcaption>Trends page in Fitness
+                      <ul>
+                        <li>Move = red</li>
+                        <li>Exercise = yellow-green</li>
+                        <li>Stand = cyan</li>
+                        <li>Distance = blue</li>
+                        <li>Stand Minutes = yellow</li>
+                        <li>Cardio Fitness = orange</li>
+                        <li>Walking Pace = purple</li>
+                        <li>Running Page = pink</li>
+                      </ul>
+                    </figcaption>
+                  </figure>
+
+                  <p>To avoid confusion and association, I decided against using a completely new colour palette for the Rest Day rings. Not only was there already a meaning attached to every colour, if a palette similar to <i>ADAMBUNKER</i>'s mockup were implemented, additional explanations would be required for the different colours. Therefore, I opted instead to use a different shade of the original colour for each ring. The Rest Day rings altogether have a lower opacity (i.e. 80%) such that it resembles an "in-between state" between the default (i.e. when rest is not enabled) filled and unfilled rings.</p>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-rest-rings"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">Next, I created the fixed indicator that appears on the Summary tab whenever Rest Day is enabled. It is a small, banner-like element positioned above the Activity card/component. After assembling with the appropriate colours and font and text settings, I had successfully built the new Summary tab and Activity pages!</p>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-main-activity2.png" alt="Side by side view of the main and activity pages under rest mode.">
+              </div>
+              <figcaption>Left: Summary tab when Rest Day is enabled (featuring the Rest Day activity card)<br>Middle: Default Activity screen with the new Rest Day button added<br>Right: Activity screen when Rest Day is enabled</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-testing" class="flex-col">
+          <h2 class="section-title"> 🔬 Testing </h2>
+          <div class="section-body flex-col">
+            <p><a href="https://www.apple.com/ca/watch/why-apple-watch/" target="_blank">Why Apple Watch</a>? It is "the ultimate device for a healthy life."</p>
+            <p>Not sponsored— rather, rigorous testing was done for both the iPhone and Apple Watch.</p>
+            <p>Additionally, this meant researching ways to modify existing Fitness screens on the Apple Watch and assessing whether additional buttons, icons, or other UI elements would be feasible for the already compact Watch screen size.</p>
+
+            <p class="break">The first question I posed was: would customers purchase an Apple Watch before an iPhone? Though it seems very trivial, I attempted to start at the most basic concern of whether it was possible to include "rest" on the Fitness application on the Apple Watch. For example, if the answer was yes, then testing would differ compared to if the answer was no because of the differences between the iPhone and Apple Watch versions of the Fitness application.</p>
+
+            <p>The next concern was the overall importance of the Fitness application on the Apple Watch. This was an attempt at addressing the integration of a Rest Day toggle into areas such as the Control Center or Watch Faces.</p>
+            
+            <p class="break">After several adjustments, testing results showed the need for more informative elements within the application.</p>
+
+            <p>Starting with the mobile application, I subsequently sketched one new onboarding screen that introduces and explains the Rest Day feature. It mirrored the layout of the first <i>Welcome to Fitness</i> onboarding screen and concisely described the various functionalities.</p>
+            <p>As well, I added one new menu item in the account settings. Similarly to the Activity page, it was placed below <i>Change Goals</i>.</p>
+            <p>Currently on the Activity page, users can view a calendar overview where each date displays coloured rings representing the corresponding date's fitness progress. To accommodate Rest Days, the rings will utilize the new colour palette. Despite the similarity in color schemes, the calendar view remains visually accessible. The colours are distinct enough to be distinguishable even for users with colour vision deficiencies.</p>
+
+            <figure class="media restrict">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/palette-visibility-test.png" alt="A screenshot of a colours simulation using the original colours and rest colours.">
+              </div>
+              <figcaption>Simulation of what colours would look like to viewers who are colourblind<br>For each colour pair, top = default/original ring colour, bottom = new Rest Day colour<br>Source: <a href="https://davidmathlogic.com/colorblind/#%23FA114F-%23FF3288-%23A6FF00-%239EEF05-%2300FFF6-%233EDED8" target="_blank">Coloring for Colorblindness by David Nichols</a><br>
+              <ul>
+                <li>True = "true" colour</li>
+                <li><i>Prot.</i> = person with <b>prot</b>anopia</li>
+                <li><i>Deut.</i> = person with <b>deut</b>eranopia</li>
+                <li><i>Trit.</i> = person with <b>trit</b>anopia</li>
+              </ul>
+            </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-final-designs" class="flex-col">
+          <h2 class="section-title"> ⭐ Final Designs </h2>
+          <div class="section-body flex-col">
+            <p>The previous testing phase allowed me to confidently move forward with making final design iterations.</p>
+
+            <p>On Figma, I created a confirmation screen that will appear each time after the Rest Day button is pressed. By integrating this screen at multiple touchpoints, it keeps users informed about Rest Day's functionality while also serving as a confirmation dialog prior to any application state transitions. I kept the design minimal and condensed the main points from the onboarding screen into a single statement. After reviews and adjustments, the statement that best described Rest Day in a concise manner became: <i>Pause goal requirements and mute reminders for today while maintaining your streaks</i>.</p>
+            <p class="break">I utilized my personal Apple Watch to capture screenshots of all relevant screens. Subsequently, I built the Rest Day versions using the new colour palette. In addition, I streamlined the data displayed by retaining only the running total of each ring's metric (i.e. similar to the new rest UI of the Summary tab on the iPhone). This design decision decluttered the interface and reduced the importance of goal completion, further reducing cognitive load.</p>
+            <p>To further maintain design consistency on the Apple Watch, I added a fixed Rest Day banner-like indicator on the page displaying the activities recorded for the current day. Positioned at the bottom of the screen, it does not obstruct the primary focus: the list of activities.</p>
+            <p>After conducting some tests, rest days had low priority on the Apple Watch. A Rest Day button was placed under the <i>Change Goals</i> button on the Weekly Summary screen. The visual indicators for Rest Day are the rings on Watch Faces and the main application screen, both utilizing the new colour palette. Additionally, the aforementioned confirmation screen was integrated into the Watch after the same touchpoints, with a slight design alteration to suit Watch screens.</p>
+            <p>Ultimately, the most efficient method to enable and disable Rest Day is through the iPhone Fitness application. A short scroll down on the mobile activity page is notably faster than scrolling all the way down the Weekly Summary page by touch or the Digital Crown on the Apple Watch.</p>
+            <p class="break">To ensure returning users are properly introduced to Rest Days, I designed a dedicated "What's New in Fitness" screen for the mobile application. This screen highlights the new Rest Day feature and its functionalities. Hence, new Fitness users are introduced via the onboarding process with the new Rest Day onboarding screen. To build the "What's New in Fitness" design, I referenced existing Apple applications <i>What's New in...</i> designs for inspiration and consistency. I noticed that they often followed the same format (i.e. primary title at the top, a few secondary headings with informative bullet points, and a <i>Continue</i> button at the bottom), and familiarized with the language and sentence structure used.</p>
+
+            <p>All together, I had successfully built all important screens of the Apple Fitness application on Figma in both iPhone and Apple Watch frames. Please take a look at the following images, and feel free to browse around with the embedded Figma component!</p>
+
+            <figure class="iframe">
+              <iframe class="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/design/FkXp71qXMje7vXeGUSbtTh/Apple-Fitness---Rest%2FRecovery-Day-Feature?node-id=281-3062&embed-host=share" allowfullscreen></iframe>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-onboarding.png" alt="An image of the onboarding frames in Figma">
+              </div>
+              <figcaption>Entire onboarding process featuring the new Rest Day screen at the end<br>Image source: <a href="https://marvelcinematicuniverse.fandom.com/wiki/Power_Broker_(episode)/Gallery?file=GRC_Reset_Restore_Rebuild.png" target="_blank">Mobbin</a></figcaption>
+            </figure>
+
+            <figure class="media restrict">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-onboarding-5.png" alt="An image of the rest onboarding frame">
+              </div>
+              <figcaption>Onboarding: Rest and Recovery</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-home.png" alt="An image of the different application homepages in Figma">
+              </div>
+              <figcaption>Left column: Skeletal view of the Summary tab, and account settings with new item added<br>Right column: Skeletal view of the Summary tab and account settings when Rest Day is enabled</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-activity.png" alt="An image of 7 different frames in Figma">
+              </div>
+              <figcaption>
+                Top row: default state of Fitness application; Rest Day is not enabled
+                <ul>
+                  <li>Left: Activity screen for the current day</li>
+                  <li>Middle: Activity screen when scrolled down </li>
+                  <li>Right: Confirmation screen after Rest Day button is pressed</li>
+                </ul>
+                Middle row: Rest Day is enabled
+                <ul>
+                  <li>Left: Activity screen for the current day</li>
+                  <li>Middle: Activity screen when scrolled down </li>
+                  <li>Right: Confirmation screen after Rest Day button is pressed</li>
+                </ul>
+                Bottom row: Example of the calendar overview with both default and Rest Day rings
+              </figcaption>
+            </figure>
+
+            <figure class="media restrict">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-rest-confirmation.png" alt="An image of the confirmation screen">
+              </div>
+              <figcaption>Confirmation screen when enabling Rest Day</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-others.png" alt="An image of the What's New in Fitness and the Fitness+ frames in Figma">
+              </div>
+              <figcaption>Left: "What's New in Fitness" screen<br>Right: Skeletal view of the Fitness+ tab featuring a new collection of Low Intensity Workouts with 18 episodes</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-home-watch.png" alt="An image of the different Apple Watch application homepages in Figma">
+              </div>
+              <figcaption>Left column: Screenshots of the main Summary pages on the Apple Watch<br>Right column: Recreation of the pages after Rest Day is enabled</figcaption>
+            </figure>
+
+            <figure class="media">
+              <div class="img-container">
+                <img class = "portfolio-entry-img" src="../images/portfolio/apple-fitness-rest/figma-final-summary-watch.png" alt="An image of the bottom of the Weekly Summary page on the Apple Watch Fitness application">
+              </div>
+              <figcaption>
+                Top row: Weekly Summary screen
+                <ul>
+                  <li>Left: Screenshot of the current Weekly Summary screen scrolled to the bottom</li>
+                  <li>Middle: Recreation of the previous screenshot with the Rest Day button</li>
+                  <li>Right: After Rest Day is enabled</li>
+                </ul>
+                Bottom row: Confirmation screen after the Rest Day button is pressed</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-learned" class="flex-col">
+          <h2 class="section-title"> ❓ What I learned </h2>
+          <div class="section-body flex-col">
+            <p>Overall, I learned several valuable lessons that shaped both the design process and my approach to problem-solving.</p>
+
+            <p>I deepened my understanding of the Apple ecosystem and its design system, particularly its guidelines, interface patterns, and the importance of maintaining consistency across devices.</p>
+
+            <p>In addition, I furthered my skills in crafting effective research questions in terms of asking targeted questions. The responses and feedback led me to asking follow-up questions which allowed me to ultimately make better design decisions.</p>
+
+            <p>Another takeaway was understanding the different types of users, and the importance of creating broader appeal. Given the large market for Apple products, I learned how to better cater to both niche and general users. This coincided with the ability to identify user pain points. I improved my empathy skills which helped me prioritize and address them in the design process.</p>
+          </div>
+        </section>
+
+        <section id = "project-next" class="flex-col">
+          <h2 class="section-title"> 💭 Next steps </h2>
+          <div class="section-body flex-col">
+            <p>I would love to see the Rest Day feature come to fruition, but I am not as proficient in <code>Swift</code> (Apple's programming language). As well, it would be nice to see Apple implement a feature to pause rings for the current day— just to give users the oppportunity to. Because right now, the option of <i>lowering the goals then change it again tomorrow</i> is very inconvenient.</p>
+            <p>I would also love to get my hands dirtier in the testing phase. Personally, I prefer having a functional prototype outside of Figma as it allows for more freedom in coding the functionalities. It would allow me to better understand any hardware or software restrictions.</p>
+            <p>Furthermore, I would like to conduct more focus group testing. This could allow me to monitor user engagement, study pre-launch metrics and simulate post-launch insights.</p>
+          </div>
+        </section>
+      </main>
+      
+      <section class = "extra">
+        <p>Last modified: November 24, 2024</p>
+      </section>
+    </div>
+
+    <footer class = "footer">
+      <div class="footer-sitemap">
+        <nav class = "footer-primary">
+          <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../portfolio.html">portfolio</a></li>
+            <li><a href="../cv.html">cv</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-secondary">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank" class="btn-icon"> <!-- linkedin -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </div>
+              /nancyhao
+            </a></li>
+            <li><a href="https://www.figma.com/@nenceh" target="_blank" class="btn-icon"> <!-- figma -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+            <li><a href="https://www.youtube.com/@nenceh" target="_blank" class="btn-icon"> <!-- youtube -->
+              <div class="btn-icon-padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

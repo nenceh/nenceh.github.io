@@ -1,6 +1,8 @@
 // const toggleMenuOpen = () => document.body.classList.toggle("open")
 
 $(document).ready(function(){
+    console.log(scrollY + " : " + $(window).width() + " x " + $(window).height())
+
     $(window).on("load resize scroll", function (){
         if ($(window).width() < 1103 && scrollY > 600){
             $('aside.back-to-top').css({'visibility':'visible', 'opacity':1})
@@ -8,7 +10,9 @@ $(document).ready(function(){
             $('aside.back-to-top').css({'visibility':'hidden', 'opacity':0})
         }
 
-        if(scrollY > $(".body-content").height()){
+        console.log((scrollY + $('.topnav-container').height()) + " : " + $(".body-content main").height())
+
+        if(scrollY + $('.topnav-container').height() > $(".body-content main").height()){
             $('section#find-me').css({'visibility':'hidden', 'opacity':0})
         }else{
             $('section#find-me').css({'visibility':'visible', 'opacity':1})
@@ -39,7 +43,9 @@ $(document).ready(function(){
         var inPageNav = document.querySelector("nav.toc")
         var inPageLinks = document.querySelectorAll(".in-page-link")
         var sections = document.querySelectorAll("main > section")
-        var currentSection = inPageLinks[0].getAttribute("href").substring(1)
+        var currentSection
+
+        if(inPageLinks.length > 0) currentSection = inPageLinks[0].getAttribute("href").substring(1)
 
         var offset = 160
         sections.forEach((section)=>{
