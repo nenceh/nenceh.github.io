@@ -67,7 +67,6 @@
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -92,10 +91,6 @@ html {
   border-radius: 10px 0 0 10px;
 }
 #find-me ul li svg {
-  margin: 12px;
-  padding: 2px;
-  height: 24px;
-  width: 24px;
   fill: #FFF;
 }
 #find-me ul li:first-child {
@@ -109,9 +104,6 @@ html {
   height: auto;
 }
 
-body {
-  overflow-x: hidden;
-}
 body .page-banner {
   background-color: #172427;
   color: #FFF;
@@ -179,6 +171,13 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
 @media screen and (min-width: 892px) {
   #find-me {
     bottom: 140px;
+  }
+  #find-me a {
+    padding: 12px;
+  }
+  #find-me a svg {
+    height: 24px;
+    width: 24px;
   }
   body {
     margin: 40px auto 0;
@@ -642,6 +641,13 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   #find-me {
     bottom: 164px;
   }
+  #find-me a {
+    padding: 9px;
+  }
+  #find-me a svg {
+    height: 18px;
+    width: 18px;
+  }
   body {
     margin: 40px auto 0;
   }
@@ -1012,6 +1018,17 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
 }
 @media screen and (max-width: 479px) {
+  #find-me {
+    bottom: 124px;
+    right: 1px;
+  }
+  #find-me a {
+    padding: 8px;
+  }
+  #find-me a svg {
+    height: 16px;
+    width: 16px;
+  }
   .topnav-container {
     padding: 0 24px;
   }

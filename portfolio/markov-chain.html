@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Random Sentence Generator</title>       
-      <link rel="stylesheet" href="../css/styles.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script type="text/javascript" src="../js/global.js"></script>
-      <script>
-        $(document).ready(function(){
-          $("p.early-regex-result").text($("input#sample").attr('placeholder').toLowerCase().split(/(?<=["(),.!])[\s]*|[\s]*(?=[ .,:;!?"()])+[\s]*/))
-        })
-      </script>
-      <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence Generator</title>       
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- ***** Google Hosted Libraries: https://developers.google.com/speed/libraries/?csw=1 ***** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+    <script type="text/javascript" src="../js/global.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("p.early-regex-result").text($("input#sample").attr('placeholder').toLowerCase().split(/(?<=["(),.!])[\s]*|[\s]*(?=[ .,:;!?"()])+[\s]*/))
+      })
+    </script>
+    <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
   </head>
     
   <header class = "topnav-container">
-    <div class = "topnav">
-      <a id = name href="../index.html">nancy hao</a>
+    <nav class = "topnav">
+      <a id = "index" href="../index.html">nancy hao</a>
       <ul>
-        <li> <a href="../portfolio.html">portfolio</a>
-        <li> <a href="../cv.html">cv</a>
+        <li><a id="portfolio" href="../portfolio.html">portfolio</a></li>
+        <li><a id="cv" href="../cv.html">cv</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
     
   <section id = "find-me">
     <ul class="flex-col">  
       <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
         <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
-      </a>
+      </a></li>
   
       <li><a href="https://www.figma.com/@nenceh" target="_blank">
         <svg style="enable-background:new 0 0 3000 3000;" version="1.1" viewBox="0 0 3000 3000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
@@ -39,7 +42,7 @@
           .st3{fill:#FF7262;}
           .st4{fill:#1ABCFE;}
         </style><path class="st0" d="M1083.333374,2750c230,0,416.666626-186.666748,416.666626-416.666748v-416.666626h-416.666626  c-230.000061,0-416.666687,186.666626-416.666687,416.666626S853.333313,2750,1083.333374,2750z" id="path0_fill"/><path class="st1" d="M666.666687,1500c0-230,186.666626-416.666748,416.666687-416.666748H1500v833.333374  h-416.666626C853.333313,1916.666626,666.666687,1730,666.666687,1500z" id="path1_fill"/><path class="st2" d="M666.666687,666.666626C666.666687,436.666656,853.333313,250,1083.333374,250H1500  v833.333252h-416.666626C853.333313,1083.333252,666.666687,896.666626,666.666687,666.666626z" id="path1_fill_1_"/><path class="st3" d="M1500,250h416.666626c230.000122,0,416.666626,186.666656,416.666626,416.666626  s-186.666504,416.666626-416.666626,416.666626H1500V250z" id="path2_fill"/><path class="st4" d="M2333.333252,1500c0,230-186.666504,416.666626-416.666626,416.666626S1500,1730,1500,1500  s186.666626-416.666748,416.666626-416.666748S2333.333252,1270,2333.333252,1500z" id="path3_fill"/></svg>
-      </a>
+      </a></li>
     </ul>
   </section>
 
@@ -91,20 +94,20 @@
       <nav role="navigation" class="toc">
         <ol>
           <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
-          <li><a href="#project-introduction" class="in-page-link"> Introduction </a>
-          <li><a href="#project-goal" class="in-page-link"> Project Goals </a>
-          <li><a href="#project-development" class="in-page-link"> Development </a>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a></li>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a></li>
+          <li><a href="#project-development" class="in-page-link"> Development </a></li>
           <li><a href="#project-early-ideation" class="in-page-link"> Early Ideation </a>
-          <li><a href="#project-testing" class="in-page-link"> Testing </a>
-          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a>
-          <li><a href="#project-learned" class="in-page-link"> What I Learned </a>
-          <li><a href="#project-next" class="in-page-link"> Next Steps </a>        
+          <li><a href="#project-testing" class="in-page-link"> Testing </a></li>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a></li>
+          <li><a href="#project-learned" class="in-page-link"> What I Learned </a></li>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a></li>
         </ol>
       </nav>
 
       <main class="flex-col">
         <section id = "project-introduction" class="flex-col">
-          <h2 class="section-title"> 🚀 Intro </h2>
+          <h2 class="section-title">&#x1F680; Intro</h2>
           <div class="section-body flex-col">
             <p>I made this because I was bored. Actually, that's not the full truth. I was looking to build something new and fun because I was feeling some burnout.</p>
             <p>I was inspired by the YouTube video <a href="https://youtu.be/VzsSLpAgNcQ" target="_blank">These Fake Animated Stories Have Gone Too Far</a> by Jarvis Johnson. In his commentary video, Johnson explored the eye-grabbing and "clickbait" titles of the videos made by certain animated story channels. As well, he made a <a href="https://animatedstorytitles.com/" target="_blank">website</a> where you can generate a random animated story title. He detailed how he utilized a language-learning model called the Markov chain.</p>
@@ -112,7 +115,7 @@
         </section>
 
         <section id = "project-goal" class="flex-col">
-          <h2 class="section-title"> 🏆 Goal </h2>
+          <h2 class="section-title">&#x1F3C6; Goals</h2>
           <div class="section-body flex-col">
             <p>Initially, my goal was to learn about the Markov chain model because it felt like the closest artificial intelligence I can construct by myself without having access to tons of data.</p>
             <p>After understanding how the stochastic model worked, I then changed my goal to replicate Johnson's website by making a sentence-generator site of my own.</p>
@@ -120,7 +123,7 @@
         </section>
 
         <section id = "project-development" class="flex-col">
-          <h2 class="section-title"> ⌛ Development </h2>
+          <h2 class="section-title">&#x23F3; Development</h2>
           <div class="section-body flex-col">
             <p>The Markov chain is a probabilistic model that transitions through a sequence of events based on defined probabilistic rules. The probability of a future event is determined only by the current event, not on past events. Hence, the future is independent of all past events which is why it appears random. </p>
             <p>For simplicity, I will refer to "Markov chain" as <code>Markov</code>. Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory - but I highly recommend reading them! For example, let's briefly go over how <code>Markov</code> works in practice. Consider the sentence: <code>the quick brown fox jumps over the lazy dog</code></p>
@@ -154,7 +157,7 @@
         </section>
 
         <section id = "project-early-ideation" class="flex-col">
-          <h2 class="section-title"> 📈 Early Ideation </h2>
+          <h2 class="section-title">&#x1F4C8; Early Ideation</h2>
           <div class="section-body flex-col">
             <p>The natural next step was to start migrating to a web-development-friendly language. After translating to JavaScript and some <code>console.log</code> testing, I achieved a small web demo! <i>Wait, you're telling me I can use anything as training data as long it's stored in a text file?</i></p>
             <p class="break">My current favourite artist is Taylor Swift— someone who needs no further introduction. To add my own twist to this project, I saved all of her lyrics from her albums <i>reputation</i> and onwards. Credits to Reddit user <a href="https://www.reddit.com/r/TaylorSwift/comments/16eo7va/comment/k004j4n/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" target="_blank">mountaingoatcheese</a> for capturing all the lyrics on publicly accessible Google Docs. After tinkering around with <code>regex</code>, the generater could now handle punctuation marks and brackets.</p>
@@ -199,7 +202,7 @@
         </section>
 
         <section id = "project-testing" class="flex-col">
-          <h2 class="section-title"> 🔬 Testing </h2>
+          <h2 class="section-title">&#x1F52C; Testing</h2>
           <div class="section-body flex-col">
             <p>Testing primarily involved ensuring good performance (i.e. consistently generating results). Sometimes, results contained an incomplete set of brackets or quotation marks. And so, I added an extra step at the end to close or complete these leftover symbols.</p>
             <p class="break">About half the time, the generator produced results that made some sense and followed basic English grammar syntax. It was good enough, but there was massive room for improvement. And besides, I was not achieving consistent results like Johnson's site.</p>
@@ -208,7 +211,7 @@
         </section>
 
         <section id = "project-final-designs" class="flex-col">
-          <h2 class="section-title"> ⭐ Final Designs </h2>
+          <h2 class="section-title">&#x2B50; Final Designs</h2>
           <div class="section-body flex-col">
             <p>Credits to this <a href="https://dev.to/bespoyasov/text-generation-with-markov-chains-in-javascript-i38" target="_blank">article</a> by Alex Bespoyasov for helping me understand what "tokens" are. Essentially, what I built so far was utilizing one token: an event corresponded to one valid <code>String</code>. By increasing the number of tokens, this would help provide more context for the chain generator.</p>
 
@@ -293,7 +296,7 @@
         </section>
 
         <section id = "project-learned" class="flex-col">
-          <h2 class="section-title"> ❓ What I learned </h2>
+          <h2 class="section-title">&#x2753; What I Learned</h2>
           <div class="section-body flex-col">
             <p>I achieved my initial goal of learning about <code>Markov</code>!</p>
             <p>Additionally, I learned about <code>regex lookbehind</code> and <code>lookahead</code>, and practiced more with <code>JavaScript</code> and <code>JQuery</code>. These were extremely helpful when extending the functionalities of my generator.</p>
@@ -315,7 +318,7 @@
         </section>
 
         <section id = "project-next" class="flex-col">
-          <h2 class="section-title"> 💭 Next steps </h2>
+          <h2 class="section-title">&#x1F4AD; Next Steps</h2>
           <div class="section-body flex-col">
             <p>This version is the base implementation I am satisfied and happy with!</p>
             <p>Looking ahead (ha!), I would like to incorporate more English grammar rules and additional text syntax, like retaining full capitalization and managing any dots/periods for acronyms and abbreviations.</p>

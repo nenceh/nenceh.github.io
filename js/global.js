@@ -1,8 +1,4 @@
-// const toggleMenuOpen = () => document.body.classList.toggle("open")
-
 $(document).ready(function(){
-    console.log(scrollY + " : " + $(window).width() + " x " + $(window).height())
-
     $(window).on("load resize scroll", function (){
         if ($(window).width() < 1103 && scrollY > 600){
             $('aside.back-to-top').css({'visibility':'visible', 'opacity':1})
@@ -10,9 +6,7 @@ $(document).ready(function(){
             $('aside.back-to-top').css({'visibility':'hidden', 'opacity':0})
         }
 
-        console.log((scrollY + $('.topnav-container').height()) + " : " + $(".body-content main").height())
-
-        if(scrollY + $('.topnav-container').height() > $(".body-content main").height()){
+        if((scrollY + $('.topnav-container').height() + $('.page-banner-container').height() > $(".body-content main").height()) || ($(window).width() < 480 && scrollY > ($('.topnav-container').height() + $('.page-banner-container').height() + $('.info-container').height()))){
             $('section#find-me').css({'visibility':'hidden', 'opacity':0})
         }else{
             $('section#find-me').css({'visibility':'visible', 'opacity':1})
