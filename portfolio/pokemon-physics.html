@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics of Pokémon World Building</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- ***** Google Hosted Libraries: https://developers.google.com/speed/libraries/?csw=1 ***** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+    <script type="text/javascript" src="../js/global.js"></script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+  </head>
+
+  <header class = "topnav-container">
+    <nav class = "topnav">
+      <a id = "index" href="../index.html">nancy hao</a>
+      <ul>
+        <li><a id="portfolio" href="../portfolio.html">portfolio</a></li>
+        <li><a id="cv" href="../cv.html">cv</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <section id = "find-me">
+    <ul class="flex-col">    
+      <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
+        <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+      </a></li>
+  
+      <li><a href="https://www.figma.com/@nenceh" target="_blank">
+        <svg style="enable-background:new 0 0 3000 3000;" version="1.1" viewBox="0 0 3000 3000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+          .st0{fill:#0ACF83;}
+          .st1{fill:#A259FF;}
+          .st2{fill:#F24E1E;}
+          .st3{fill:#FF7262;}
+          .st4{fill:#1ABCFE;}
+        </style><path class="st0" d="M1083.333374,2750c230,0,416.666626-186.666748,416.666626-416.666748v-416.666626h-416.666626  c-230.000061,0-416.666687,186.666626-416.666687,416.666626S853.333313,2750,1083.333374,2750z" id="path0_fill"/><path class="st1" d="M666.666687,1500c0-230,186.666626-416.666748,416.666687-416.666748H1500v833.333374  h-416.666626C853.333313,1916.666626,666.666687,1730,666.666687,1500z" id="path1_fill"/><path class="st2" d="M666.666687,666.666626C666.666687,436.666656,853.333313,250,1083.333374,250H1500  v833.333252h-416.666626C853.333313,1083.333252,666.666687,896.666626,666.666687,666.666626z" id="path1_fill_1_"/><path class="st3" d="M1500,250h416.666626c230.000122,0,416.666626,186.666656,416.666626,416.666626  s-186.666504,416.666626-416.666626,416.666626H1500V250z" id="path2_fill"/><path class="st4" d="M2333.333252,1500c0,230-186.666504,416.666626-416.666626,416.666626S1500,1730,1500,1500  s186.666626-416.666748,416.666626-416.666748S2333.333252,1270,2333.333252,1500z" id="path3_fill"/></svg>
+      </a></li>
+    </ul>
+  </section>
+
+  <aside class="back-to-top">
+    <button id="to-top" class="flex-col">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 3.5a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Zm.47 9.47a.749.749 0 1 0 1.06 1.06l4.97-4.969V21.25a.75.75 0 0 0 1.5 0V9.061l4.97 4.969a.749.749 0 1 0 1.06-1.06l-6.25-6.25a.749.749 0 0 0-1.06 0l-6.25 6.25Z"></path></svg>
+      Top
+    </button>
+  </aside>
+
+  <body>
+    <section class = "page-banner-container">
+        <div class = "page-banner flex-col">
+          <h1>The Physics of Pokémon World Building</h1>
+          <ul class="breadcrumbs">
+            <li>portfolio</li>
+            <li>The Physics of Pokémon World Building</li>
+          </ul>
+        </div>
+    </section>
+    
+    <section class = "info-container flex-col">
+      <div id="project-info">
+        <div class="project-info-item flex-col">
+          <p class="subtitle">TIMELINE</p>
+          <p>Jan'25</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">PLATFORM</p>
+          <p>Python<p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">ROLE</p>
+          <p>Developer</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">DELIVERABLE</p>
+          <a href="https://docs.google.com/spreadsheets/d/1Pf5Kix1d2JVRxMPypSBBFWyDGX_uPrvT1lu2MthW2OU/edit?usp=sharing" target="_blank">
+            <p class = "link"><i>📎</i> Google Sheets</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class = "body-content">    
+      <nav role="navigation" class="toc">
+        <ol>
+          <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a></li>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a></li>
+          <li><a href="#project-development" class="in-page-link"> Development </a></li>
+          <li><a href="#project-early-ideation" class="in-page-link"> Early Ideation </a>
+          <li><a href="#project-testing" class="in-page-link"> Testing </a></li>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a></li>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a></li>
+        </ol>
+      </nav>
+
+      <main class="flex-col">
+        <section id = "project-introduction" class="flex-col">
+          <h2 class="section-title">&#x1F680; Intro</h2>
+          <div class="section-body flex-col">
+            <p>Imagine having lovable animals serve as a major and viable method of transportation.</p>
+            <p>If you did not already know, Pokémon is one of the, if not the, highest-grossing media franchises. In this fictional universe, humans coexist with living creatures known as Pokémon. Across various animated series, movies and video games, humans may use the elemental powers of Pokémon to fly between cities and towns, and travel across bodies of water.</p>
+            <p>While a general audience of any media adopts a certain level of suspension of disbelief, I find it fun to closely examine how realistic or unrealistic the world-building is. In this project, I analyzes over 1000 Pokémon to determine whether they could reasonably serve as our personal aircraft or surfboat.</p>
+
+            <p class="break">Credits to the YouTube channel <i>adef</i> because they made two videos discussing this very topic:</p>
+            <ul>
+              <li><a href="https://youtu.be/3VZcZJ9GJ98?si=47fgbWMyL-iZPjpH" target="_blank">Mathematically Proving which Pokémon Should Learn Fly</a></li>
+              <li><a href="https://youtu.be/pw3LGlIBAjw?si=YLvY_0dnc9e2TKzN" target="_blank">Mathematically Proving which Pokémon Should Learn Surf</a></li>
+            </ul>
+            <p>In each video, adef explained the physics concept involved and how he went about conducting his research— which I will try my best to explain in my own words. Throughout your reading journey, I will also include buttons to reveal some supplementary information. These only provide additional information and are not mandatory - but I highly recommend reading them!</p>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-intro">
+                <div class="panel-items">
+                  <p>For transparency, adef mentioned he has a Master's degree in physics (!!!), and the last physics course I took was an introductory physics course in university. So, at most, I have high-school/first-year physics knowledge...</p>
+                  <p>This is to say that I'm not an expert!</p>
+                  <p>This project will roughly cover forces, buoyancy, density, birds, flight, and bird flight. And I aimed to try to have some fun when discussing them.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id = "project-goal" class="flex-col">
+          <h2 class="section-title">&#x1F3C6; Goals</h2>
+          <div class="section-body flex-col">
+            <p>Science and Pokémon is a niche combination that is right up my alley! As aforementioned, I thought it would be fun to apply real-world physics into the Pokémon universe.</p>
+            <p>As well, this served as another opportunity to practice the <code>python</code> language and data-scrapping methods.</p>
+          </div>
+        </section>
+
+        <section id = "project-development" class="flex-col">
+          <h2 class="section-title">&#x23F3; Development</h2>
+          <div class="section-body flex-col">
+            <p>Like adef's videos, I targetted <a href="https://bulbapedia.bulbagarden.net/wiki/Fly_(move)" target="_blank">Fly</a> and <a href="https://bulbapedia.bulbagarden.net/wiki/Surf_(move)" target="_blank">Surf</a>. These are two elemental moves that only a portion of Pokémon can learn and use. They are primarily attacks that deal damage but in addition, Fly acts like air travel, and Surf acts like water transportation. Specifically in the video games, we use Fly to fast travel and Surf to cross bodies of water. Notably, the playable character does not have access to a personal plane/balloon/aircraft or boat/swim equipment.</p>
+
+            <p class="break">Alright, it's science time! Let's start with some of the physics for Fly.</p>
+
+            <figure class="media restrict">
+              <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/platinum-fly.png" alt="A screenshot of the map interface when using HM02 Fly in the Pokémon Platinum video game.">
+              <figcaption>Choosing a location when using <a href="https://bulbapedia.bulbagarden.net/wiki/HM02" target="_blank">HM02</a> Fly in <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Platinum_Version" target="_blank">Pokémon Platinum</a></figcaption>
+            </figure>
+
+            <p>In short, a force is an external influence acting on an object, such as frictional force, pushing a shopping cart, or the force due to gravity. Forces can be easily visualized using a free-body diagram:</p>
+
+            <figure class="media restrict">
+              <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/drawing-fbd.png" alt="A simple free-body diagram of an object.">
+            </figure>
+
+            <p>Forces acting on an object on a surface:</p>
+            <ul>
+              <li>\( \text F_\text{Normal} =\) force acting on an object that is perpendicular to the surface that the object contacts</li>
+              <li>
+                \( \text F_\text{Gravitational} =\) weight force \(=\) force acting on object by the planet's gravity
+                <ul>
+                  <li>\( \text F_\text G =\) object mass \(\times g\)</li>
+                  <li>\(\ g =\) acceleration due to gravity</li>
+                  <li>\(g_\text{Earth} = 9.8\ m/s^2 \)</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <p>For something to float or fly, it must overcome its weight force. In flight, there are four primary forces at play:</p>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-flight">
+                <div class="panel-items">
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/drawing-flight.png" alt="Free-body diagrams of an airplane and two birds at two different directions of flight.">
+                  </figure>
+
+                  <ul>
+                    <li>\( \text F_\text{Lift}\)</li>
+                    <li>\( \text F_\text{Thrust}\)</li>
+                    <li>\( \text F_\text{Gravitational}\)</li>
+                    <li>\( \text F_\text{Drag}\)</li>
+                  </ul>
+
+                  <p>Fluid dynamics is also involved in flight. In physics, a fluid can be a liquid or gas.</p>
+
+                  <div class="formula">\( P_1 + {1 \over 2}\rho v_1^2 + \rho g h_1 = P_2 + {1 \over 2}\rho v_2^2 + \rho g h_2 \)</div>
+                  <ul>
+                    <li>\(P =\) pressure</li>
+                    <li>\(\rho =\) density</li>
+                    <li>\(v =\) velocity</li>
+                    <li>\(g =\) acceleration due to gravity</li>
+                    <li>\(h =\) height</li>
+                  </ul>
+
+                  <p><b>Bernoulli's princple</b>, derived from the Conservation of Energy, explains how airplanes achieve lift. The equation relates a fluid's speed, height and pressure.</p>
+                  <ul>
+                    <li>Faster fluid = lower pressure</li>
+                    <li>Slower fluid = higher pressure</li>
+                  </ul>
+
+                  <div class="formula">\( P = {F \over A} \)</div>
+                  <div class="formula">\( F = P A \)</div>
+                  <ul>
+                    <li>\(P =\) pressure</li>
+                    <li>\(F =\) force</li>
+                    <li>\(A =\) area</li>
+                  </ul>
+
+                  <p>Pressure is the amount of force exerted on the surface of an object. By rearranging the equation, we can also say that the force on an object is equal to the pressure over the area.</p>
+
+                  <p class="break">Fluids naturally seek equilibrium in pressure if there exist pressure differences in a system. As a result, fluids in the area with high pressure will move along the path of least resistance towards the area with low pressure.</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/drawing-bp-1.png" alt="A diagram of a system with a pressure difference.">
+                    <figcaption>Original image source: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/pber.html" target="_blank">Bernoulli Equation</a></figcaption>
+                  </figure>
+                  
+                  <p>As an airplane speeds up via thrust, the material and the shape of the wings will cause a different flow of air above and below. And this causes a pressure difference!</p>
+
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/drawing-bp-2.png" alt="A diagram of a wing and the flow of air when in flight.">
+                    <figcaption>Original image source: <a href="https://www.valispace.com/whats-that-formula-bernoullis-principle/" target="_blank">What's that formula? - Bernoulli's principle</a></figcaption>
+                  </figure>
+
+                  <p>By creating a low-pressure flow above the wings and a high-pressure flow below them, the air (which is the fluid in our case) moves toward the area of low-pressure, pressing into the bottom of the wing.</p>
+                  <p>Using complex calculations made by <i>real science-y scientists</i> based on a plane's weight, material, etc., the plane generates enough air pressure difference to produce the lift needed for take off.</p>
+
+                  <p class="break">Birds that glide generally operate on the same physics as airplane wings. But there are also many types of birds that many types of wings.</p>
+                  <p>I will skip bird anatomy, but in short, they have evolved to minimize weight to maximize efficiency.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-flight"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">TLDR: It is harder for something to take off if it is really heavy! Although some bird-like Pokémon seem like they should be able to fly, we also need to factor in the weight of the playable character.</p>
+
+            <p class="break">In terms of Surf, the playable character rides on the back of the Pokémon swimming near the surface of the water</p>
+
+            <figure class="media restrict">
+              <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/platinum-surf.png" alt="A screenshot of the map interface when using HM03 Surf in the Pokémon Platinum video game.">
+              <figcaption>The overworld of <a href="https://bulbapedia.bulbagarden.net/wiki/Sinnoh_Route_223" target="_blank">Route 223</a> when using <a href="https://bulbapedia.bulbagarden.net/wiki/HM03" target="_blank">HM03</a> Surf in <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Platinum_Version" target="_blank">Pokémon Platinum</a></figcaption>
+            </figure>
+
+            <p>The key idea is that the Pokémon should at least be able to float, ensuring the playable character is not submerged. Why only float? In the video games, we can stop moving at any time, and we often battle other Pokémon trainers or wild Pokémon while stationary. Additionally, the speed at which the Pokémon swims is roughly similar to the swimming NPCs.</p>
+
+            <div class="formula">\( \text F_\text{Buoyant} = \rho g V \)</div>
+            <ul>
+              <li>\( \rho =\) fluid density</li>
+              <li>\( g =\) acceleration due to gravity</li>
+              <li>\( V =\) fluid volume</li>
+            </ul>
+
+            <p>A boat, for example, must overcome its weight force in water, like the previous example of the airplane in air. In this case, we use <b>Archimedes' principle</b> (AKA buoyancy or the buoyant force) to stay afloat in water, which equals to the weight force of the volume of the amount of fluid displaced.</p>
+
+            <div class="formula">\( \rho = {m \over V} \)</div>
+            <ul>
+              <li>\( \rho =\) density</li>
+              <li>\( m =\) mass</li>
+              <li>\( V =\) volume</li>
+            </ul>
+
+            <p>Density is the relationship between mass and volume. Simply put, an object that is more dense will have more difficulty floating than one that is less dense. For example, consider two cubes at 10 kilograms but differing in size:</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-float">
+                <div class="panel-items">
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/drawing-buoyancy.png" alt="Free-body diagrams of two different 10 kg cubes in water.">
+                    <figcaption></figcaption>
+                  </figure>
+
+                  <p>The larger cube has a greater volume and displaces more water. And so, it experiences a larger buoyant force.</p>
+
+                  <p>If the buoyant force equals the weight force, an object will stay submerged and suspended in the water at the depth it was placed. To float and rise towards the surface, the buoyant force must exceed the weight force, which requires the object to have a large volume and low density.</p>
+
+                  <p class="break">I will skip the anatomy of sea creatures, but many types of fishes, for example, have a swimmbladder. This is an internal organ filled with gases that is used to change the fish's overall density and modulate buoyancy.</p>
+
+                  <p>And that's why large ships can float!</p>
+                  <ul>
+                    <li>Spread total mass over large surface area</li>
+                    <li>Inner compartments inside boat are filled with air</li>
+                    <li>Air is far less dense than water</li>
+                    <li>Thus lowering overall density</li>
+                  </ul>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-float"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">TLDR: In water, we need to factor in both weight and volume. Altogether, the Pokémon must be less dense such that, after adding the weight of the playable character, we can stay afloat.</p>
+          </div>  
+        </section>
+
+        <section id = "project-early-ideation" class="flex-col">
+          <h2 class="section-title">&#x1F4C8; Early Ideation</h2>
+          <div class="section-body flex-col">
+            <p>I used <code>python</code> and <a href="https://pypi.org/project/beautifulsoup4/" target="_blank">BeautifulSoup4</a> to get data from <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page" target="_blank">Bulbapedia</a>, a community-driven encyclopedia for Pokémon, and then I used <a href="https://github.com/burnash/gspread" target="_blank">gspread</a> to write the data to Google Sheets. These two tasks alone took me almost three days because I had to account for all possible cases when retrieving data. For example, navigating the naming conventions for both Pokémon and the <code>html</code> elements on a page, as well as determine where these <code>html</code> elements were located.</p>
+
+            <p>Using the <a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number" target="_blank">List of Pokémon by National Pokédex number</a>, I recorded the following data for each of all 1025 Pokémon:</p>
+            <ul>
+              <li>Whether they have <a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_form_differences" target="_blank">different forms</a> (same species but differ in appearances: regional forms, evolutional forms, transformations, etc.)</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Ability" target="_blank">Abilities</a> (allow for special passive effect(s) or specific mechanic(s) that may influence battles or the overworld)</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Type" target="_blank">Types</a> (elemental attribute(s))</li>
+              <li>Height (in metres)</li>
+              <li>Weight (in kilograms)</li>
+              <li>Whether they can learn Surf</li>
+              <li>Whether they can learn Fly</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_shape" target="_blank">Body shape</a> (categorization of a Pokémon's body shape/type)</li>
+            </ul>
+
+            <p class="break">Now, let's dive into the calculations. Again, full credits to adef as I mostly followed his work.</p>
+
+            <p>When evaluating for Fly, adef used real-life bird data. For Surf, it became a little more complicated. As we know, density is related to volume, and Pokémon metrics provide limited data to work with.<p>
+
+            <p>adef approximated each Pokémon's volume using the formula for cylinder, and therefore also estimated the radius of each Pokémon. He assigned a value called the <i>radius-to-height ratio</i>, which estimated the radius as a fraction of the height. Similarly, I assigned up to four ratios per body shape category. This task also took a while because I eyeballed each Pokémon in each shape category. Since proportions can vary widely, using a single ratio for each body shape would not accurately account for all Pokémon in that category.</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-3d-model">
+                <div class="panel-items">
+                  <p>Eyeballing was my last resort— seriously. I tried my best to calculate a more accurate radius for every Pokémon.</p>
+                  <p>The 3D models had long been extracted from the video games. I did try opening them in <a href="https://www.blender.org/" target="_blank">Blender</a> and was able to view the height, length, width, volume, and calculated density of the mesh model. However, it was not efficient for me to download, import each into Blender, and then find the dimensions of the model. In addition, I am not proficient with 3D-modelling or Blender, so off of a quick Google search I could not find a fast way to extract only the dimensions.</p>
+                  <p>Another approach I considered was approximating the length based on image dimensions. For example, <a href="https://projectpokemon.org/home/docs/spriteindex_148/" target="_blank">this page</a> on a website called ProjectPokemon has a GIF of each 3D model that is forward-facing at an angle. I could easily get the rendered size of the <code>img</code> element and use simple algebra to get an approximate value for the radius. However, for certain body shapes like serpentine, the proportions of their elongated bodies could not be accurately reflected.</p>
+                  <p>Ultimately, I gave up, haha. adef even mentioned that he manually went through each Pokémon and assigned a ratio by hand. I knew I did not want to do that, so I tried identifying patterns for each body shape instead.</p>
+                  <p>Some shape categories were easy and had consistent proportions such that one ratio was sufficient. For example, the category of Pokémon consisting of only a head all were fairly spherical in shape, so I let the ratio be 0.5. For other shapes, like bipedal, serpentine, or winged, not all Pokémon that fell into these categories had consistent proportions. Therefore, I assigned different ratios based on a few notable height points. This is reflected in my <code>python</code> code.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-3d-model"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p>With a radius calculation for each Pokémon, I was able to compute their volumes and densities.</p>
+          </div>
+        </section>
+
+        <section id = "project-testing" class="flex-col">
+          <h2 class="section-title">&#x1F52C; Testing</h2>
+          <div class="section-body flex-col">
+            <p><a href="https://birdsoftheworld.org/bow/home" target="_blank">Birds of the World</a> by the Cornell Lab of Ornithology has a whole comprehensive database on the various birds that exist on Earth. adef used this to mathematically assess whether a Pokémon should be able to fly. He gathered the height and weight of 50 different bird species, and used a power series to generate an equation where weight was the independent variable and height (or <i>expected height</i>) was the dependent variable. The assumptions were that a Pokémon's wingspan was proportional to its height, and this relationship scaled linearly across all Pokémon.</p>
+            <p>Fortunately, <a href="https://www.allaboutbirds.org/news/" target="_blank">All About Birds</a> by the Cornell Lab has many birds available to view for free. To ensure a diverse selection of birds from around the world, I used the <a href="https://boardgamegeek.com/filepage/193164/wingspan-spreadsheet-bird-cards-bonus-cards-end-of" target="_blank">list of bird cards</a> from <a href="https://stonemaiergames.com/games/wingspan/" target="_blank">Wingspan</a>, a board game that featured real bird species. Then, I made another data-scrapping algorithm to extract the bird data from All About Birds, plotted the data points, and generated my own power series equation.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/bird-graph.png" alt="Scatter chart of bird length vs. bird weight.">
+              <figcaption>\(y = 0.581x^{0.354} \), \(y =\) expected bird height (m), \(x = \) bird weight (kg)</figcaption>
+            </figure>
+
+            <p>Important note: the terms "length" and "height" were used interchangably. On the Cornell Lab websites, they utilized "length", "weight", "wingspan", etc. However, a Pokémon's dimensions are always labeled as height and weight, and it is safe to assume that the height value equated to a Pokémon's length if it had a long body or large wingspan. Let's look at a few examples:</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-length-height">
+                <div class="panel-items">
+                  <p class="break"><a href="https://bulbapedia.bulbagarden.net/wiki/Pikachu_(Pok%C3%A9mon)" target="_blank">Pikachu</a>, the Mouse Pokémon</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/thumb/0/01/Ash_and_Pikachu.png/1200px-Ash_and_Pikachu.png" alt="Ash and Pikachu in the Pokémon Journeys animated series.">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:Ash_and_Pikachu.png#/media/File:Ash_and_Pikachu.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Height: 1'04" or 0.4 m</li>
+                    <li>Weight: 13.2 lbs. or 6.0 kg</li>
+                    <li>Body shape: Quadruped</li>
+                  </ul>
+
+                  <p>As a relatively small quadruped creature, it is safe to assume that the height of Pikachu is measured from its feet to head (or maybe ears).</p>
+
+                  <p class="break"><a href="https://bulbapedia.bulbagarden.net/wiki/Charizard_(Pok%C3%A9mon)" target="_blank">Charizard</a>, the Flame Pokémon</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/c/c1/Professor_Oak_Lecture_EP161.png" alt="Charizard standing next to Professor Oak.">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:Professor_Oak_Lecture_EP161.png#/media/File:Professor_Oak_Lecture_EP161.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Height: 5'07"	or 1.7 m</li>
+                    <li>Weight: 199.5 lbs. or 90.5 kg</li>
+                    <li>Body shape: Tailed bipedal</li>
+                  </ul>
+
+                  <p>For a dragon-like creature who stands upright, it is safe to assume that the listed height is its height.</p>
+                  
+                  <p class="break"><a href="https://bulbapedia.bulbagarden.net/wiki/Golbat_(Pok%C3%A9mon)" target="_blank">Golbat</a>, the Bat Pokémon</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/e/ed/Koga_Golbat_Adventures.png" alt="Koga and Golbat in the Pokémon Adventures manga.">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:Koga_Golbat_Adventures.png#/media/File:Koga_Golbat_Adventures.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Height: 5'03" or 1.6 m</li>
+                    <li>Weight: 121.3 lbs. or 55.5 kg</li>
+                    <li>Body shape: Single pair of wings</li>
+                  </ul>
+
+                  <p>A bat with a vertical height of 1.6 metres would be almost as tall as Charizard, and overall just scarily, crazily large... Seriously, just look at a regular picture of Golbat.</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/thumb/7/76/0042Golbat.png/1200px-0042Golbat.png" alt="Golbat">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:0042Golbat.png#/media/File:0042Golbat.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <p>We should (nay, <i>need</i>) to assign the height as a measurement of its length (or wingspan).</p>
+                
+                  <p class="break"><a href="https://bulbapedia.bulbagarden.net/wiki/Gyarados_(Pok%C3%A9mon)" target="_blank">Gyarados</a>, the Atrocious Pokémon</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/b/bc/0130Gyarados.png" alt="Gyarados">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:0130Gyarados.png#/media/File:0130Gyarados.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Height: 21'04" or 6.5 m</li>
+                    <li>Weight: 518.1 lbs. or 235.0 kg</li>
+                    <li>Body shape: Serpentine</li>
+                  </ul>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/thumb/2/22/Lysandre_Gyarados.png/1200px-Lysandre_Gyarados.png" alt="Lysandre, Pyroar and Shiny Gyarados in the Pokémon XYZ animated series.">
+                    <figcaption>Image source: <a href="https://archives.bulbagarden.net/wiki/File:Lysandre_Gyarados.png#/media/File:Lysandre_Gyarados.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <p>Again, the value of its height really should be the measurement of its entire length. There could be an argument that its height could be measured from where its segmented body touches the ground. However, technically it could place itself anywhere along its body, and even then, that would be one <i>tall</i> leviathan-like creature... It is way safer to assume 6.5 metres is the length of its serpentine body.</p>
+                
+                  <p class="break"><a href="https://bulbapedia.bulbagarden.net/wiki/Eternatus_(Pok%C3%A9mon)" target="_blank">Eternamax Eternatus</a>, the Gigantic Pokémon</p>
+
+                  <figure class="media restrict">
+                    <img class = "portfolio-entry-img" src="https://archives.bulbagarden.net/media/upload/f/f1/Eternamax_Eternatus_Rose_Tower_SWSH.png" alt="Eternamax Eternatus atop Rose Tower in Pokémon Sword/Shield video game.">
+                    <figcaption>The Eternamax form of Eternatus, image source: <a href="https://archives.bulbagarden.net/wiki/File:Eternamax_Eternatus_Rose_Tower_SWSH.png#/media/File:Eternamax_Eternatus_Rose_Tower_SWSH.png" target="_blank">Bulbapedia</a></figcaption>
+                  </figure>
+
+                  <ul>
+                    <li>Height: 328'01"	or 100.0 m</li>
+                    <li>Weight: ???</li>
+                    <li>Body shape: Serpentine</li>
+                  </ul>
+
+                  <p>There is <i>no</i> way 100 metres is anything other than the length measurement of its entire serpentine body.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-length-height"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">Then, an expected height was calculated for each Pokémon and was compared with the Pokémon's listed height. In addition, a second expected height was calculated after adding the playable character's weight with the Pokémon's listed weight.</p>
+
+            <p class="break">For Surf, adef used the radius ratio to approximate a radius for each Pokémon. This value was then used to calculate the volume of each Pokémon using the formula for a cylinder: \(V = \pi r^2 h\), where \(r =\) radius and \(h =\) height. Following that, the density was calculated and compared to the density of water \(\approx 1000 kg/m^3\).</p>
+
+            <p class="break">Regarding the weight of the playable character, I assigned a value of 38 kg. In the Generation 4 Pokémon video games, the male protagonist was listed at 38 kg and the female protagonist 34 kg. Realistically, the value we should consider should be larger. In fact, the playable character can have as many or as few items in their bag that they carry with them at all times. Funnily enough, we can even store our bicycle! To give our lovable creatures a fair chance (and you will see why), we will stick with 38 kg.</p>
+
+            <figure class="media restrict">
+              <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/platinum-bicycle.png" alt="A screenshot of the key items section of the bag interface in the Pokémon Platinum video game.">
+              <figcaption>Selecting the <a href="https://bulbapedia.bulbagarden.net/wiki/Bicycle" target="_blank">bicycle</a> from the bag in <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_Platinum_Version" target="_blank">Pokémon Platinum</a></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-final-designs" class="flex-col">
+          <h2 class="section-title">&#x2B50; Final Designs</h2>
+          <div class="section-body flex-col">
+            <p>It turns out that many Pokémon that can fly really should not be able to... On the other hand, majority of all Pokémon are impressively less dense! In addition to the 1025 official Pokémon, I added 153 form differences which yielded a total of 1178 Pokémon on my <a href="https://docs.google.com/spreadsheets/d/1Pf5Kix1d2JVRxMPypSBBFWyDGX_uPrvT1lu2MthW2OU/edit?usp=sharing" target="_blank">spreadsheet</a>.</p>
+
+            <figure class="iframe"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9B1UqJ_RS_ksuJOE8zulJpBgnUXPshVSnXrHS7l7fDiQ8aF-nypIOkz_Np0Cpilw-9tcryvdaJIqB/pubhtml?gid=1401214744&amp;single=true&amp;widget=true&amp;headers=false"></iframe></figure>
+            
+            <p>Out of 126 Pokémon capable of learning Fly, only 13 of them had an original height that matched or passed the expected height value... Yikes! Of those 13, only 10 were strong enough to carry the playable character. As well, 12 out of the 13 fliers are special and rare Pokémon that an average Pokémon citizen (who will never be a main character in a story) would likely not have regular access to them. Double yikes! Guess it is carbon emmissions or nothing!</p>
+
+            <p>By the waters, however, you may catch many average citizens with their Pokémon. Of the 266 Pokémon who can learn Surf, 251 can float, and 206 are capable of carrying the playable character. In fact, about 94% and 77% of all 1178 Pokémon can float in water and carry the playable character, respectively! Whether they would actually enjoy being in water... Well, that is a question for another time...</p>
+
+            <p class="break">The Fly numbers are quite disheartening. Let's stretch the confines of what Pokémon can be considered a potential flyer by including 3 additional criteria:</p>
+            <ol>
+              <li>Ability<br>
+                A Pokémon's ability can be described a special passive effect(s) or specific mechanic(s) that may influence battles or the overworld. <a href="https://bulbapedia.bulbagarden.net/wiki/Levitate_(Ability)" target="_blank">Levitate</a> is an ability that insinuates the Pokémon is able to hover, float or levitate above the ground.
+              </li>
+              <li>Type<br>
+                A Pokémon's type is its elemental attribute, with each Pokémon having up to two types for any given form. The <a href="https://bulbapedia.bulbagarden.net/wiki/Flying_(type)" target="_blank">Flying</a> type is assigned to practically all aeronautical and flight-themed (e.g. bird-like, dragon-like, winged-insects) Pokémon. And besides, <i>Fly</i> is literally in the name!
+              </li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_shape" target="_blank">Body shape</a><br>
+                The body shape is a categorization of a Pokémon's physical body shape. I considered three specific shapes:
+                <ul>
+                  <li>Pokémon consisting of only a head</li>
+                  <li>Pokémon with a single pair of wings</li>
+                  <li>Pokémon with two or more pairs of wings</li>
+                </ul>
+                The two winged categories are self-explanatory. As for Pokémon consisting solely of a head, the majority were often depicted as being able to hover (or float/levitate). I am able to declare this since I am very familiar with the animated series and the video games. The minority of Pokémon who should not be able to fly with this body shape do not appear as a viable flyer on the spreadsheet.
+              </li>
+            </ol>
+
+            <p>The new additions expanded the pool to a new total of 236 potential fliers (i.e. Pokémon that can learn the move Fly, can have the ability Levitate, are or are part Flying type, or have wings or consist only of a head). Unfortunately, this only added 11 new Pokémon to the list of those with an original height at or greater than their expected height value, for a grand total of just 24. Wow.</p>
+            <p>But hey, at least we now have a broader selection of viable fliers beyond just the special Pokémon I mentioned earlier! Here are a few of them:</p>
+            <ul>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Weezing_(Pok%C3%A9mon)" target="_blank">Galarian Weezing</a> = 193% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Gyarados_(Pok%C3%A9mon)" target="_blank">Gyarados</a> = 162% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Skiploom_(Pok%C3%A9mon)" target="_blank">Skiploom</a> = 103% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Dragapult_(Pok%C3%A9mon)" target="_blank">Dragapult</a> = 129% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Flutter_Mane_(Pok%C3%A9mon)" target="_blank">Flutter Mane</a> = 147% of its expected height</li>
+            </ul>
+
+            <p>Sadly, only half of the 24 are large enough to carry the playable character. To take it one step further, I also looked at all Pokémon that had at least 80% of their expected height. This brought the total to 41 viable fliers, but only 15 could carry the playable character. Well, I guess we better not take them for granted! Here are a some of the new-new additions to the 41 fliers:</p>
+            <ul>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Pidgeot_(Pok%C3%A9mon)" target="_blank">Mega Pidgeot</a> = 94% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Xatu_(Pok%C3%A9mon)" target="_blank">Xatu</a> = 99% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Masquerain_(Pok%C3%A9mon)" target="_blank">Masquerain</a> = 87% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Altaria_(Pok%C3%A9mon)" target="_blank">Mega Altaria</a> = 88% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Gliscor_(Pok%C3%A9mon)" target="_blank">Gliscor</a> = 91% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Sigilyph_(Pok%C3%A9mon)" target="_blank">Sigilyph</a> = 95% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Drampa_(Pok%C3%A9mon)" target="_blank">Drampa</a> = 81% of its expected height</li>
+              <li><a href="https://bulbapedia.bulbagarden.net/wiki/Corviknight_(Pok%C3%A9mon)" target="_blank">Corviknight</a> = 82% of its expected height</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id = "project-next" class="flex-col">
+          <h2 class="section-title">&#x1F4AD; Next Steps</h2>
+          <div class="section-body flex-col">
+            <p>Yeah, not a lot of fliers... but tons of floaters! But of course, we should take this with a grain of salt. After all, Pokémon is a fictional universe and it is fair to bend some real-life scientific rules.</p>
+
+            <p>We should also give the Pokémon creators some grace because they likely were not thinking too deeply about these metrics when designing them.</p>
+
+            <p>There also exists <a href="https://bulbapedia.bulbagarden.net/wiki/Size_and_weight_variation" target="_blank">size and weight variation</a>, where different Pokémon of the same species can vary in these attributes. This is a relatively modern mechanic introduced in games like <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_GO" target="_blank">Pokémon GO</a> and the <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon:_Let%27s_Go,_Pikachu!_and_Let%27s_Go,_Eevee!" target="_blank">Let's Go</a> games. With this variability in mind, we can reasonably assume that most Pokémon with wings should theoretically be able to fly.</p>
+            <p>Whether they should or should not be able to carry an average citizen... Let's just say we better start doubling or tripling up on our fliers...</p>
+
+            <p class="break">Back in <a href="#project-early-ideation">🔖 early ideation</a> in an optional part, I mentioned that I tried retriving the dimensions from the 3D models of the Pokémon. As a next step for me, I think I would love to know more and gain experience in 3D modelling and 3D graphics software.</p>
+          </div>
+        </section>
+      </main>
+      
+      <section class = "extra">
+        <p>Last modified: January 17, 2025</p>
+      </section>
+    </div>
+
+    <footer class = "footer">
+      <div class="footer-sitemap">
+        <nav class = "footer-primary">
+          <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../portfolio.html">portfolio</a></li>
+            <li><a href="../cv.html">cv</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-secondary">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank" class="btn-icon"> <!-- linkedin -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </div>
+              /nancyhao
+            </a></li>
+            <li><a href="https://www.figma.com/@nenceh" target="_blank" class="btn-icon"> <!-- figma -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+            <li><a href="https://www.youtube.com/@nenceh" target="_blank" class="btn-icon"> <!-- youtube -->
+              <div class="btn-icon-padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
