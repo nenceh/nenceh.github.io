@@ -111,7 +111,7 @@
             <p>If you did not already know, Pokémon is one of the, if not the, highest-grossing media franchises. In this fictional universe, humans coexist with living creatures known as Pokémon. Across various animated series, movies and video games, humans may use the elemental powers of Pokémon to fly between cities and towns, and travel across bodies of water.</p>
             <p>While a general audience of any media adopts a certain level of suspension of disbelief, I find it fun to closely examine how realistic or unrealistic the world-building is. In this project, I analyzes over 1000 Pokémon to determine whether they could reasonably serve as our personal aircraft or surfboat.</p>
 
-            <p class="break">Credits to the YouTube channel <i>adef</i> because they made two videos discussing this very topic:</p>
+            <p class="break">Credits to the YouTube channel <i>adef</i> because he made two videos discussing this very topic:</p>
             <ul>
               <li><a href="https://youtu.be/3VZcZJ9GJ98?si=47fgbWMyL-iZPjpH" target="_blank">Mathematically Proving which Pokémon Should Learn Fly</a></li>
               <li><a href="https://youtu.be/pw3LGlIBAjw?si=YLvY_0dnc9e2TKzN" target="_blank">Mathematically Proving which Pokémon Should Learn Surf</a></li>
@@ -130,6 +130,8 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
               </button>
             </div>
+
+            <p class="break">Fastforwarding ahead, check out my <a href="https://github.com/nenceh/bulbapedia-web-scraper" target="_blank">Bulbapedia Web Scraper</a> repository on Github!</p>
           </div>
         </section>
 
@@ -332,7 +334,7 @@
                   <p>The 3D models had long been extracted from the video games. I did try opening them in <a href="https://www.blender.org/" target="_blank">Blender</a> and was able to view the height, length, width, volume, and calculated density of the mesh model. However, it was not efficient for me to download, import each into Blender, and then find the dimensions of the model. In addition, I am not proficient with 3D-modelling or Blender, so off of a quick Google search I could not find a fast way to extract only the dimensions.</p>
                   <p>Another approach I considered was approximating the length based on image dimensions. For example, <a href="https://projectpokemon.org/home/docs/spriteindex_148/" target="_blank">this page</a> on a website called ProjectPokemon has a GIF of each 3D model that is forward-facing at an angle. I could easily get the rendered size of the <code>img</code> element and use simple algebra to get an approximate value for the radius. However, for certain body shapes like serpentine, the proportions of their elongated bodies could not be accurately reflected.</p>
                   <p>Ultimately, I gave up, haha. adef even mentioned that he manually went through each Pokémon and assigned a ratio by hand. I knew I did not want to do that, so I tried identifying patterns for each body shape instead.</p>
-                  <p>Some shape categories were easy and had consistent proportions such that one ratio was sufficient. For example, the category of Pokémon consisting of only a head all were fairly spherical in shape, so I let the ratio be 0.5. For other shapes, like bipedal, serpentine, or winged, not all Pokémon that fell into these categories had consistent proportions. Therefore, I assigned different ratios based on a few notable height points. This is reflected in my <code>python</code> code.</p>
+                  <p>Some shape categories were easy and had consistent proportions such that one ratio was sufficient. For example, the category of Pokémon consisting of only a head all were fairly spherical in shape, so I let the ratio be 0.5. For other shapes, like bipedal, serpentine, or winged, not all Pokémon that fell into these categories had consistent proportions. Therefore, I assigned different ratios based on a few notable height points. This is reflected in my <code>python</code> <a href="https://github.com/nenceh/bulbapedia-web-scraper" target="_blank">code</a>.</p>
                 </div>
               </div>
               <button class="btn-primary panel-control" value="#expand-3d-model"> Show/Hide for addition, non-critical, information!
@@ -352,7 +354,11 @@
 
             <figure class="media">
               <img class = "portfolio-entry-img" src="../images/portfolio/pokemon-physics/bird-graph.png" alt="Scatter chart of bird length vs. bird weight.">
-              <figcaption>\(y = 0.581x^{0.354} \), \(y =\) expected bird height (m), \(x = \) bird weight (kg)</figcaption>
+              <figcaption>\(y = 0.581x^{0.354} \), \(y =\) expected bird height (m), \(x = \) bird weight (kg)
+                <ul>
+                  <li>adef's equation: \(y = 0.532x^{0.343}\)</li>
+                </ul>
+              </figcaption>
             </figure>
 
             <p>Important note: the terms "length" and "height" were used interchangably. On the Cornell Lab websites, they utilized "length", "weight", "wingspan", etc. However, a Pokémon's dimensions are always labeled as height and weight, and it is safe to assume that the height value equated to a Pokémon's length if it had a long body or large wingspan. Let's look at a few examples:</p>
@@ -469,11 +475,11 @@
         <section id = "project-final-designs" class="flex-col">
           <h2 class="section-title">&#x2B50; Final Designs</h2>
           <div class="section-body flex-col">
-            <p>It turns out that many Pokémon that can fly really should not be able to... On the other hand, majority of all Pokémon are impressively less dense! In addition to the 1025 official Pokémon, I added 153 form differences which yielded a total of 1178 Pokémon on my <a href="https://docs.google.com/spreadsheets/d/1Pf5Kix1d2JVRxMPypSBBFWyDGX_uPrvT1lu2MthW2OU/edit?usp=sharing" target="_blank">spreadsheet</a>.</p>
+            <p>It turns out that many Pokémon that can fly really should not be able to... On the other hand, majority of all Pokémon are impressively less dense! In addition to the 1025 official Pokémon, I added 200 form differences which yielded a total of 1225 Pokémon on my <a href="https://docs.google.com/spreadsheets/d/1Pf5Kix1d2JVRxMPypSBBFWyDGX_uPrvT1lu2MthW2OU/edit?usp=sharing" target="_blank">spreadsheet</a>.</p>
 
             <figure class="iframe"><iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT9B1UqJ_RS_ksuJOE8zulJpBgnUXPshVSnXrHS7l7fDiQ8aF-nypIOkz_Np0Cpilw-9tcryvdaJIqB/pubhtml?gid=1401214744&amp;single=true&amp;widget=true&amp;headers=false"></iframe></figure>
             
-            <p>Out of 126 Pokémon capable of learning Fly, only 13 of them had an original height that matched or passed the expected height value... Yikes! Of those 13, only 10 were strong enough to carry the playable character. As well, 12 out of the 13 fliers are special and rare Pokémon that an average Pokémon citizen (who will never be a main character in a story) would likely not have regular access to them. Double yikes! Guess it is carbon emmissions or nothing!</p>
+            <p>Out of 129 Pokémon capable of learning Fly, only 13 of them had an original height that matched or passed the expected height value... Yikes! Of those 13, only 10 were strong enough to carry the playable character. As well, 12 out of the 13 fliers are special and rare Pokémon that an average Pokémon citizen (who will never be a main character in a story) would likely not have regular access to them. Double yikes! Guess it is carbon emmissions or nothing!</p>
 
             <p>By the waters, however, you may catch many average citizens with their Pokémon. Of the 266 Pokémon who can learn Surf, 251 can float, and 206 are capable of carrying the playable character. In fact, about 94% and 77% of all 1178 Pokémon can float in water and carry the playable character, respectively! Whether they would actually enjoy being in water... Well, that is a question for another time...</p>
 
@@ -496,7 +502,7 @@
               </li>
             </ol>
 
-            <p>The new additions expanded the pool to a new total of 236 potential fliers (i.e. Pokémon that can learn the move Fly, can have the ability Levitate, are or are part Flying type, or have wings or consist only of a head). Unfortunately, this only added 11 new Pokémon to the list of those with an original height at or greater than their expected height value, for a grand total of just 24. Wow.</p>
+            <p>The new additions expanded the pool to a new total of 247 potential fliers (i.e. Pokémon that can learn the move Fly, can have the ability Levitate, are or are part Flying type, or have wings or consist only of a head). Unfortunately, this only added 11 new Pokémon to the list of those with an original height at or greater than their expected height value, for a grand total of just 24. Wow.</p>
             <p>But hey, at least we now have a broader selection of viable fliers beyond just the special Pokémon I mentioned earlier! Here are a few of them:</p>
             <ul>
               <li><a href="https://bulbapedia.bulbagarden.net/wiki/Weezing_(Pok%C3%A9mon)" target="_blank">Galarian Weezing</a> = 193% of its expected height</li>
@@ -531,12 +537,13 @@
             <p>Whether they should or should not be able to carry an average citizen... Let's just say we better start doubling or tripling up on our fliers...</p>
 
             <p class="break">Back in <a href="#project-early-ideation">🔖 early ideation</a> in an optional part, I mentioned that I tried retriving the dimensions from the 3D models of the Pokémon. As a next step for me, I think I would love to know more and gain experience in 3D modelling and 3D graphics software.</p>
+            <p>Otherwise, I would love to examine utilizing Pokémon as <a href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9mon_as_transport" target="_blank">general transportation</a> (e.g. traverse terrain). There are plenty of Pokémon who have real-life animal counterparts. I think it would be fun to also look at all the Pokémon that seem ridable (e.g. horse-like, large dog-like and strong humanoid Pokémon).</p>
           </div>
         </section>
       </main>
       
       <section class = "extra">
-        <p>Last modified: January 17, 2025</p>
+        <p>Last modified: January 20, 2025</p>
       </section>
     </div>
 

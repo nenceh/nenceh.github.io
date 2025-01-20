@@ -238,6 +238,15 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     letter-spacing: 0.35px;
     font-family: "Trebuchet MS";
   }
+  body .formula {
+    width: 100%;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+  body .formula + .formula {
+    margin-top: 0;
+  }
   svg {
     width: 24px;
     height: 24px;
@@ -342,6 +351,9 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
   .body-content main figure.restrict img {
     max-height: 600px;
+  }
+  .body-content main figure.iframe iframe {
+    height: 400px;
   }
   .body-content ul, .body-content ol {
     gap: 16px;
@@ -711,6 +723,15 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     max-width: 499px;
     width: 100%;
   }
+  body .formula {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+  body .formula + .formula {
+    margin-top: 0;
+  }
   svg {
     width: 16px;
     height: 16px;
@@ -843,6 +864,9 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
   .body-content main figure.restrict img {
     max-height: 500px;
+  }
+  .body-content main figure.iframe iframe {
+    height: 360px;
   }
   section#about-me .section-body {
     gap: 24px;
