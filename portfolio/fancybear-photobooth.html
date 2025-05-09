@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Bear | Online Photobooth</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- ***** Google Hosted Libraries: https://developers.google.com/speed/libraries/?csw=1 ***** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+    <script type="text/javascript" src="../js/global.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+  </head>
+
+  <header class = "topnav-container">
+    <nav class = "topnav">
+      <a id = "index" href="../index.html">nancy hao</a>
+      <ul>
+        <li><a id="portfolio" href="../portfolio.html">portfolio</a></li>
+        <li><a id="cv" href="../cv.html">cv</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <section id = "find-me">
+    <ul class="flex-col">    
+      <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
+        <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+      </a></li>
+  
+      <li><a href="https://www.figma.com/@nenceh" target="_blank">
+        <svg style="enable-background:new 0 0 3000 3000;" version="1.1" viewBox="0 0 3000 3000" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+          .st0{fill:#0ACF83;}
+          .st1{fill:#A259FF;}
+          .st2{fill:#F24E1E;}
+          .st3{fill:#FF7262;}
+          .st4{fill:#1ABCFE;}
+        </style><path class="st0" d="M1083.333374,2750c230,0,416.666626-186.666748,416.666626-416.666748v-416.666626h-416.666626  c-230.000061,0-416.666687,186.666626-416.666687,416.666626S853.333313,2750,1083.333374,2750z" id="path0_fill"/><path class="st1" d="M666.666687,1500c0-230,186.666626-416.666748,416.666687-416.666748H1500v833.333374  h-416.666626C853.333313,1916.666626,666.666687,1730,666.666687,1500z" id="path1_fill"/><path class="st2" d="M666.666687,666.666626C666.666687,436.666656,853.333313,250,1083.333374,250H1500  v833.333252h-416.666626C853.333313,1083.333252,666.666687,896.666626,666.666687,666.666626z" id="path1_fill_1_"/><path class="st3" d="M1500,250h416.666626c230.000122,0,416.666626,186.666656,416.666626,416.666626  s-186.666504,416.666626-416.666626,416.666626H1500V250z" id="path2_fill"/><path class="st4" d="M2333.333252,1500c0,230-186.666504,416.666626-416.666626,416.666626S1500,1730,1500,1500  s186.666626-416.666748,416.666626-416.666748S2333.333252,1270,2333.333252,1500z" id="path3_fill"/></svg>
+      </a></li>
+    </ul>
+  </section>
+
+  <aside class="back-to-top">
+    <button id="to-top" class="flex-col">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 3.5a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Zm.47 9.47a.749.749 0 1 0 1.06 1.06l4.97-4.969V21.25a.75.75 0 0 0 1.5 0V9.061l4.97 4.969a.749.749 0 1 0 1.06-1.06l-6.25-6.25a.749.749 0 0 0-1.06 0l-6.25 6.25Z"></path></svg>
+      Top
+    </button>
+  </aside>
+
+  <body>
+    <section class = "page-banner-container">
+        <div class = "page-banner flex-col">
+          <h1>Fancy Bear | Online Photobooth</h1>
+          <ul class="breadcrumbs">
+            <li>portfolio</li>
+            <li>Fancy Bear Photobooth</li>
+          </ul>
+        </div>
+    </section>
+    
+    <section class = "info-container flex-col">
+      <div id="project-info">
+        <div class="project-info-item flex-col">
+          <p class="subtitle">TIMELINE</p>
+          <p>Mar'25</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">PLATFORM</p>
+          <p>ReactJS, CSS<p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">ROLE</p>
+          <p>Co-founder, developer</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">DELIVERABLE</p>
+          <a href="https://nenceh.github.io/fancybear/" target="_blank">
+            <p class = "link"><i>📎</i> Website</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class = "body-content">    
+      <nav role="navigation" class="toc">
+        <ol>
+          <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a></li>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a></li>
+          <li><a href="#project-development" class="in-page-link"> Development </a></li>
+          <li><a href="#project-early-ideation" class="in-page-link"> Early Ideation </a>
+          <li><a href="#project-testing" class="in-page-link"> Testing </a></li>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a></li>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a></li>
+        </ol>
+      </nav>
+
+      <main class="flex-col">
+        <section id = "project-introduction" class="flex-col">
+          <h2 class="section-title">&#x1F680; Intro</h2>
+          <div class="section-body flex-col">
+            <p><i>"My friend and I made an online photobooth so we don't have to keep paying $10 😂😂"</i>— Yes, that is the tagline we went with.</p>
+            <p>A self-photo studio is a popular and interactive way to capture photo experiences. More commonly known a photo booth, it allows users to control the photo-taking process and receive physical prints and/or digital photo strips.</p>
+
+            <p>My friend really enjoys taking photos at Korean-style photo booths, and we share many of the same interests. She had seen several viral TikTok videos featuring people who built their own online photo booths and hosted them on personal websites— and now, here we are!</p>
+
+            <p class="break">I had never used camera capabilities in a serious project before, so I saw this as a good opportunity to try it out, and gain more experience with <code>ReactJS</code>. To add our own creative twist, we decided to incorporate aspects from a mobile game into our photo booth project. This mobile game is called <a href="https://loveanddeepspace.infoldgames.com/" target="_blank">Love and Deepspace</a>, and we both play it!</p>
+            
+            <p>Throughout your reading journey, I will also include buttons to reveal some supplementary information. These only provide additional information and are not mandatory - but I highly recommend reading them!</p>
+            
+            <div class="panel-container">
+              <div class = "panel" id="expand-intro">
+                <div class="panel-items">
+                  <p>Photo booths typically capture a set number of photos in quick succession and offer creative and customization options like backgrounds, props and decals, along with instant printing. Korean-style booths have popularized the "4-cut style", in which the final result consists of four photos in one photo strip. This trend has gained popularity for its variety of decorative "frames" (i.e. the design of the border that surrounded the photos), which can allow users to pose alongside pre-set overlay images of their favourite celebrities, "idols" or performers.</p>
+
+                  <p><i>Love and Deepspace</i> is a popular and successful 3D mobile game that currently features five main characters. We were excited by the opportunity to incorporate them into our project. We thought it would be fun for us and for other players to pose alongside these characters.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">I do not own any aspect of Love and Deepspace, and no copyright or trademark infringement is intended. All rights go to InFold Games and Papergames.</p>
+          </div>
+        </section>
+
+        <section id = "project-goal" class="flex-col">
+          <h2 class="section-title">&#x1F3C6; Goals</h2>
+          <div class="section-body flex-col">
+            <p>Our initial goal was to replicate the viral videos by creating a generic photo capturing application. Shortly thereafter, we incorporated branding aspirations.</p>
+            <p>As we progressed, user experience became my primary focus. More information regarding this in <a href="#project-development"> &#x23F3; development</a>.</p>
+            <p>A secondary goal was to complete the project by the end of March. We began in early March, and I had planned to travel in April.</p>
+          </div>
+        </section>
+
+        <section id = "project-development" class="flex-col">
+          <h2 class="section-title">&#x23F3; Development</h2>
+          <div class="section-body flex-col">
+            <p>Using the viral videos as the inital framework, I quickly built a demo using <code>ReactJS</code>. My friend and I jumped on a quick call and created a FigJam file for our brainstorming and a regular Figma design file for initial designs.</p>
+
+            <p>In the FigJam file, we used sticky notes to outline our overall goals, potential resources, ideas, and to-do lists. We then used text and shapes to map out user journeys and draft interface designs for both mobile and desktop.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figjam-overview.png" alt="A screenshot of the FigJam file.">
+              <figcaption>FigJam overview</figcaption>
+            </figure>
+
+            <p class="break">As previously mentioned, we were also greatly inspired by the Korean-style photo booths. The process we decided on for our photo booth was built off of the standard user journey:</p>
+            
+            <ol>
+              <li>Choose a style (i.e. the design of the photo strip)
+                  <figure class="media">
+                    <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/1_style-options.png" alt="The two options for the style.">
+                    <figcaption>Currently, there are two styles available: one for portrait-oriented photos and one for landscape. Users may select one style per session.</figcaption>
+                  </figure>
+              </li>
+              <li>Choose a frame (i.e. the border design surrounding the photos of the photo strip)
+                <figure class="media">
+                  <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/2_frame-options.png" alt="The two categories for the frames.">
+                  <figcaption>Currently, there are two categories of frames. Users may select one frame from either category per session:
+                    <ol>
+                      <li>Classic, which currently has one option: solid colour</li>
+                      <li>Love and Deepspace, which lists five options corresponding to the five main characters from the aforementioned mobile game</li>
+                    </ol>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>Set up the camera
+                  <br>
+                  The application should prompt users to grant camera permissions. Once enabled, a live camera feed appears on screen, with dimensions determined by the selected style (portrait or landscape). Users can also configure:
+                  <ul>
+                      <li>The countdown timer for each photo</li>
+                      <li>Camera filter</li>
+                  </ul>
+              </li>
+              <li>Capture photos in a 4-cut style
+                  <br>
+                  The application will capture four photos in succession, with a countdown preceding each shot.
+              </li>
+              <li>Customize photo strip
+                  <br>
+                  Users can personalize their photo strip. Currently, we allow:
+                  <ul>
+                    <li>Colour selection for the frame</li>
+                    <li>Variety of stickers/decals
+                      <figure class="media">
+                        <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/5_cust-sticker_tools.png" alt="Selected sticker with its interactive tools.">
+                        <figcaption>
+                          A selected sticker with interactive tools (from top to bottom): rotate, delete, resize
+                          <br>
+                          Stickers (from left to right): <i>hyperpigmentation</i> meme, crown*, blob with face*, water drop*
+                          <br>
+                          * Inspired by Love and Deepspace assets
+                        </figcaption>
+                      </figure>
+                    </li>
+                  </ul>
+              </li>
+            </ol>
+
+            <p class="break">At this point, I wanted to ensure the best user experience possible. One key design choice was the placement and size of the camera feed relative to other page elements. For the best experience, the camera feed should be as large as possible for any device type to allow users to view themselves comfortavly. Additionally, as each photo is being captured, users should be able to see previously taken photos with ease.</p>
+
+            <p>Some of the TikToks and websites we observed lacked a consistent location for the feed, required scrolling to find interactive elements, and didn't have a responsive design. Subjectively, the inconsistent placements and the need for scrolling detracted from my experience. In other words, it gave me the <i>ick</i>. I felt that since each screen involved only a few interactive elements and minimal text, everything relevant should be visible without scrolling.</p>
+
+            <p>Of course, I did not judge them personally, but these "icks" motivated me to try really hard in adapting the essence of traditional photo booths into a modern design optimized for our favourite devices.</p>
+
+            <p>Additionally, I wanted to incorporate progress indicators throughout the user journey. I believe it is important to inform users of their progress, especially for new users unfamiliar with the process.</p>
+
+            <p class="break">TLDR: Call me selfish, but UX became my central goal. It shaped nearly every decision in the development process like the design layouts, functionalities, etc.</p>
+          </div>  
+        </section>
+
+        <section id = "project-early-ideation" class="flex-col">
+          <h2 class="section-title">&#x1F4C8; Early Ideation</h2>
+          <div class="section-body flex-col">
+            <p>While my friend gathered images, designed frames, and drafted colour options, I developed a basic camera application demo using <a href="https://github.com/mozmorris/react-webcam" target="_blank">react-webcam</a> by <i>mozmorris</i>. I styled using <a href="https://sass-lang.com/" target="_blank">Syntactically Awesome Style Sheets</a>, a popular and powerful CSS preprocessor.</p>
+
+            <p>Next, I learned how to save images using the <code>&lt;canvas&gt;</code> element, built separate screens for the style and frame selections, and implemented the necessary functions to connect these processes.</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-webcam">
+                <div class="panel-items">
+                  <p>I also learned that the <code>&lt;canvas&gt;</code> element could be used to build games! Wow! The possibilities were quite endless once I figured out how to draw (e.g. shapes, images) and export the results.</p>
+
+                  <p>Just as a side note, I will avoid writing about <code>css</code>, and properties ("props") and <a href="https://react.dev/reference/react/hooks" target="_blank">hooks</a> each time they are used. The jist is that props and hooks are important parts of <code>react</code> programming.</p>
+
+                  <p class="break">I spent considerable time testing and configuring the dimensions of the camera feed. Intially, we wanted to perfect the landscape style, as it was the best orientation for users to pose beside an overlay of a character. We settled on a <code>7:5</code> width-to-height ratio for both the camera feed and the captured photos.</p>
+
+                  <p>The feed needed to maintain this ratio responsively, and the <code>css</code> property <code>aspect-ratio</code> alone was not sufficient. Therefore, I implemented dynamic calculations to adjust dimensions in various scenarios as the camera feed loaded.</p>
+
+                  <p>Using the dynamic viewport units <code>dvw</code> and <code>dvh</code> proved invaluable. Here are a few examples of the dynamic calculations:</p>
+                  <ul>
+                      <li><p>Derive height from width: <code>'height':`${containerRef.current.offsetWidth * Math.pow(STYLE.ratio, -1)}px`</code></p></li>
+
+                      <li><p>Maintain appropriate size on larger devices: <code>'height' : `min(100dvh - 144px - 24px - 8px, ${containerRef.current.offsetWidth * Math.pow(STYLE.ratio, -1)}px)`</code>, where the individual subtracted values correspond to the sizes of specific on-screen elements</p></li>
+                  </ul>
+
+                  <p class="break">After getting a screenshot of the camera feed via <i>react-webcam</i>'s <code>getScreenshot()</code> method, I drew the image onto a <code>canvas</code> object with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">drawImage()</a> in order to save the image with the correct dimensions.</p>
+                  <p><code>drawImage(sc, startX, startY, endX, endY, 0, 0, targetW, targetH)</code></p>
+                  <ul>
+                      <li><code>sc</code>: the screenshot</li>
+                      <li><code>startX, startY</code>: the x- and y-coordinate of where to start drawing from <code>sc</code></li>
+                      <li><code>endX, endY</code>: the x- and y-coordinate of where to end drawing from <code>sc</code></li>
+                      <li><code>0, 0</code>: the x- and y-coordinate of where to start drawing on the <code>canvas</code> object</li>
+                      <li><code>targetW, targetH</code>: the x- and y-coordinate of where to end drawing on the <code>canvas</code> object</li>
+                  </ul>
+
+                  <p>Drawing the overlay images followed the same process. Finally, <code>canvas.toDataURL('image/png')</code> to export as a <code>PNG</code> image.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-webcam"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+            
+            <p class="break">Then, I added the countdown timer and a placeholder for the filters (as we hadn't finalized what filters to include). The countdown functionality utilizes <code>setTimeout</code>.</p>
+
+            <p>After successfully capturing and storing four photos, I built the photo strip by drawing each image onto a <code>canvas</code> object with all relevant measurements. For example, calculating the start and end drawing coordinates based on the eyeballed values that looked the best for the border width, space between each photo and the bottom margin of the strip.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/photostrip_measurements.png" alt="Picture showcasing three measurement values: border width, photo spacing, bottom margin.">
+                <!-- <figcaption></figcaption> -->
+              </figure>
+
+            <p><code>drawImage(img, 0, 0, img.width, img.height, xOffset, yOffset, imgW, imgH)</code></p>
+            <ul>
+                <li><code>img</code>: the image</li>
+                <li><code>0, 0</code>: the x- and y-coordinate of where to start drawing from <code>img</code></li>
+                <li><code>img.width, img.height</code>: the x- and y-coordinate of where to end drawing from <code>img</code>
+                  <ul>
+                    <li>we want to draw the entire image</li>
+                    <li>so we draw the entirety of <code>img</code></li>
+                  </ul>
+                </li>
+                <li><code>xOffset, yOffset</code>: the x- and y-coordinate of where to start drawing on the <code>canvas</code> object
+                  <ul>
+                    <li>recalculated before drawing each image</li>
+                    <li>so each <code>img</code> will be drawn at a different location according to its placement on the strip</li>
+                  </ul>
+                </li>
+                <li><code>imgW, imgH</code>: the x- and y-coordinate of where to end drawing on the <code>canvas</code> object
+                  <ul>
+                    <li>how large an individual photo is on the strip</li>
+                  </ul>
+                </li>
+            </ul>
+
+            <p class="break">Next, I created a screen of the customization step. I added temporary border colours (default colour options like red, orange, yellow, etc.), and programmed the application to change the background colour of the <code>canvas</code> object when a colour option was selected. Additionally, I disabled the ability to scroll when swiping by touch on the <code>canvas</code> to prevent unintended scrolling.</p>
+            
+            <p>My friend sent me the sticker illustrations she had drawn digitally. I added them inside a <code>&lt;ul&gt;</code> element, and programmed the application to draw the image of the sticker onto a <code>canvas</code> object when clicked/tapped. Most of the sticker designs were inspired by Love and Deepspace assets.</p>
+
+            <p class="break">With more of the core functionality in place, we began developing our design system.</p>
+
+            <p>Initially, we thought choosing a photo booth and the colour palette would be easy. Oh, how naive we were— those were actually the final pieces we decided on.</p>
+
+            <p>We browsed <a href="https://fonts.google.com/" target="_blank">Google Fonts</a> for a free (and robust) variable font that matched the ✨ <i>vibe</i> ✨ of our application. Using the <i>Feeling</i> search filters, we selected <a href="https://fonts.google.com/specimen/Sour+Gummy" target="_blank">Sour Gummy</a> (SG) and used <a href="https://typescale.com/" target="_blank">TypeScale</a> to help structure the typography.</p>
+
+            <p class="break">We then migrated our sketches from FigJam to Figma. My friend, more familiar with the Korean-style photo booths, created Figma frames of the rough designs that mapped the user journey typical of those booths.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-trad-pb.png" alt="Figma frame prototypes of the traditional design.">
+              <figcaption>START → choose style → choose frame → configure camera → capture photos → customize → final product → END; back navigation available</figcaption>
+            </figure>
+
+            <p>Meanwhile, I began adapting her designs into responsive ones. The structure of the responsive layouts was determined using different grid layouts.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-grid.png" alt="A screenshot of the grid layouts with different frame sizes.">
+              <figcaption>Grid layouts for responsive design of different screen widths</figcaption>
+            </figure>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-breakpoints">
+                <div class="panel-items">
+                  <p>The breakpoint values (in pixels) are 346, 500, 740, 984, and 1180. Device widths up to and including 983px (ranging from mobile phones to medium-sized tablets) will have a smaller typography that corresponds to smaller devices. Device widths starting at 984px (ranging from larger tablets to desktops) will have a larger typography that corresponds to larger devices.</p>
+                  <p>For device width (in pixels):</p>
+                  <ul>
+                    <li>1441+: centers and maintains the following layout at 1440px</li>
+                    <li>1180-1440
+                      <ul>
+                        <li>Column count: 12</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 120</li>
+                        <li>Gutter: 40</li>
+                      </ul>
+                    </li>
+                    <li>984-1179
+                      <ul>
+                        <li>Column count: 12</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 80</li>
+                        <li>Gutter: 40</li>
+                      </ul>
+                    </li>
+                    <li>740-983
+                      <ul>
+                        <li>Column count: 8</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 30</li>
+                        <li>Gutter: 24</li>
+                      </ul>
+                    </li>
+                    <li>500-739: centers and maintains the following layout at 499px</li>
+                    <li>346-499
+                      <ul>
+                        <li>Column count: 4</li>
+                        <li>Type: Stretch</li>
+                        <li>Margin: 10*</li>
+                        <li>Gutter: 20</li>
+                      </ul>
+                      * A different margin value is used for all other website pages
+                    </li>
+                    <li>&#8804;345: centers and maintains the previous layout at 346px</li>
+                  </ul>
+                </div>
+              </div>
+              <button class = "btn-primary panel-control" value="#expand-breakpoints"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">With these established guidelines, I brainstormed designs for the progress indicators. Since each step in the user journey featured a separate screen with differently sized on-screen elements, the indicator could benefit from being independent of those changing components and be positioned in a consistently visible location. Furthermore, the design should be minimal and occupy as little space as possible to maintain focus on the photo booth experience.</p>
+
+            <p class="break">Since we still hadn't nailed our brand name or colour yet, our next step was to build a mini <code>canvas</code> application where users could move, resize, rotate and delete stickers freely.</p>
+          </div>
+        </section>
+
+        <section id = "project-testing" class="flex-col">
+          <h2 class="section-title">&#x1F52C; Testing</h2>
+          <div class="section-body flex-col">
+            <p>At this point, I researched <code>javascript</code> libraries to handle drawing graphics and rendering on a <code>canvas</code> object. However, I was unable to find one that best suited the project, so I challenged myself to build one from scratch.</p>
+
+            <p>And so, through <i><del>blood, sweat and tears</del></i> rigorous testing, I successfully built my own using only the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas API</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget API</a>!</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-canvas">
+                <div class="panel-items">
+                  <p>It is safe to say that <code>canvas</code> and I developed a new understanding.</p>
+
+                  <p>I tried implementing various <code>javascript</code> and <code>react</code>-based libraries. But <i>none</i> worked well for my case. I won't rant too much, but most of the issues I encountered came up during mobile testing:</p>
+                  
+                  <ul>
+                    <li>Drawn images glitched and appeared as empty boxes</li>
+                    <li>The entire <code>canvas</code> was heavily zoomed in (so the drawn images were absurdly large... I had absolutely no idea why it happened)</li>
+                    <li>Overall lag, or website crash</li>
+                  </ul>
+
+                  <p>These problems occurred in Safari on my iPhone. The only glimmer of hope was that everything worked smoothly on desktop. I had exhausted my problem-solving patience, so I pivoted.</p>
+
+                  <p>To my surprise, I was able to nail the ability to track and maintain user inputs on the <code>canvas</code> fairly early on. I used pencil and paper to brainstorm the logic of the various <code>canvas</code> functionalities our application needed. When a sticker is added, a new custom object is pushed to a list. This object contains relevant properties such as the image of the sticker, the x- and y-coordinates, width, height, and its angle (to be implemented).</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-canvas"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p>The following <code>EventListener</code> functions were the main stars:</p>
+            <ul>
+              <li><code>mousedown</code>: pointer device is pressed</li>
+              <li><code>mouseup</code>: pointer device is released</li>
+              <li><code>mousemove</code>: pointer device is pressed and moved</li>
+              <li><code>touchstart</code>: touch surface registers a touch point</li>
+              <li><code>touchend</code>: touch point leaves touch surface</li>
+              <li><code>touchmove</code>: touch point moves along touch surface</li>
+            </ul>
+
+            <p class="break">Testing mainly involved translating the logic into code and determining which set of instructions belonged under which <code>EventListener</code>. This required a lot of math and <code>console.log</code> usage. This was also when I figured out scaling and rotation.</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-sample-math">
+                <div class="panel-items">
+                  <p>The top-left of a <code>canvas</code> has coordinates (0,0). The <code>drawImage()</code> function draws an image starting at its local (0,0), which is at the top-left of the image. To draw an image at its correct location, we need to "move" the <code>canvas</code> to the desired spot: <code>ctx.translate(x, y)</code>, <code>ctx</code> = <code>cavnas</code>'s 2D rendering context.</p>
+                  <p>Simple translation of a sticker involved getting the current coordinates of the user input (i.e. pointer device, touch point) and updating the x- and y-coordinates accordingly.</p>
+                  <p>Resizing a sticker involved updating its width and height values, and limiting how quickly or excessively it could scale.</p>
+                  <p>To draw an image at its correct angle, we need to rotate the <code>canvas</code>: <code>ctx.rotate(angle)</code>. The rotation utilizes radians, so we can retrieve the angle with: <code>Math.atan2(dy, dx)</code>, <code>dy, dx</code> = the vertical and horizontal displacements.</p>
+                  <p class="break">These will resize and rotate the image about the local (0,0), not at its center. I will later update this in <a href="#project-final-designs"> &#x2B50; final designs</a>.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-sample-math"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">Then, I moved on to testing our design system. Without a finalized colour palette, I was able to focus solely on typography and layouts. I built frames in Figma that followed the aforementioned grid layouts. With experience from past projects, I found it easier to balance aesthetics with user experience.</p>
+
+            <p>My friend and I eventually finalized the primary colour we wanted to use. From existing and popular Korean-style services, they often used light colours which greatly contributed to branding (and overall atmosphere of fun and whimsical). We adopted a light shade of green that had pear 🍐 in the name as our primary brand colour. We then got an image of a nice-looking pear from Google Images, and I let my friend have some fun by picking a shade of pink found within the image that complemented our green. With these two colours chosen, I decided to use the 60-30-10 colour rule that I used in previous projects:</p>
+
+            <ul>
+              <li>60% of the page = neutral background colour</li>
+              <li>30% of the page = primary and secondary colours = text colour + brand colour</li>
+              <li>10% of the page = tertiary and accent colours</li>
+            </ul>
+
+            <p>Next, I generated a tonal palette for each colour using the <a href="https://www.figma.com/community/plugin/1024452006068794933" target="_blank">Foundation: Color Generator</a> Figma plugin by Jorge Fernandes.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-palette-tonal.png" alt="An image of the tonal palettes generated using the Foundation: Color Generator plugin.">
+              <figcaption>Tonal palettes:
+                <ul>
+                  <li>13 shades of neutral colours (black and white)</li>
+                  <li>10 shades of the primary colour</li>
+                  <li>10 shades of the secondary colour</li>
+                  <li>10 shades of the pink tertiary colour</li>
+                  <li>10 shades of the pink-variant tertiary colour (if needed)</li>
+                  <li>10 shades of the red accent colour</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>Next, I built the full color palette and labeled it as the <i>Light</i> theme. The layout and labels were inspired by the Color Guidance by <a href="https://m3.material.io/" target="_blank">Material Design</a>. The <a href="https://www.figma.com/community/plugin/748533339900865323" target="_blank">Contrast</a> plugin by WillowTree was incredibly useful in selecting appropriate shades and tones.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-palette-light.png" alt="An image of the light themed colour palette.">
+              <figcaption>View of the light themed colour palette with labels denoting their names and the tonal palette they are retrieved from</figcaption>
+            </figure>
+
+            <p class="break">Throughout various testing phases, my friend had her siblings play around, and I let a few of my other friends to do the same. This proved useful as it raised certain issues or critiques we otherwise wouldn't have thought of at this point. For example:</p>
+            <ul>
+              <li>the <code>draggable</code> property of <code>&lt;img&gt;</code> elements</li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color" target="_blank">-webkit-tap-highlight-color</a></li>
+              <li>testing with in-app browsers</li>
+              <li>more instructions at the customization step</li>
+            </ul>
+
+            <p class="break">Additionally, my friend suggested improving the font style to better convey a playful tone. We chose <a href="https://fonts.google.com/specimen/Mochiy+Pop+P+One" target="_blank">Mochiy Pop P One</a> from Google Fonts, a thicker typeface that better aligned with our visual goals. Because it wasn't a variable font (i.e. void of non-regular styles like italics and bold), I built the new typography while still holding onto the previous SG typography.</p>
+
+            <p>After adding the new font style into the Figma frames, it became more difficult to create hierarchy within the elements through varying text sizes. Especially for elements that used smaller text sizes due to the font's consistent weight (or thickness). Consequently, I decided to use SG for smaller body text, such as captions and helper text.</p>
+
+            <p class="break">Lastly, I conducted testing on various progress indicator designs. I gathered images of common design patterns and listed the pros and cons of each design. Then, I consulted friends by asking them to associate each design with a purpose, function, or overall "vibe".</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-test-progress">
+                <div class="panel-items">
+                  <p>For example, consider the first four progress indicator designs shown in the image linked <a href="https://medium.com/design-bootcamp/progress-bar-in-ui-design-90f911c3ec18" target="_blank">here</a>:</p>
+                  <ol>
+                    <li>Dashed horizontal bar</li>
+                    <li>Single long horizontal bar with a knob - similar to an element that receives user input</li>
+                    <li>Single long horizontal bar without a knob - similar to a loading bar</li>
+                    <li>Chained circular numerical steps - often used in registration or purchasing processes</li>
+                  </ol>
+
+                  <p>The second and third options less suited for a photo booth application. The second felt more like an element for customization rather than an overall progress indicator. The third best resembled a loading bar, and therefore best suited when the progress is visually continuous.</p>
+
+                  <p>The first and fourth better conveyed the idea of sequential steps. The fourth was more informative and clearly communicated the user's position in the process. The first conveyed similar progression but without the use of additional icons or text.</p>
+
+                  <p>After testing these two designs, here is a summary of the feedback:</p>
+
+                  <ul>
+                    <li>Dashed horizontal bar
+                      <ul>
+                        <li>🟢 Simple and effective</li>
+                        <li>🟢 Minimal and flexible design</li>
+                        <li>🟢 Commonly associated with simple, straightforward processes</li>
+                        <li>🟡 Less informative</li>
+                        <li>🔴 Potential confusion about the user's current position (e.g. is the user on the last coloured bar or the next faded one?)</li>
+                      </ul>
+                    </li>
+                    <li>Chained circular numerical steps
+                      <ul>
+                        <li>🟢 Highly informative</li>
+                        <li>🟢 Clearly indicates the user's current step</li>
+                        <li>🟡 Less emphasis on numbers, more focus on the purpose of each step (e.g. with labels)</li>
+                        <li>🟡 Commonly used in shopping, registration and formal processes</li>
+                        <li>🔴 Can feel overly formal, corporate or commercial in tone</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-test-progress"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p>As a result, I chose the design of a dashed horizontal bar. I adapated the usage of a separate colour to denote the step the user is currently at. This design is minimal, concise, and provided sufficient communication.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-progress_indicator.gif" alt="GIF of the progress indicator design.">
+              <!-- <figcaption></figcaption> -->
+            </figure>
+
+          </div>
+        </section>
+
+        <section id = "project-final-designs" class="flex-col">
+          <h2 class="section-title">&#x2B50; Final Designs</h2>
+          <div class="section-body flex-col">
+            <p><i>Finally</i>, we've arrived at <i>Final</i> Designs where we <i>finally finalized</i> the <i>final</i> designs.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-runthrough.gif" alt="A sped up GIF of the entire photo booth process on larger devices.">
+              <figcaption>Sped up example runthrough on my laptop with the Xavier* frame<br>* Xavier is one of the characters from Love and Deepspace</figcaption>
+            </figure>
+
+            <p>First, let's go over the Figma designs. I created a variety of components and variants. For icons, I initially used a copy of the <a href="https://www.figma.com/community/file/809920999413919915/octicons-githubs-icon-set" target="_blank">Octicons - Github's icon set</a> design file as a temporary placeholder. These were later replaced in code with free SVG versions from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-components-buttons.png" alt="An image of some of the button components I built in Figma.">
+              <figcaption>Some call-to-action (CTA) buttons and their various states like default, hover, touch, disabled
+                <ul>
+                  <li>Top: for larger device sizes</li>
+                  <li>Bottom: for smaller device sizes</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-final-design-frames.png" alt="A screenshot of an overview of all the built frames in Figma.">
+              <figcaption>Each row corresponds to one step in the user journey, and frames within a row represent responsive designs at specific breakpoints<br>Sample image in the third and fourth row source: <a href="https://x.com/Love_Deepspace/status/1747521236803211603" target="_blank">X (Twitter)</a></figcaption>
+            </figure>
+
+            <p>After refining the design system, I translated those changes and built everything in code.</p>
+
+            <p class="break">Next, I refined the code for drawing images on a <code>canvas</code> during the customization step. I also implemented two-finger scaling for resizing stickers, which involved adding three new <code>EventListener</code> functions:</p>
+
+            <ul>
+              <li><code>gesturestart</code>: touch surface registers multiple touch points (which triggers a touch gesture)</li>
+              <li><code>gestureend</code>: touch surface does not have multiple touch points</li>
+              <li><code>gesturechange</code>: touch points move along touch surface during a touch gesture</li>
+            </ul>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-final-math">
+                <div class="panel-items">
+                  <p>As aforementioned, I updated the code so that stickers now appeared scaling and rotating about their center (rather than from the top-left corner which gave me such a huge <i>ick</i>). ICYMI: to draw an image at the desired spot, we need to "move" the canvas to the correct coordinates. Our new desired spot is at the center of the sticker: <code>ctx.translate(x + halfW, y + halfH)</code>, where <code>halfW</code> and <code>halfH</code> are the halved values of the sticker's width and height. Then, to draw the image: <code>ctx.drawImage(img, 0, 0, img.width, img.height, -halfW, -halfH, halfW*2, halfH*2)</code>. The <code>half-</code>values are needed to correctly account for drawing a transformed image.</p>
+
+                  <p>During a <code>gesturechange</code>, the event contains a <code>scale</code> property. If <code>scale</code> > 1, the touch points moved apart. If <code>scale</code> < 1, the touch points moved closer.</p>
+
+                  <p>Accordingly, the x- and y-coordinates are also updated as it's resizing.</p>
+
+                  <p>I also handled a few edge cases.</p>
+                  <ul>
+                    <li>Stickers have maximum and minimum size constraints to ensure they will never be too small or too large to interact with</li>
+                    <li>Prevent stickers from being placed outside of the <code>canvas</code> by checking the x- and y-coordinates relative to the width and height of the <code>canvas</code></li>
+                    <li>Added another <code>EventListener</code>: <code>mouseleave</code>, for when the pointer device exits the <code>canvas</code> - if triggered and a sticker was being interacted with, treat it as a <code>mouseup</code> and save the interaction</li>
+                  </ul>
+
+                  <p>For rotated stickers, the program calculates the rotated coordinates for any user input. These new coordinates are used to check whether the user has interacted with the sticker or its interactive elements. The formulae follow the standard equation for rotating a point (x, y) about another point (m, n):</p>
+                  <ul>
+                    <li>New x-coordinate: <code>(x - m) * Math.cos(angle) - (y - n) * Math.sin(angle) + m</code></li>
+                    <li>New y-coordinate: <code>(y - n) * Math.cos(angle) + (x - m) * Math.sin(angle) + n</code></li>
+                  </ul>                  
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-final-math"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p>As I was testing and playing around with the customizations, the <code>canvas</code> would lag on mobile after a short period of use. I then looked for ways to optimize my code:</p>
+
+            <div class="panel-container">
+              <div class = "panel" id="expand-optimize">
+                <div class="panel-items">
+                  <p>Essentially, after a short while, as the sticker moved on the <code>canvas</code>, it looked like there was an extreme drop in frame rate.</p>
+                  <p>I learned that drawing on the <code>canvas</code> is quite an expensive operation. The issue was that the drawing function was unable to keep up with the frequency of user inputs user inputs.</p>
+
+                  <p>To address this, I optimized the drawing function by introducing a second <code>canvas</code> object to create a two-layer structure. The top layer held the sticker most recently added or interacted with (i.e. the last sticker in the list). The bottom layer held all the remaining stickers. Therefore, when interacting with one sticker, the program only needed to redraw that one sticker on the top layer, rather than redrawing the entire list each time.</p>
+
+                  <p>Furthermore, during transformations, the drawing function will no longer draw the associated interactive tools. Only when a sticker was stationary and selected will the function draw the tools. As well, I went through the logic from the beginning and prevented extra unnecessary draws.</p>
+
+                  <p>These major modifications significantly improved the drawing performance, and it no longer "lagged" on mobile.</p>
+                </div>
+              </div>
+              <button class="btn-primary panel-control" value="#expand-optimize"> Show/Hide for addition, non-critical, information!
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+              </button>
+            </div>
+
+            <p class="break">I also added loading indicators and modal instructions:</p>
+            <ul>
+              <li>Integrated <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a> by <i>dvtng</i>
+                <ul>
+                  <li>Prompt users to enable camera permissions to continue</li>
+                  <li>Loading states for the camera feed</li>
+                  <li>Loading states for overlay image imports</li>
+                  <li>Loading/importing the sticker images (at the customization step)</li>
+                </ul>
+              </li>
+              <li>Information "i" icon button that opens a modal with a brief instructional text snippet
+                <figure class="media">
+                  <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-modal-cus_instructions.gif" alt="Side by side view of the instructions modal.">
+                  <figcaption>Left: mobile (or smaller devices), right: desktop (or larger devices)</figcaption>
+                </figure>
+              </li>
+            </ul>
+
+            <p class="break">Then, I implemented undo and redo functionalities and quite enjoyed planning the logic for them. Basically, after each user action, the current "state" of the <code>canvas</code> is stored in an 'actions' list. If undo is triggered, the current state is moved to a new 'redo' list, and the <code>canvas</code> reverts to the previous state. If redo is triggered, the state is restored and returned to the 'actions' list. If a user performs a new action after undoing, then the 'redo' list is cleared.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-undo_redo.gif" alt="Undo and redo demo.">
+              <figcaption>A sped up GIF of a demo of the undo and redo features</figcaption>
+            </figure>
+
+            <p>This led me to change the <a href="https://www.w3schools.com/cssref/pr_class_cursor.php" target="_blank">cursor style</a> during different types of user interactions with a pointer device. Specifically, I utilized the following cursor styles:</p>
+            <ul>
+              <li><code style="cursor:default;">default</code>: default cursor arrow</li>
+              <li><code style="cursor:pointer;">pointer</code>: clickable element</li>
+              <li><code style="cursor:grab;">grab</code>: grabbable element</li>
+              <li><code style="cursor:grabbing;">grabbing</code>: currently grabbing</li>
+              <li><code style="cursor:move;">move</code>: moving sticker</li>
+              <li><code style="cursor:se-resize;">se-resize</code>: resizable element</li>
+              <li><code style="cursor:not-allowed;">not-allowed</code>: elements that cannot be interacted with</li>
+            </ul>
+
+            <p>Cursor styles are applied on various interactive elements and within the <code>canvas</code> during the customization step.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-cursor-canvas.gif" alt="A GIF of a sticker on a canvas.">
+              <figcaption>Examples of cursor style changes:
+                <ul>
+                  <li>Hovering over a sticker</li>
+                  <li>Repositioning a sticker</li>
+                  <li>Hovering over the sticker tools</li>
+                  <li>Hovering over the <code>canvas</code>'s undo and redo buttons</li>
+                </ul>
+              </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-cursor-disabled_camera_permission.gif" alt="A GIF of the camera capturing step when camera permissions are not granted.">
+              <figcaption>Visual indicators when camera permissions are not granted:
+                <ul>
+                  <li>Loading skeleton where the camera feed would be</li>
+                  <li>Disabled button + <code>not-allowed</code> cursor style</li>
+                  <li>"Back" button available</li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p class="break">Later, I updated each <code>canvas</code> throughout the photo booth process to export its image as a <code>blob</code> instead of a standard image format (e.g. PNG). This was added as an extra detail to manage memory since I could easily delete a <code>blob</code> image when no longer needed: <code>URL.revokeObjectURL(resultBlob)</code>.</p>
+
+            <p class="break">My friend and I consolidated the list of border colours and camera filters. We utilized <a href="https://github.com/una/CSSgram" target="_blank">CSSgram</a> by <i>una</i>, a library with <i>Instagram</i>-like filters, and mapped them as follows:</p>
+            <ul>
+              <li>1977 → Musically</li>
+              <li>Clarendon → Vivid</li>
+              <li>Reyes → Light</li>
+              <li>Inkwell → Black/White</li>
+            </ul>
+
+            <p class="break">Lastly, I built the homepage, header and footer for the site. I was inspired by conventional layouts that highlight the services and features of a business, brand or company.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-final-design-homepage.png" alt="A screenshot of an overview of the homepage frames in Figma.">
+              <figcaption>Three main sections:
+                <ol>
+                  <li>Hero banner - CTA that led to the photo booth</li>
+                  <li>Info section 1 - generic showcase with easy, bite-sized information
+                    <figure class="media">
+                      <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/figma-final-design-homepage_info1.png" alt="A image of info section 1 for larger devices.">
+                      <!-- <figcaption></figcaption> -->
+                    </figure>
+                  </li>
+                  <li>Info section 2 - overview of the photo booth process</li>
+                </ol>
+              </figcaption>
+            </figure>
+
+            <p>By this point, the month of March was almost finished. I shortened the second info section and removed the last section (i.e. the fourth section in the left-most frame of the previous image) during implementation. I felt these were not essential at this stage. My friend and I also collaborated on replacing the <i>Lorem ipsum</i> text. As well, we created brief pages for a Privacy policy and Disclaimer for copyright material. We stated that we did not store any images and do not own the Love and Deepspace content used.</p>
+
+            <p>Since this was a website rather than a downloadable application, the header and footer should still be interactable by scrolling. As the user proceeds to the next step, the screen scrolls automatically so the photo booth interface occupies the entire device screen. Similarly, during the photo capture process, I disabled page scrolling to keep users within the main photo booth view. This helps prioritize the visiblity of the photo booth process and fix accidental scrolling on all devices.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-scroll-1-2.gif" alt="A sped up GIF of the scrolling feature (1/2).">
+              <figcaption>START → style → frame → camera set up → ...</figcaption>
+            </figure>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-scroll-2-2.gif" alt="A sped up GIF of the scrolling feature (2/2).">
+              <figcaption>... → customization</figcaption>
+            </figure>
+
+            <p>Finally, we published the latest version of our photo booth. Check out the website linked <a href="https://nenceh.github.io/fancybear/" target="_blank">here</a>! Or, check out the <code>README.md</code> <a href="https://github.com/nenceh/fancybear/blob/gh-pages/README.md" target="_blank">here</a>!</p>
+          </div>
+        </section>
+
+        <section id = "project-next" class="flex-col">
+          <h2 class="section-title">&#x1F4AD; Next Steps</h2>
+          <div class="section-body flex-col">
+            <p>My friend and I plan to update the photo booth with new frame designs. As our brand develops, we could add supplementary pages such as "About Us" or a viewable list of available frames.</p>
+
+            <p>Some of the camera filters did not function properly and required several makeshift workarounds. This was due to differences in how blend modes work between <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" target="_blank">Canvas</a>, and that I couldn't directly apply filters onto the <code>&lt;video&gt;</code> element due to the way the CSSgram library functions. Therefore, I'll need to figure out exactly how to proceed with filters.</p>
+
+            <p>A different friend mentioned the ability to save, share or send the finished result to a another device or across devices. I added a "Share" button to enable quick access to sharing options via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API" target="_blank">Web Share API</a>. This was my quick solution to their suggestion, but I'd like to investigate this further down the line.</p>
+
+            <p>Lastly, the <code>canvas</code> I built has plenty of room for improvement. Either I get my hands dirty again or I will continue searching for a usable library. Nonetheless, I'm incredibly proud of what we have built.</p>
+          </div>
+        </section>
+      </main>
+      
+      <section class = "extra">
+        <p>Last modified: May 4, 2025</p>
+      </section>
+    </div>
+
+    <footer class = "footer">
+      <div class="footer-sitemap">
+        <nav class = "footer-primary">
+          <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../portfolio.html">portfolio</a></li>
+            <li><a href="../cv.html">cv</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-secondary">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank" class="btn-icon"> <!-- linkedin -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </div>
+              /nancyhao
+            </a></li>
+            <li><a href="https://www.figma.com/@nenceh" target="_blank" class="btn-icon"> <!-- figma -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+            <li><a href="https://www.youtube.com/@nenceh" target="_blank" class="btn-icon"> <!-- youtube -->
+              <div class="btn-icon-padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
