@@ -580,12 +580,10 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     flex-flow: column wrap;
     max-height: 160px;
     gap: 0;
-    justify-content: space-between;
     width: 100%;
     padding-left: 16px;
   }
   .body-content .toc ol li {
-    flex: 1;
     min-width: 20%;
     width: auto;
     border: none;

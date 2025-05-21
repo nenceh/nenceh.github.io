@@ -241,7 +241,7 @@
                       <li><p>Maintain appropriate size on larger devices: <code>'height' : `min(100dvh - 144px - 24px - 8px, ${containerRef.current.offsetWidth * Math.pow(STYLE.ratio, -1)}px)`</code>, where the individual subtracted values correspond to the sizes of specific on-screen elements</p></li>
                   </ul>
 
-                  <p class="break">After getting a screenshot of the camera feed via <i>react-webcam</i>'s <code>getScreenshot()</code> method, I drew the image onto a <code>canvas</code> object with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">drawImage()</a> in order to save the image with the correct dimensions.</p>
+                  <p class="break">After getting a screenshot of the camera feed <del>via <i>react-webcam</i>'s <code>getScreenshot()</code> method</del>, I drew the image onto a <code>canvas</code> object with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">drawImage()</a> in order to save the image with the correct dimensions.</p>
                   <p><code>drawImage(sc, startX, startY, endX, endY, 0, 0, targetW, targetH)</code></p>
                   <ul>
                       <li><code>sc</code>: the screenshot</li>
@@ -725,7 +725,7 @@
           <div class="section-body flex-col">
             <p>My friend and I plan to update the photo booth with new frame designs. As our brand develops, we could add supplementary pages such as "About Us" or a viewable list of available frames.</p>
 
-            <p>Some of the camera filters did not function properly and required several makeshift workarounds. This was due to differences in how blend modes work between <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" target="_blank">Canvas</a>, and that I couldn't directly apply filters onto the <code>&lt;video&gt;</code> element due to the way the CSSgram library functions. Therefore, I'll need to figure out exactly how to proceed with filters.</p>
+            <p><del>Some of the camera filters did not function properly and required several makeshift workarounds. This was due to differences in how blend modes work between <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" target="_blank">Canvas</a>, and that I couldn't directly apply filters onto the <code>&lt;video&gt;</code> element due to the way the CSSgram library functions. Therefore, I'll need to figure out exactly how to proceed with filters.</del> EDIT: I have significantly improved (and basically fixed) how the camera filters worked when applying to an image. The only caveat is that, on mobile, I am unable to retrieve decimal values from <code>css</code> properties. For example, if an element has property <code>opacity: 0.5</code>, <code>getPropertyValue('opacity')</code> returns an empty string. Retrieval of regular properties (e.g. <code>getPropertyValue('mix-blend-mode')</code>) functions just fine. So, there's that.</p>
 
             <p>A different friend mentioned the ability to save, share or send the finished result to a another device or across devices. I added a "Share" button to enable quick access to sharing options via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API" target="_blank">Web Share API</a>. This was my quick solution to their suggestion, but I'd like to investigate this further down the line.</p>
 
@@ -735,7 +735,7 @@
       </main>
       
       <section class = "extra">
-        <p>Last modified: May 4, 2025</p>
+        <p>Last modified: May 20, 2025</p>
       </section>
     </div>
 
