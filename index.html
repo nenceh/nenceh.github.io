@@ -48,7 +48,7 @@
       <main class="flex-col">
         <section id = "about-me" class="flex-col">
           <h2 class="section-title">This is me!</h2>
-          <section class="section-body">
+          <div class="section-body">
             <div id="about-me-info">
               <ul class="flex-col">
                 <li name="My Name">Nancy Hao (she/her)</li>
@@ -59,24 +59,77 @@
             </div>
             <figure id = "about-me-pic" class="media">
               <img src="images/headshot-2019.jpg" alt="A picture of me!">
-              <!-- <figcaption></figcaption> -->
             </figure>
-          </section>
+          </div>
+        </section>
+
+        <section id = "showcase" class="flex-col">
+          <div class="section-title">
+            <h2>Portfolio Showcase</h2>
+            <div class="control">
+              <button id="showcase-bwd" class="btn-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
+              <button id="showcase-fwd" class="btn-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></button>
+            </div>
+          </div>
+
+          <div class="section-body">
+            <div class="showcase">
+              <div class="showcase-item-container" id="fancybear">
+                <a href="https://nenceh.github.io/portfolio/fancybear-photobooth.html" class="showcase-item">
+                  <figure class="media">
+                    <img src="images/portfolio/fancybear-photobooth/thumbnail-figma.png" alt="Fancy Bear Photobooth project thumbnail"/>
+                  </figure>
+                </a>
+              </div>
+
+              <div class="showcase-item-container" id="firstsip">
+                <a href="https://nenceh.github.io/portfolio/firstsipmatcha-website.html" class="showcase-item">
+                  <figure class="media">
+                    <img src="images/portfolio/firstsipmatcha-website/thumbnail-figma.png" alt="First Sip Matcha Bar project thumbnail"/>
+                  </figure>
+                </a>
+              </div>
+
+              <div class="showcase-item-container" id="restday">
+                <a href="https://nenceh.github.io/portfolio/fitness-rest-day.html" class="showcase-item">
+                  <figure class="media">
+                    <img src="images/portfolio/apple-fitness-rest/thumbnail-figma.png" alt="Apple Fitness: Rest Day project thumbnail"/>
+                  </figure>
+                </a>
+              </div>
+
+              <div class="showcase-item-container" id="grc">
+                <a href="https://nenceh.github.io/portfolio/grc-website.html" class="showcase-item">
+                  <figure class="media">
+                    <img src="images/portfolio/grc-website/thumbnail-figma.png" alt="Global Repatriation Council project thumbnail"/>
+                  </figure>
+                </a>
+              </div>
+
+              <div class="showcase-item-container" id="bulbapedia">
+                <a href="https://nenceh.github.io/portfolio/pokemon-physics.html" class="showcase-item">
+                  <figure class="media">
+                    <img src="images/portfolio/pokemon-physics/thumbnail-figma.png" alt="Bulbapedia Web Scraper project thumbnail"/>
+                  </figure>
+                </a>
+              </div>
+            </div>
+
+            <div id="pagination" class="pagination"></div>
+          </div>
         </section>
 
         <section id = "tinder-bio" class="flex-col">
-          <h2 class="section-title">My unofficial Tinder profile</h2>
-          <section class="section-body flex-col">
-            <!-- <blockquote>"Too weird to live, too rare to die."</blockquote> -->
-            <!-- <img src="/images/tinder-bio.png" id = "tinder-bio-pic" alt = "A collage of some of the things I love!"> </img> -->
+          <!-- <h2 class="section-title">My unofficial Tinder profile</h2> -->
+          <div class="section-body flex-col">
+            <p>I am <span id = "creative"> creative</span>, <span id = "passionate">passionate</span>, <span id = "rational">rational</span>, <span id = "confident">confident</span>, <span id="ingenious">ingenious</span>.</p>
             
             <figure class="media">
-              <img src="images/lassonde-yu.png" id = "school-pic" alt = "The logo of the university I attend.">
+              <img src="images/lassonde-yu.png" id = "school-pic" alt = "The logo of the faculty and university I attended: Lassonde School of Engineering, York University">
               <!-- <figcaption></figcaption> -->
             </figure>
-          
-            <p>I am <span id = "creative"> creative</span>, <span id = "passionate">passionate</span>, <span id = "rational">rational</span>, <span id = "confident">confident</span>, <span id="ingenious">ingenious</span>.</p>
-          </section>
+            
+          </div>
         </section>
       </main>
     </div>

@@ -58,4 +58,83 @@ $(document).ready(function(){
             else item.classList.remove("in-page-current")
         })
     })
+
+    // showcase carousel
+    $(window).on("load", function(){
+        const list = document.querySelectorAll('.showcase-item-container');
+
+        if(list.length > 0){
+            const controls = document.querySelectorAll('section#showcase button.btn-icon');
+            for(let i = 0; i < list.length; i++){
+                $('div#pagination').append('<div class="pagination-dot" id="showcase-item-' + (i+1) + '"/>')
+            }
+            const pagination = document.querySelectorAll('div.pagination-dot');
+            const disableDuration = 700;
+            var curIdx = 0, bwdIdx = list.length - 1, fwdIdx = curIdx + 1, direction = 1, ffwdIdx = fwdIdx + 1;
+            $(pagination[curIdx]).addClass('current')
+
+            const slide = (x) => {
+                $(controls).attr("disabled", true);
+
+                if(x != direction) direction = x;
+
+                $(list[curIdx]).removeClass('current prev next next_ animate')
+                $(list[bwdIdx]).removeClass('current prev next next_ animate')
+                $(list[fwdIdx]).removeClass('current prev next next_ animate')
+                $(pagination[curIdx]).removeClass('current')
+                
+                if(x == 1) $(list[ffwdIdx]).removeClass('current prev next next_ animate');
+                else $(list[ffwdIdx]).removeClass('current prev next next_');
+
+                if(x == 1){
+                    bwdIdx = curIdx;
+                    curIdx = (curIdx + 1) % list.length;
+                    fwdIdx = (curIdx + 1) % list.length
+                } else{
+                    fwdIdx = curIdx;
+                    curIdx = (curIdx - 1 + list.length) % list.length
+                    bwdIdx = (curIdx - 1 + list.length) % list.length
+                }
+
+                ffwdIdx = (fwdIdx + 1) % list.length
+                $(pagination[curIdx]).addClass('current')
+
+                setIdx();
+
+                if (list.length > 1){
+                    if(x == -1){
+                        setTimeout(() => {
+                            $('.showcase-item-container.animate:not(.prev):not(.current):not(.next):not(.next_)').removeClass('animate');
+                            $('.showcase-item-container.prev').addClass('animate');
+                        }, disableDuration);
+                    }
+                    setTimeout(() => $(controls).attr("disabled", false), disableDuration)
+                }
+            }
+
+            const setIdx = () => {
+                $(list[curIdx]).addClass('current')
+                $(list[bwdIdx]).addClass('prev')
+                $(list[fwdIdx]).addClass('next')
+                $(list[ffwdIdx]).addClass('next_')
+
+                if(direction == 1){
+                    $(list[bwdIdx]).addClass('animate')
+                }
+
+                $(list[curIdx]).addClass('animate')
+                $(list[fwdIdx]).addClass('animate')
+                $(list[ffwdIdx]).addClass('animate')
+            }
+
+            setIdx();
+
+            if(list.length > 1){
+                setTimeout(() => $('.showcase-item-container').css({transition: 'transform 0.7s ease-out'}), 100);
+            }
+
+            $("button#showcase-bwd").click(() => slide(-1))
+            $("button#showcase-fwd").click(() => slide(1))
+        }
+    })
 })
