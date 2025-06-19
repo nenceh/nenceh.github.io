@@ -63,6 +63,14 @@ $(document).ready(function(){
     $(window).on("load", function(){
         const list = document.querySelectorAll('.showcase-item-container');
 
+        var imgs = document.querySelectorAll('.showcase-item img');
+        if(imgs.length < 1)imgs = document.querySelectorAll('section.portfolio-entry img');
+        
+        imgs.forEach((i) => {
+            $(i).attr('src', $(i).attr('original-src'));
+            $(i).removeAttr('original-src');
+        });
+
         if(list.length > 0){
             const controls = document.querySelectorAll('section#showcase button.btn-icon');
             for(let i = 0; i < list.length; i++){

@@ -53,11 +53,6 @@
 .topnav a:hover, .topnav a :active {
   text-decoration: underline;
 }
-.topnav a.active {
-  color: #172427;
-  font-style: italic;
-  text-decoration: underline;
-}
 
 @media screen and (min-width: 1441px) {
   .topnav-container {
@@ -344,8 +339,8 @@ main#cv {
   }
 }
 @media (hover: hover), (-ms-high-contrast: none) and (pointer: fine) {
-  section#showcase .control button.btn-icon:hover {
-    background-color: #B7C3DA;
+  section#showcase .section-title .control button.btn-icon:hover {
+    background-color: #D9D9D9;
   }
 }
 section#showcase .section-title {
@@ -363,10 +358,11 @@ section#showcase .section-title .control {
   height: fit-content;
 }
 section#showcase .section-title .control button.btn-icon {
+  background-color: #F0F0F0;
   border: 1px solid black;
 }
 section#showcase .section-title .control button.btn-icon:active {
-  background-color: #B7C3DA;
+  background-color: #D9D9D9;
 }
 section#showcase .section-title .control button.btn-icon svg {
   align-self: center;
@@ -393,11 +389,11 @@ section#showcase .pagination {
 }
 section#showcase .pagination-dot {
   transition: background-color 0.3s ease;
-  background-color: #99A1A3;
+  background-color: #BFBFBF;
   border-radius: 50%;
 }
 section#showcase .pagination-dot.current {
-  background-color: rgba(23, 36, 39, 0.85);
+  background-color: rgba(58, 58, 58, 0.92);
 }
 
 .body-content.landing main {
@@ -445,12 +441,12 @@ section#showcase .pagination-dot.current {
           user-select: none;
 }
 .showcase-item-container .info .title {
-  color: #172427;
+  color: #0D0D0D;
 }
 .showcase-item-container .info .desc {
   display: flex;
   flex-direction: column;
-  color: rgba(23, 36, 39, 0.85);
+  color: rgba(58, 58, 58, 0.92);
 }
 .showcase-item-container .info .desc p {
   padding: 0;
@@ -470,7 +466,7 @@ html {
 }
 
 #find-me {
-  background-color: rgba(23, 36, 39, 0.85);
+  background-color: rgba(58, 58, 58, 0.92);
   border-radius: 10px 0 0 10px;
   position: fixed;
   right: 0;
@@ -504,7 +500,7 @@ html {
 }
 
 body .page-banner {
-  background-color: #172427;
+  background-color: #0D0D0D;
   color: #FFF;
   text-align: center;
   border-radius: 0 0 8px 8px;
@@ -673,7 +669,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     font-family: "Trebuchet MS";
     padding: 8px 20px;
   }
-  .body-content p, .extra p, figcaption, .panel-control, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text {
+  .body-content p, .extra p, figcaption, .panel-control, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .early-regex {
     width: 100%;
   }
   .body-content main, .page-banner p.desc, .info-container > .info, .footer-sitemap {
@@ -797,7 +793,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   .body-content .toc ol li::before {
     content: "";
     position: absolute;
-    background-color: rgba(23, 36, 39, 0.55);
+    background-color: rgba(58, 58, 58, 0.92);
     width: 1px;
     top: 0;
     bottom: 0;
@@ -910,7 +906,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
 }
 @media screen and (max-width: 1102px) {
-  #project-info, nav[role=navigation], .entry-list, .page-banner p.desc, .info-container > .info, .section-title, .body-content p, .extra p, figcaption, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .footer-sitemap {
+  #project-info, nav[role=navigation], .entry-list, .page-banner p.desc, .info-container > .info, .section-title, .body-content p, .extra p, figcaption, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .footer-sitemap, .early-regex {
     width: calc(6 * (100% + 24px) / 8 - 24px);
   }
   .info-container .info {
@@ -953,7 +949,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     text-decoration: underline;
   }
   .body-content .toc ol li a.in-page-current {
-    color: #172427;
+    color: #0D0D0D;
   }
   .body-content .toc ol li a.in-page-current:after {
     content: none;
@@ -1044,7 +1040,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     letter-spacing: 0.5px;
     font-family: "Trebuchet MS";
   }
-  body #project-info, body nav[role=navigation], body .entry-list, body .page-banner p.desc, body .info-container > .info, body .section-title, body .body-content p, body .extra p, body figcaption, body .panel-container, body .section-body ul, body .section-body ol, body .section-body hr, body div.gen-text, body .footer-sitemap {
+  body #project-info, body nav[role=navigation], body .entry-list, body .page-banner p.desc, body .info-container > .info, body .section-title, body .body-content p, body .extra p, body figcaption, body .panel-container, body .section-body ul, body .section-body ol, body .early-regex, body .section-body hr, body div.gen-text, body .footer-sitemap {
     max-width: 499px;
     width: 100%;
   }
@@ -1357,21 +1353,21 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
 }
 @media (hover: hover), (-ms-high-contrast: none) and (pointer: fine) {
   a:hover:not(.btn-primary):not(.showcase-item) {
-    color: #736EF7;
+    color: #5852F5;
   }
   .body-content nav.toc li a:hover {
     text-decoration: underline;
-    color: #736EF7;
+    color: #5852F5;
   }
   #find-me li:hover {
-    background-color: #172427;
+    background-color: #0D0D0D;
   }
   button#to-top:hover {
-    background-color: #172427;
+    background-color: #0D0D0D;
   }
   .page-banner:hover {
-    background-color: #f69051;
-    color: #172427;
+    background-color: #F69051;
+    color: #0D0D0D;
   }
   .page-banner:hover span.highlight-1 {
     background: linear-gradient(to bottom, transparent 50%, #FCE04F 50%);
@@ -1392,17 +1388,17 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   ul.toggle-filters label:active {
     letter-spacing: 0.8px;
   }
-  footer a:hover {
-    color: #736EF7;
+  footer.footer ul a:hover {
+    color: #5852F5;
   }
-  footer a:hover svg {
-    fill: #736EF7;
+  footer.footer ul a:hover svg {
+    fill: #5852F5;
   }
 }
 /* BODY */
 body {
   background-color: #FAF9F0;
-  color: #172427;
+  color: #0D0D0D;
   overflow-x: hidden;
   text-underline-offset: 2px;
 }
@@ -1414,7 +1410,7 @@ body a {
   color: #211CAD;
 }
 body a:active {
-  color: #736EF7;
+  color: #5852F5;
 }
 body main ul {
   padding: 0 0 0 32px;
@@ -1430,7 +1426,7 @@ body main code, body main pre {
   font-size: 0.9em;
   line-height: 24px;
   color: #5F161E;
-  background-color: #B7C3DA;
+  background-color: #BEBCFB;
   padding: 1px 4px 2px;
   width: 100%;
 }
@@ -1512,10 +1508,10 @@ body main code, body main pre {
 }
 .body-content .toc ol li a:active {
   text-decoration: underline;
-  color: #736EF7;
+  color: #5852F5;
 }
 .body-content .toc a {
-  color: #172427;
+  color: #0D0D0D;
 }
 
 .extra {
@@ -1538,7 +1534,7 @@ button#to-top {
   align-items: center;
   border-radius: 100px;
   z-index: 1;
-  background-color: rgba(23, 36, 39, 0.85);
+  background-color: rgba(58, 58, 58, 0.92);
   border: none;
   color: #FFF;
 }
@@ -1546,12 +1542,12 @@ button#to-top svg {
   fill: #FFF;
 }
 button#to-top:active {
-  background-color: #172427;
+  background-color: #0D0D0D;
 }
 
 .btn-primary {
-  background-color: #1E53BA;
-  color: #FFF;
+  background-color: #2E27F3;
+  color: #EAE9FE;
   border: none;
   box-shadow: 0 10px 18px -8px rgba(16, 43, 96, 0.45);
 }
@@ -1580,8 +1576,8 @@ button#to-top:active {
 }
 
 .btn-secondary {
-  background-color: #173D87;
-  color: #FFF;
+  background-color: #BFBFBF;
+  color: rgba(58, 58, 58, 0.92);
   border: none;
 }
 .btn-secondary svg {
@@ -1622,12 +1618,9 @@ aside.back-to-top {
   width: 100% !important;
 }
 
-.early-regex {
-  width: 100%;
-}
 .early-regex .input {
   display: flex;
-  border: 1px solid #172427;
+  border: 1px solid #0D0D0D;
   gap: 4px;
 }
 .early-regex .input input {
@@ -1637,7 +1630,7 @@ aside.back-to-top {
 }
 .early-regex .input input:focus {
   outline: none;
-  color: #172427;
+  color: #0D0D0D;
 }
 
 section#about-me .section-body {
@@ -1784,7 +1777,7 @@ ul.toggle-filters li {
 }
 ul.toggle-filters li label {
   display: inline-block;
-  outline: 1px solid #172427;
+  outline: 1px solid #0D0D0D;
   outline-offset: -1px;
   border-radius: 16px;
   white-space: nowrap;
@@ -1803,7 +1796,7 @@ ul.toggle-filters li input[type=checkbox] {
   display: none;
 }
 ul.toggle-filters li input[type=checkbox]:checked + label {
-  color: #172427;
+  color: #0D0D0D;
 }
 ul.toggle-filters li input[type=checkbox][name=ts-album][id=ts-album10]:checked + label {
   outline: 2px solid #efc180;
@@ -1866,10 +1859,10 @@ ul.toggle-filters li input[type=checkbox][name=ts-album][id=ts-album15]:checked 
   color: #FFF;
 }
 ul.toggle-filters li input[type=checkbox][name=yt-channel]:checked + label {
-  outline: 2px solid #B7C3DA;
+  outline: 2px solid #BEBCFB;
   outline-offset: -2px;
-  background-color: #B7C3DA;
-  color: #102B60;
+  background-color: #BEBCFB;
+  color: #131066;
 }
 
 #ts-albums .gen-text {
@@ -1877,18 +1870,18 @@ ul.toggle-filters li input[type=checkbox][name=yt-channel]:checked + label {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #172427;
+  background-color: #0D0D0D;
   color: #FFF;
   font-style: italic;
 }
 
 #yt-titles .gen-text {
-  background-color: #172427;
+  background-color: #0D0D0D;
   color: #FAF9F0;
 }
 #yt-titles .gen-text .screen {
   justify-content: flex-end;
-  background: linear-gradient(to top, #102B60 60%, rgba(0, 0, 0, 0) 90%);
+  background: linear-gradient(to top, #131066 60%, rgba(0, 0, 0, 0) 90%);
 }
 #yt-titles .gen-text .control {
   display: flex;
@@ -1968,14 +1961,14 @@ span.stand-rest2 {
 footer.footer {
   display: flex;
   justify-content: center;
-  background: #B7C3DA;
+  background: #BEBCFB;
 }
 footer.footer ul {
   list-style-type: none;
 }
 footer.footer ul li, footer.footer ul a {
   transition: color 0.4s ease;
-  color: #102B60;
+  color: #131066;
 }
 footer.footer .footer-sitemap {
   display: flex;
@@ -1988,11 +1981,11 @@ footer.footer .footer-sitemap .footer-primary li, footer.footer .footer-sitemap 
 }
 footer.footer svg {
   transition: fill 0.4s ease;
-  fill: rgba(23, 36, 39, 0.85);
+  fill: rgba(58, 58, 58, 0.92);
 }
 footer.footer a:active {
-  color: #736EF7;
+  color: #5852F5;
 }
 footer.footer a:active svg {
-  fill: #736EF7;
+  fill: #5852F5;
 }/*# sourceMappingURL=styles.css.map */
