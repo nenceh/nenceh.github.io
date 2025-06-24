@@ -63,7 +63,7 @@
 
         <div class="project-info-item flex-col">
           <p class="subtitle">PLATFORM</p>
-          <p>ReactJS, CSS<p>
+          <p>Figma, ReactJS, CSS, Git<p>
         </div>
 
         <div class="project-info-item flex-col">
@@ -74,7 +74,7 @@
         <div class="project-info-item flex-col">
           <p class="subtitle">DELIVERABLE</p>
           <a href="https://nenceh.github.io/fancybear/" target="_blank">
-            <p class = "link"><i>📎</i> Website</p>
+            <p class = "link"><i>📎</i> Web Application</p>
           </a>
         </div>
       </div>
@@ -99,11 +99,27 @@
           <h2 class="section-title">&#x1F680; Intro</h2>
           <div class="section-body flex-col">
             <p><i>"My friend and I made an online photobooth so we don't have to keep paying $10 😂😂"</i>... Yes, that is the tagline we went with.</p>
-            <p>A self-photo studio is a popular and interactive way to capture photo experiences. More commonly known a photo booth, it allows users to control the photo-taking process and receive physical prints and/or digital photo strips.</p>
+            <p class="break">A self-photo studio is a popular and interactive way to capture photo experiences. More commonly known a photo booth, it allows users to control the photo-taking process and receive physical prints and/or digital photo strips.</p>
 
-            <p>My friend really enjoys taking photos at Korean-style photo booths, and we share many of the same interests. She had seen several viral TikTok videos featuring people who built their own online photo booths and hosted them on personal websites. Now, here we are!</p>
+            <p>My friend really enjoys taking photos at Korean-style photo booths, and we share many of the same interests. She had seen several viral TikTok videos featuring people who built their own online photo booths and hosted them on personal websites.</p>
 
-            <p class="break">I had never used camera capabilities in a serious project before, so I saw this as a good opportunity to try it out, and gain more experience with <code>ReactJS</code>. To add our own creative twist, we decided to incorporate aspects from a mobile game into our photo booth project. This mobile game is called <a href="https://loveanddeepspace.infoldgames.com/" target="_blank">Love and Deepspace</a>, and we both play it!</p>
+            <p class="break">At a surface level, these self-published booths were fine. However, most <b>lacked intuitive design choices that would drastically improve the user experience</b>. The root of the issues we identified was the absence of responsive designs for desktop and mobile web browsers, which contributed to poor cross-browser compatibility. Common pain points were:</p>
+            <ul>
+              <li>Inconsistent placement of on-screen elements</li>
+              <li>Disproportionate size of the camera feed relative to other elements (making it difficult for users to view themselves comfortably)</li>
+              <li>Unnecessary scroll affordances</li>
+            </ul>
+
+            <p class="break">By the end of the project, the web application has a fully developed front-end:</p>
+            <ul>
+              <li>Different layout designs for desktop and mobile platforms</li>
+              <li>Improved the application's performance on mobile browsers by optimizing dynamic rendering on HTML <code>Canvas</code></li>
+              <li>Freestyle decorating feature for the photo strip with self-made assets as stickers, using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank">Canvas API</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" target="_blank">EventTarget API</a></li>
+              <li>Incorporated different cursor styles at different touch points using the <code>CSS</code> <code>cursor</code> property</li>
+              <li>Ability to choose a camera filter</li>
+            </ul>
+
+            <p class="break">To add our own creative twist, we incorporated aspects from a mobile game into our photo booth project. This mobile game is called <a href="https://loveanddeepspace.infoldgames.com/" target="_blank">Love and Deepspace</a>, and we both play it!</p>
             
             <p>Throughout your reading journey, I will also include buttons to reveal some supplementary information. These only provide additional information and are not mandatory - but I highly recommend reading them!</p>
             
@@ -112,7 +128,13 @@
                 <div class="panel-items">
                   <p>Photo booths typically capture a set number of photos in quick succession and offer creative and customization options like backgrounds, props and decals, along with instant printing. Korean-style booths have popularized the "4-cut style", in which the final result consists of four photos in one photo strip. This trend has gained popularity for its variety of decorative "frames" (i.e. the design of the border that surrounded the photos), which can allow users to pose alongside pre-set overlay images of their favourite celebrities, "idols" or performers.</p>
 
-                  <p><i>Love and Deepspace</i> is a popular and successful 3D mobile game that currently features five main characters. We were excited by the opportunity to incorporate them into our project. We thought it would be fun for us and for other players to pose alongside these characters.</p>
+                  <p>Examples of popular photo booths:</p>
+                  <ul>
+                    <li><a href="https://life4cuts.ca/" target="_blank">Life4Cuts Canada | Website</a></li>
+                    <li><a href="https://www.instagram.com/hamafilm.ca/" target="_blank">Hama Film Canada | Instagram Profile</a></li>
+                  </ul>
+
+                  <p class="break"><i>Love and Deepspace</i> is a popular and successful 3D mobile game that currently features five main characters. We were excited by the opportunity to incorporate them into our project. We thought it would be fun for us and for other players to pose alongside these characters.</p>
                 </div>
               </div>
               <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
@@ -127,9 +149,18 @@
         <section id = "project-goal" class="flex-col">
           <h2 class="section-title">&#x1F3C6; Goals</h2>
           <div class="section-body flex-col">
-            <p>Our initial goal was to replicate the viral videos by creating a generic photo capturing application. Shortly thereafter, we incorporated branding aspirations.</p>
-            <p>As we progressed, user experience became my primary focus. More information regarding this in <a href="#project-development"> &#x23F3; development</a>.</p>
-            <p>A secondary goal was to complete the project by the end of March. We began in early March, and I had planned to travel in April.</p>
+            <p>The main goal was to adapt the traditional user journey of the Korean-style photo booth into a digital format.</p>
+            <p>The primary focus was to ensure the best user experience possible by successfully addressing the aforementioned pain points. One key design choice was the placement and size of the camera feed relative to other page elements. For the best experience, the camera feed should be as large as possible for any device type to allow users to view themselves comfortavly. Additionally, as each photo is being captured, users should be able to see previously taken photos with ease.</p>
+
+            <p>Some of the TikToks and websites we observed lacked a consistent location for the feed, required scrolling to find interactive elements, and didn't have a responsive design. The inconsistent placements and the need for scrolling detracted from the experience.</p>
+
+            <p>... In other words, it gave me the <i>ick</i>.</p>
+
+            <p>Since each screen involved only a few interactive elements and minimal text, everything relevant should be visible without scrolling. These "icks" motivated me to try really hard in adapting the essence of traditional photo booths into a modern design optimized for our favourite devices.</p>
+
+            <p>Additionally, I wanted to incorporate progress indicators throughout the user journey. I believe it is important to inform users of their progress, especially for new users unfamiliar with the process.</p>
+
+            <p class="break">The secondary goal was to incorporate branding aspirations and complete this design sprint in one month. We began in early March, and I had planned to travel in April.</p>
           </div>
         </section>
 
@@ -197,16 +228,6 @@
                   </ul>
               </li>
             </ol>
-
-            <p class="break">At this point, I wanted to ensure the best user experience possible. One key design choice was the placement and size of the camera feed relative to other page elements. For the best experience, the camera feed should be as large as possible for any device type to allow users to view themselves comfortavly. Additionally, as each photo is being captured, users should be able to see previously taken photos with ease.</p>
-
-            <p>Some of the TikToks and websites we observed lacked a consistent location for the feed, required scrolling to find interactive elements, and didn't have a responsive design. Subjectively, the inconsistent placements and the need for scrolling detracted from my experience. In other words, it gave me the <i>ick</i>. I felt that since each screen involved only a few interactive elements and minimal text, everything relevant should be visible without scrolling.</p>
-
-            <p>Of course, I did not judge them personally, but these "icks" motivated me to try really hard in adapting the essence of traditional photo booths into a modern design optimized for our favourite devices.</p>
-
-            <p>Additionally, I wanted to incorporate progress indicators throughout the user journey. I believe it is important to inform users of their progress, especially for new users unfamiliar with the process.</p>
-
-            <p class="break">TLDR: Call me selfish, but UX became my central goal. It shaped nearly every decision in the development process like the design layouts, functionalities, etc.</p>
           </div>  
         </section>
 
@@ -215,7 +236,7 @@
           <div class="section-body flex-col">
             <p>While my friend gathered images, designed frames, and drafted colour options, I developed a basic camera application demo using <a href="https://github.com/mozmorris/react-webcam" target="_blank">react-webcam</a> by <i>mozmorris</i>. I styled using <a href="https://sass-lang.com/" target="_blank">Syntactically Awesome Style Sheets</a>, a popular and powerful CSS preprocessor.</p>
 
-            <p>Next, I learned how to save images using the <code>&lt;canvas&gt;</code> element, built separate screens for the style and frame selections, and implemented the necessary functions to connect these processes.</p>
+            <p>Next, I learned how to save images using the HTML <code>&lt;canvas&gt;</code> element, built separate screens for the style and frame selections, and implemented the necessary functions to connect these processes.</p>
 
             <div class="panel-container">
               <div class = "panel" id="expand-webcam">
@@ -235,7 +256,7 @@
                       <li><p>Maintain appropriate size on larger devices: <code>'height' : `min(100dvh - 144px - 24px - 8px, ${containerRef.current.offsetWidth * Math.pow(STYLE.ratio, -1)}px)`</code>, where the individual subtracted values correspond to the sizes of specific on-screen elements</p></li>
                   </ul>
 
-                  <p class="break">After getting a screenshot of the camera feed <del>via <i>react-webcam</i>'s <code>getScreenshot()</code> method</del>, I drew the image onto a <code>canvas</code> object with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">drawImage()</a> in order to save the image with the correct dimensions.</p>
+                  <p class="break">After getting a screenshot of the camera feed, I drew the image onto a <code>canvas</code> object with <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage" target="_blank">drawImage()</a> in order to save the image with the correct dimensions.</p>
                   <p><code>drawImage(sc, startX, startY, endX, endY, 0, 0, targetW, targetH)</code></p>
                   <ul>
                       <li><code>sc</code>: the screenshot</li>
@@ -255,11 +276,11 @@
             
             <p class="break">Then, I added the countdown timer and a placeholder for the filters (as we hadn't finalized what filters to include). The countdown functionality utilizes <code>setTimeout</code>.</p>
 
-            <p>After successfully capturing and storing four photos, I built the photo strip by drawing each image onto a <code>canvas</code> object with all relevant measurements. For example, calculating the start and end drawing coordinates based on the eyeballed values that looked the best for the border width, space between each photo and the bottom margin of the strip.</p>
+            <p>After successfully capturing the camera feed and storing four photos, I built the photo strip by drawing each image onto a <code>canvas</code> object with all relevant measurements. For example, calculating the start and end drawing coordinates based on the eyeballed values that looked the best for the border width, space between each photo and the bottom margin of the strip.</p>
 
             <figure class="media">
                 <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/photostrip_measurements.png" alt="Picture showcasing three measurement values: border width, photo spacing, bottom margin.">
-                <!-- <figcaption></figcaption> -->
+                <figcaption>Left: Style Option 1, right: Style Option 2</figcaption>
               </figure>
 
             <p><code>drawImage(img, 0, 0, img.width, img.height, xOffset, yOffset, imgW, imgH)</code></p>
@@ -594,7 +615,7 @@
               <div class = "panel" id="expand-optimize">
                 <div class="panel-items">
                   <p>Essentially, after a short while, as the sticker moved on the <code>canvas</code>, it looked like there was an extreme drop in frame rate.</p>
-                  <p>I learned that drawing on the <code>canvas</code> is quite an expensive operation. The issue was that the drawing function was unable to keep up with the frequency of user inputs user inputs.</p>
+                  <p>I learned that drawing on the <code>canvas</code> is quite an expensive operation. The issue was that the drawing function was unable to keep up with the frequency of user inputs because it was drawing so many things each time.</p>
 
                   <p>To address this, I optimized the drawing function by introducing a second <code>canvas</code> object to create a two-layer structure. The top layer held the sticker most recently added or interacted with (i.e. the last sticker in the list). The bottom layer held all the remaining stickers. Therefore, when interacting with one sticker, the program only needed to redraw that one sticker on the top layer, rather than redrawing the entire list each time.</p>
 
@@ -610,7 +631,7 @@
 
             <p class="break">I also added loading indicators and modal instructions:</p>
             <ul>
-              <li>Integrated <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a> by <i>dvtng</i>
+              <li>Integrated <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a> by <i>dvtng</i> at multiple touch points
                 <ul>
                   <li>Prompt users to enable camera permissions to continue</li>
                   <li>Loading states for the camera feed</li>
@@ -721,7 +742,7 @@
 
             <p><del>Some of the camera filters did not function properly and required several makeshift workarounds. This was due to differences in how blend modes work between <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode" target="_blank">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" target="_blank">Canvas</a>, and that I couldn't directly apply filters onto the <code>&lt;video&gt;</code> element due to the way the CSSgram library functions. Therefore, I'll need to figure out exactly how to proceed with filters.</del> EDIT: I have significantly improved (and basically fixed) how the camera filters worked when applying to an image. The only caveat is that, on mobile, I am unable to retrieve decimal values from <code>css</code> properties. For example, if an element has property <code>opacity: 0.5</code>, <code>getPropertyValue('opacity')</code> returns an empty string. Retrieval of regular properties (e.g. <code>getPropertyValue('mix-blend-mode')</code>) functions just fine. So, there's that.</p>
 
-            <p>A different friend mentioned the ability to save, share or send the finished result to a another device or across devices. I added a "Share" button to enable quick access to sharing options via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API" target="_blank">Web Share API</a>. This was my quick solution to their suggestion, but I'd like to investigate this further down the line.</p>
+            <p>A different friend mentioned the ability to save, share or send the finished result to another device or across devices. I added a "Share" button to enable quick access to sharing options via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API" target="_blank">Web Share API</a>. This was my quick solution to their suggestion, but I'd like to investigate this further down the line.</p>
 
             <p>Lastly, the <code>canvas</code> I built has plenty of room for improvement. Either I get my hands dirty again or I will continue searching for a usable library. Nonetheless, I'm incredibly proud of what we have built.</p>
           </div>
@@ -729,7 +750,7 @@
       </main>
       
       <section class = "extra">
-        <p>Last modified: May 20, 2025</p>
+        <p>Last modified: June 24, 2025</p>
       </section>
     </div>
 
