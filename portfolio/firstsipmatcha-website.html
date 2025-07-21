@@ -62,18 +62,18 @@
 
         <div class="project-info-item flex-col">
           <p class="subtitle">PLATFORM</p>
-          <p>Figma, ReactJS, CSS, Git<p>
+          <p>Figma, ReactJS, NextJS, Git<p>
         </div>
 
         <div class="project-info-item flex-col">
           <p class="subtitle">ROLE</p>
-          <p> UX, Developer </p>
+          <p> UX, Front-End Developer</p>
         </div>
 
         <div class="project-info-item flex-col">
           <p class="subtitle">DELIVERABLE</p>
           <a href="https://nenceh.github.io/firstsipmatcha/" target="_blank">
-            <p class = "link"><i>📎</i> Web Application (v1.9)</p>
+            <p class = "link"><i>📎</i> Web Application (v2.0)</p>
           </a>
         </div>
       </div>
@@ -102,7 +102,7 @@
             <p>I designed and developed a custom website for my friend's up-and-coming business. I have known her for quite some time, and her love and passion for matcha was my central inspiration.</p>
             <p>I had the opportunity to expand her vision and online presence with a functional webpage that is public and equally as shareable and presentable as an Instagram profile link. </p>
 
-            <p>Currently, I collaborate with her to extend design workflows and upcoming business goals with <a href="https://developer.squareup.com/docs/web-payments/overview" target="_blank">Square Web Payments SDK</a>. See <a href="#project-git-updates">&#x1F4D1; <code>git push</code> updates</a> for version release notes. </p>
+            <p>Currently, I collaborate with her to extend design workflows and upcoming business goals with <a href="https://developer.squareup.com/docs/web-payments/overview" target="_blank">Square Web Payments SDK</a>. In July 2025, I migrated from using only React to using <a href="https://nextjs.org/" target="_blank">Next</a>, the React Framework. See <a href="#project-git-updates">&#x1F4D1; <code>git push</code> updates</a> for version release notes. </p>
 
             <p class="break">Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory, but I highly recommend reading them!</p>
             
@@ -518,36 +518,77 @@
           <div class="section-body flex-col">
             <p class="break"><code>git push</code> updates log:</p>
             <ul>
-              <li>&#x1F4C5; 12/01/24 &#x2192; Initial commit v1.0</li>
-              <li>&#x1F4C5; 12/11/24
+              <li>&#x1F4C5; 07/20/25 &#x2192; NextJS port v2.0
                 <ul>
-                  <li>v1.1: new home page design, separate pages for <i>menu</i> and <i>about</i></li>
-                  <li>v1.2: mobile loading bug fixed</li>
+                  <li>TypeScript programming
+                    <figure class="media">
+                      <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-file-architecture.png" alt="An image of the file architecture for the new Next.js version of the web application.">
+                      <figcaption>next.js file architecture inside the <i>app</i> folder</figcaption>
+                    </figure>
+                  </li>
+                  <li><a href="https://nextjs.org/docs/app/guides/static-exports" target="_blank">static export</a> hosted on github pages</li>
+                  <li>implemented static <a href="https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes" target="_blank">dynamic route segments</a> using <code>generateStaticParams()</code>
+                    <figure class="media">
+                      <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-build-dynamic-ssg.png" alt="A screenshot of the console displaying the .">
+                      <!-- <figcaption></figcaption> -->
+                    </figure>
+                    <ul>
+                      <li>each menu item has an individual route (i.e. website page)</li>
+                      <li>extended menu <code>json</code> database to include a unique <code>id</code> per menu item</li>
+                      <li>retrieve menu info from <code>json</code> files using <code>readFileSync()</code> and <code>JSON.parse()</code></li>
+                    </ul>
+                  </li>
+                  <li>individual route for each menu item
+                    <ul>
+                      <li>page design/layout:
+                        <ul>
+                          <li>main information (display image, item name as title, item description)</li>
+                          <li>secondary navigation: breadcrumbs</li>
+                          <li>item specific information (to be added)</li>
+                          <li>tertiary navigation: "related items" section (a small list of related menu items)</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>implemented boundary navigation cases
+                    <ul>
+                      <li><code>not-found.tsx</code>: custom <i>page not found</i></li>
+                      <li><code>error.tsx</code>: custom error page as general fallback</li>
+                    </ul>
+                  </li>
+                  <li>created skeleton loading component</li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 12/19/24 &#x2192; ReactJS port v1.3
+
+              <li>&#x1F4C5; 05/20/25 &#x2192; updated menu design</li>
+
+              <li>&#x1F4C5; 02/11/25 &#x2192; ui updates</li>
+
+              <li>&#x1F4C5; 02/14/25 &#x2192; ui & ux improvements v1.9
                 <ul>
-                  <li>learned React & practiced by recreating/transforming the website into a component-based application</li>
-                  <li>utilized the same <code>CSS</code> file(s)</li>
-                  <li>built progress bar using <a href="https://www.npmjs.com/package/nprogress" target="_blank">nprogress</a></li>
-                  <li>homepage countdown starts immediately</li>
-                  <li>renamed repository to <code>firstsipmatcha</code> from <code>firstsipmatcha-website</code></li>
+                  <li>implemented infinite carousel</li>
+                  <li>adjusted adaptive element behaviour at 346px and 1440px breakpoints</li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 12/20/24 &#x2192; ReactJS cont. v1.4
+
+              <li>&#x1F4C5; 02/08/25 &#x2192; added home page hero carousel v1.8
                 <ul>
-                  <li>cleaned up some files</li>
-                  <li>some routing/paths proofing for <code>Routes</code>, <code>BrowserRouter</code></li>
-                  <li>favicon src inside <code>index.html</code> fixed</li>
-                  <li>patched 404 error on refresh</li>
+                  <li>automated 10 000 ms rotation</li>
+                  <li>ability to display 1+ information pieces</li>
+                  <li>each piece on one carousel slide</li>
+                  <li>added new collab announcement</li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 12/23/24 &#x2192; v1.5
+
+              <li>&#x1F4C5; 01/18/25 &#x2192; updated home page countdown</li>
+
+              <li>&#x1F4C5; 01/04/25 &#x2192; v1.7
                 <ul>
-                  <li>updated some designs (Figma & front-end)</li>
-                  <li>built nav menu icon animation (via this <a href="https://blog.logrocket.com/creating-animated-hamburger-menu-icon-react/" target="_blank">LogRocket blog post</a> by Ibadehin Mojeed)</li>
+                  <li>added footer</li>
+                  <li>added more to About Us page</li>
                 </ul>
               </li>
+
               <li>&#x1F4C5; 01/01/25 &#x2192; mock database v1.6
                 <ul>
                   <li>moved menu info to its own <code>json</code> file</li>
@@ -558,36 +599,48 @@
                   <figcaption><i>draw.io</i> schema diagram</figcaption>
                 </figure>
               </li>
-              <li>&#x1F4C5; 01/04/25 &#x2192; v1.7
+
+              <li>&#x1F4C5; 12/23/24 &#x2192; v1.5
                 <ul>
-                  <li>added footer</li>
-                  <li>added more to About Us page</li>
+                  <li>updated some designs (Figma & front-end)</li>
+                  <li>built nav menu icon animation (via this <a href="https://blog.logrocket.com/creating-animated-hamburger-menu-icon-react/" target="_blank">LogRocket blog post</a> by Ibadehin Mojeed)</li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 01/18/25 &#x2192; updated home page countdown</li>
-              <li>&#x1F4C5; 02/08/25 &#x2192; added home page hero carousel v1.8
+
+              <li>&#x1F4C5; 12/20/24 &#x2192; ReactJS cont. v1.4
                 <ul>
-                  <li>automated 10 000 ms rotation</li>
-                  <li>ability to display 1+ information pieces</li>
-                  <li>each piece on one carousel slide</li>
-                  <li>added new collab announcement</li>
+                  <li>cleaned up some files</li>
+                  <li>some routing/paths proofing for <code>Routes</code>, <code>BrowserRouter</code></li>
+                  <li>favicon src inside <code>index.html</code> fixed</li>
+                  <li>patched 404 error on refresh</li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 02/11/25 &#x2192; ui updates</li>
-              <li>&#x1F4C5; 02/14/25 &#x2192; ui & ux improvements v1.9
+
+              <li>&#x1F4C5; 12/19/24 &#x2192; ReactJS port v1.3
                 <ul>
-                  <li>implemented infinite carousel</li>
-                  <li>adjusted adaptive element behaviour at 346px and 1440px breakpoints</li>
+                  <li>learned React & practiced by recreating/transforming the website into a component-based application</li>
+                  <li>utilized the same <code>CSS</code> file(s)</li>
+                  <li>built progress bar using <a href="https://www.npmjs.com/package/nprogress" target="_blank">nprogress</a></li>
+                  <li>homepage countdown starts immediately</li>
+                  <li>renamed repository to <code>firstsipmatcha</code> from <code>firstsipmatcha-website</code></li>
                 </ul>
               </li>
-              <li>&#x1F4C5; 05/20/25 &#x2192; updated menu design</li>
+
+              <li>&#x1F4C5; 12/11/24
+                <ul>
+                  <li>v1.1: new home page design, separate pages for <i>menu</i> and <i>about</i></li>
+                  <li>v1.2: mobile loading bug fixed</li>
+                </ul>
+              </li>
+
+              <li>&#x1F4C5; 12/01/24 &#x2192; Initial commit v1.0</li>              
             </ul>
           </div>
         </section>
       </main>
 
       <section class = "extra">
-        <p>Last modified: June 24, 2025</p>
+        <p>Last modified: July 21, 2025</p>
       </section>
     </div>
 
