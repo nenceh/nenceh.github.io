@@ -100,9 +100,21 @@
           <h2 class="section-title">&#x1F680; Intro</h2>
           <div class="section-body flex-col">
             <p>I designed and developed a custom website for my friend's up-and-coming business. I have known her for quite some time, and her love and passion for matcha was my central inspiration.</p>
-            <p>I had the opportunity to expand her vision and online presence with a functional webpage that is public and equally as shareable and presentable as an Instagram profile link. </p>
+            <p>I had the opportunity to expand her vision and online presence with a functional webpage that is public and equally as shareable and presentable as an Instagram profile link.</p>
 
-            <p>Currently, I collaborate with her to extend design workflows and upcoming business goals with <a href="https://developer.squareup.com/docs/web-payments/overview" target="_blank">Square Web Payments SDK</a>. In July 2025, I migrated from using only React to using <a href="https://nextjs.org/" target="_blank">Next</a>, the React Framework. See <a href="#project-git-updates">&#x1F4D1; <code>git push</code> updates</a> for version release notes. </p>
+            <p>Currently, I collaborate with her to extend design workflows and upcoming business goals with <a href="https://developer.squareup.com/docs/web-payments/overview" target="_blank">Square Web Payments SDK</a>. In December 2024, I migrated to <a href="https://react.dev/" target="_blank">React.js</a> from plain HTML, CSS, and jQuery. In July 2025, I migrated from using only React.js to using <a href="https://nextjs.org/" target="_blank">Next.js</a>.</p>
+            <p>See <a href="#project-git-updates">&#x1F4D1; <code>git push</code> updates</a> for version release notes.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/firstsipmatcha-website/site-designs.png" alt="An image of three screenshots from the web application.">
+              <figcaption>A few screenshots of the web application as of July 22, 2025
+                <ul>
+                  <li>Left: homepage on smaller devices</li>
+                  <li>Middle: menu page on larger devices</li>
+                  <li>Right: /menu/matcha-latte page on smaller devices</li>
+                </ul>
+              </figcaption>
+            </figure>
 
             <p class="break">Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory, but I highly recommend reading them!</p>
             
@@ -454,7 +466,7 @@
             <p>My preferred method of testing is to actually get your hands dirty.</p>
             <p>I thought that building my own webpage demo would be far better to my likings as opposed to utilizing Figma's prototyping features, so I launched <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> (VSC), my code editor application, and migrated all pages into individual HTML files. In addition, I could easily publish a demo and share it with others.</p>
 
-            <p>I utilized <a href="https://sass-lang.com/" target="_blank">Syntactically Awesome Style Sheets</a> (SASS), a popular and powerful CSS preprocessor. I was introduced to SASS in a previous project, and it made plain CSS coding more efficient and intuitive. The two VSC extensions that helped me test my code were <a href="https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass" target="_blank">Live Sass Compiler</a> by Glenn Marks and <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> by Ritwick Dey.</p>
+            <p>I utilized Sassy CSS/<a href="https://sass-lang.com/" target="_blank">Syntactically Awesome Style Sheets</a> (SCSS/SASS), a popular and powerful CSS preprocessor. I was introduced to SCSS in a previous project, and it made plain CSS coding more efficient and intuitive. The two VSC extensions that helped me test my code were <a href="https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass" target="_blank">Live Sass Compiler</a> by Glenn Marks and <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a> by Ritwick Dey.</p>
 
             <p>After some simple JavaScript coding with <code>JQuery</code>, I had successfully built a functional web demo. It provided more clarity in testing both technical and visual aspects. By utilizing the <i>Inspect</i> tool in my web browser, I adjusted some of the layout spacings and font properties of my typography. Consequently, I was able to establish a rule for such spacings and incorporated it into my design system.</p>
 
@@ -518,6 +530,33 @@
           <div class="section-body flex-col">
             <p class="break"><code>git push</code> updates log:</p>
             <ul>
+              <li>&#x1F4C5; 07/22/25 &#x2192; <a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" target="_blank">Lighthouse performance score</a> enhancements
+                <ul>
+                  <li>added <code>priority={true}</code> attribute for next.js <a href="https://nextjs.org/docs/pages/api-reference/components/image" target="_blank">Image</a> components + reduced image sizes for <b>improved performance</b></li>
+                  <li>implemented <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">ARIA attributes</a> for <b>improved accessibility</b>
+                    <ul>
+                      <li>hamburger menu button:
+                        <ul>
+                          <li><code>aria-hidden="true"</code> + <code>disabled</code> on larger device sizes</li>
+                          <li><code>aria-label="Open menu"</code> + <code>aria-expanded="false"</code> by default, <code>aria-label="Close menu"</code> + <code>aria-expanded="true"</code> when the menu modal is open</li>
+                          <li><code>aria-controls="primary-hamburger-nav-menu"</code></li>
+                        </ul>
+                      </li>
+                      <li>menu modal: <code>aria-modal="true"</code> + <code>id="primary-hamburger-nav-menu"</code></li>
+                      <li>logo link to home page: <code>aria-label="Home, First Sip Matcha Bar"</code></li>
+                      <li>homepage <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/" target="_blank">carousel</a>:
+                        <ul>
+                          <li><code>aria-roledescription="carousel"</code> in the carousel container element</li>
+                          <li><code>aria-label={`${index + 1} of ${list.length}`}</code> + <code>aria-roledescription="slide"</code> attributes on individual slides</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>added <code>role="presentation"</code> attribute on <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_blank">decorative images</a></li>
+                  <li>added <code>meta</code> descriptions, added screen-reader only text in the <code>&lt;a&gt;</code> elements without <a href="https://developer.chrome.com/docs/lighthouse/seo/link-text" target="_blank">descriptive text</a> + adjusted CSS values for <b>improved SEO</b></li>
+                </ul>
+              </li>
+
               <li>&#x1F4C5; 07/20/25 &#x2192; NextJS port v2.0
                 <ul>
                   <li>TypeScript programming
@@ -640,7 +679,7 @@
       </main>
 
       <section class = "extra">
-        <p>Last modified: July 21, 2025</p>
+        <p>Last modified: July 23, 2025</p>
       </section>
     </div>
 
