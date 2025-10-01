@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Sip Matcha full stack website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- ***** Google Hosted Libraries: https://developers.google.com/speed/libraries/?csw=1 ***** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+
+    <script type="text/javascript" src="../js/global.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/icon/n.svg">
+  </head>
+
+  <header class = "topnav-container">
+    <nav class = "topnav">
+      <a id = "index" href="../index.html">nancy hao</a>
+      <ul>
+        <li><a id="portfolio" href="../portfolio.html">portfolio</a></li>
+        <li><a id="cv" href="../cv.html">cv</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <section id = "find-me">
+    <ul class="flex-col">  
+      <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank">
+        <svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z"/></svg>
+      </a>
+  
+      <li><a href="https://github.com/nenceh" target="_blank" class="btn-icon"> <!-- github -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a></li>
+    </ul>
+  </section>
+
+  <aside class="back-to-top">
+    <button id="to-top" class="flex-col">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.75 3.5a.75.75 0 0 1 0-1.5h14.5a.75.75 0 0 1 0 1.5H4.75Zm.47 9.47a.749.749 0 1 0 1.06 1.06l4.97-4.969V21.25a.75.75 0 0 0 1.5 0V9.061l4.97 4.969a.749.749 0 1 0 1.06-1.06l-6.25-6.25a.749.749 0 0 0-1.06 0l-6.25 6.25Z"></path></svg>
+      Top
+    </button>
+  </aside>
+
+  <body>
+    <section class = "page-banner-container">
+        <div class = "page-banner flex-col">
+          <h1>First Sip Matcha Bar | a nascent matcha beverage small business</h1>
+          <ul class="breadcrumbs">
+            <li>portfolio</li>
+            <li>Website for a small business (Full Stack version)</li>
+          </ul>
+        </div>
+    </section>
+    
+    <section class = "info-container flex-col">
+      <div id="project-info">
+        <div class="project-info-item flex-col">
+          <p class="subtitle">TIMELINE</p>
+          <p>Aug'25 - Present</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">PLATFORM</p>
+          <p>Next.js, Prisma, Git<p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">ROLE</p>
+          <p> Full Stack Developer</p>
+        </div>
+
+        <div class="project-info-item flex-col">
+          <p class="subtitle">DELIVERABLE</p>
+          <a href="https://nenceh.github.io/firstsipmatcha/" target="_blank">
+            <p class = "link"><i>📎</i> Web Application (v2.0)</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class = "body-content">
+      <nav role="navigation" class="toc">
+        <div class="toc-label">On this page...</div>
+        <ol>
+          <li><a href="#project-info" class="in-page-link in-page-current"> Project Information </a></li>
+          <li><a href="#project-introduction" class="in-page-link"> Introduction </a></li>
+          <li><a href="#project-goal" class="in-page-link"> Project Goals </a></li>
+          <li><a href="#project-typescript" class="in-page-link"> TypeScript (Next.js) </a></li>
+          <li><a href="#project-angular" class="in-page-link"> Full Stack (with Next.js) </a></li>
+          <li><a href="#project-testing" class="in-page-link"> Testing </a></li>
+          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a></li>
+          <li><a href="#project-next" class="in-page-link"> Next Steps </a></li>
+        </ol>
+      </nav>
+  
+      <main class="flex-col">
+        <section id = "project-introduction" class="flex-col">
+          <h2 class="section-title">&#x1F680; Intro</h2>
+          <div class="section-body flex-col">
+            <p>I designed and developed a custom website for my friend's up-and-coming business. I have known her for quite some time, and her love and passion for matcha was my central inspiration.</p>
+            <p>I had the opportunity to expand her vision and online presence with a functional webpage that is public and equally as shareable and presentable as an Instagram profile link.</p>
+
+            <p>Currently, I collaborate with her to extend design workflows and upcoming business goals with <a href="https://developer.squareup.com/ca/en" target="_blank">Square APIs and SDKs</a>. The full stack web application has the following architecture:</p>
+
+            <ul>
+                <li><a href="https://nextjs.org/" target="_blank">Next.js</a>: frontend and backend; handles both client-side and server-side logic</li>
+                <li><a href="https://www.prisma.io/" target="_blank">Prisma</a>: connect backend to a <a href="https://www.postgresql.org/" target="_blank">Postgres</a> database</li>
+                <li>Set up for <a href="https://payloadcms.com/" target="_blank">Payload CMS</a> and <a href="https://jestjs.io/" target="_blank">Jest Testing</a> integrations</li>
+            </ul>
+
+            <p class="disclaimer">Check out the previous write-up: <a href="firstsipmatcha-website.html">Website for a Small Business (Front-End version)</a> to see the early development stages of the application. I discuss the initial designs built with Figma, transition to basic HTML, CSS and JS, and <code>git push</code> updates that detail the migration to React.js and then Next.js using TypeScript.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/firstsipmatcha-website/site-designs.png" alt="An image of three screenshots from the web application.">
+              <figcaption>A few screenshots of the web application as of July 22, 2025
+                <ul>
+                  <li>Left: homepage on smaller devices</li>
+                  <li>Middle: /menu page on larger devices</li>
+                  <li>Right: /menu/matcha-latte page on smaller devices</li>
+                </ul>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-goal" class="flex-col">
+          <h2 class="section-title">&#x1F3C6; Goals</h2>
+          <div class="section-body flex-col">
+            <p>The goal was to create a tailored solution that effectively showcased the brand's identity. The website needed to complement the existing Instagram profile while being engaging and responsive across various devices to maintain cross-device compatibility. Moreover, the design had to be scalable to accommodate future web features, pages and functionalities.</p>
+            <p>What motivated me was the challenge of successfully combining creative design elements with the technical aspects to support and aid in business growth.</p>
+            <p class="break">To accommodate growing business goals, I wanted to build a small backend so the web application can communicate with a database, and utilize <a href="https://developer.squareup.com/docs/checkout-api" target="_blank">Square Checkout API</a> for checkouts, processing payments and order fulfillments.</p>
+          </div>
+        </section>
+
+        <section id = "project-typescript" class="flex-col">
+          <h2 class="section-title">&#x23F3; TypeScript (Next.js)</h2>
+          <div class="section-body flex-col">
+            <p><i>What makes for a successful online presence in the food and drink industry?</i></p>
+            <p>That was the question I asked when first starting out. Be sure to check out the previous write-up: <a href="firstsipmatcha-website.html">Website for a Small Business (Front-End version)</a>.</p>
+
+            <p>In December 2024, I migrated from basic HTML/CSS/JS to <a href="https://react.dev/" target="_blank">ReactJS</a>, a popular frontend JS framework. Building with a <code>react</code> allowed for improved workflow due to its advantages with dynamic content. It was easier to maintain, build and scale <i>component</i>-based code, and I became proficient with translating Figma designs into rendered user interfaces.</p>
+
+            <p class="break">Throughout your reading journey, I will include buttons to reveal some supplementary information. These only provide additional information and are not mandatory, but I highly recommend reading them!</p>
+
+            <div class="panel-container">
+                <div class = "panel" id="expand-intro">
+                    <div class="panel-items">
+                        <p>Specifically, I learned about the lifecycle of a <code>react</code> component versus an <i>effect</i>, <code>react</code> <i>states</i> and <i>hooks</i>, and the overall concept of a single-page application (SPA).</p>
+                        <p>Honestly, it was a lot of fun learning and building with <code>react</code> due to the ease of file-based routing, responsiveness and user interactivity.</p>
+                        <p>I also learned the differences in how a webpage is rendered. The usage of states and hooks is primarily client-side rendering (CSR), where rendering happens on the browser. Later, I will dive into prerendering.</p>
+                        <p><code>React</code> was beneficial for me to examine the different JS frameworks, and how powerful they can be.</p>
+                    </div>
+                </div>
+                <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+                </button>
+            </div>
+
+            <p>Performance and accessibility implementations became more intuitive. For example, I built a hamburger menu button for mobile navigation via this <a href="https://blog.logrocket.com/creating-animated-hamburger-menu-icon-react/" target="_blank">LogRocket blog post</a> by Ibadehin Mojeed. The mobile navigation modal along with the button will have different styling and <code>ARIA</code> attributes based on the device size. This also applies to every responsive design because of how easy it was to make UI changes based on the browser client.</p>
+
+            <p>With <code>BrowserRouter</code> and <code>Routes</code>, I performed some routing/paths proofing, like redirects and catch-all routing. However, a major drawback was that a <code>react</code> router application doesn't go harmoniously together with GitHub Pages since GitHub Pages doesn't support single-page applications (SPA). To keep all my projects available and functional on GitHub, I used <a href="https://github.com/rafgraph/spa-github-pages" target="_blank">this solution</a> by rafgraph. At this point, I knew that <code>react</code> was not going to be where I stopped when it came to building web applications.</p>
+
+            <p class="break">Thinking ahead, I built a mock <code>SQL</code> database by moving all information about the beverage menu into its own <code>json</code> file. Each item belongs under a specific category of drinks and has relevant tags for easy look-up and filtering.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="../images/portfolio/firstsipmatcha-website/db-menu-schema-diagram.png" alt="An image of a schema diagram for the menu.">
+                <figcaption><i>draw.io</i> schema diagram</figcaption>
+            </figure>
+
+            <p class="break">Then, I made improvements to the landing/home page. To showcase multiple announcements or news-like content, I built a carousel in the hero section such that users can view these information pieces in a circular rotation. To improve the user experience, I made the carousel infinite in both backward and forward directions, adjusted responsive behaviour at the pre-established breakpoints, added a pagination (visual indication of the number of information pieces/slides), and prevented the backward and forward buttons to fire again too quickly after a previous interaction.</p>
+            
+            <p class="break">I also made design improvements to the menu page. To prepare for individual item pages and to declutter the interface, I removed the description attached to each item, and enlargened the image and the font size of the item name. To enhance the visual design, I added a white oval shape behind the entire item to better convey the size of the interactive HTML element, and increased the distance between the image and the item name.</p>
+
+            <figure class="media">
+              <img class = "portfolio-entry-img" src="../images/portfolio/firstsipmatcha-website/menu-design-changes.png" alt="An image of the comparison between the old and new designs of the menu page.">
+              <figcaption>Left: previous design iteration on Figma with placeholder images<br>Right: current deployed design with updated images</figcaption>
+            </figure>
+
+            <p class="break">In July 2025, I launched version 2.0 built with TypeScript and <a href="https://nextjs.org/" target="_blank">Next.js</a>. I learned <code>next</code> after researching about deploying production-ready web applications. Moreover, <code>typescript</code> and <code>next</code> provided additional mechanisms for accessibility and improved SEO like prefetching content and prerendered pages. <code>Next</code> web applications hosted with GitHub pages functioned better compared to <code>react</code> due to its file-based routing system. This system allowed the ease of building dynamic pages, for example: individual pages for each menu item.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-file-architecture.png" alt="An image of the file architecture for the new Next.js version of the web application.">
+                <figcaption>Next.js file architecture inside the <i>app</i> folder</figcaption>
+            </figure>
+            
+            <p>Now, it was more intuitive to define client components with CSR and components that can be prerendered. For example, server-side render (SSR), and static site generation (SSG).</p>
+            <p>For the aforementioned dynamic pages, I implemented static <a href="https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes" target="_blank">dynamic route segments</a> using <code>generateStaticParams()</code>. I extended the menu <code>json</code> database to include a unique <code>id</code> attribute per menu item. For example, "Matcha Latte" has <code>id: matcha-latte</code>. I retrieved menu information from the <code>json</code> files using <code>readFileSync()</code> and <code>JSON.parse()</code>.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-build-dynamic-ssg.png" alt="A screenshot of the console displaying the generated sitemap.">
+                <!-- <figcaption></figcaption> -->
+            </figure>
+
+            <p>Each menu item has a specific page design/layout located at <code>/menu/&lt;itemId&gt;</code>. The main information of the item is located at the top of the page, which includes a display image, the item name as the <code>&lt;h1&gt;</code> heading, and the item description. There is also a breadcrumbs component that serves as the secondary navigation. The rest of the page contains the information specific to the item, which is still currently under development. Lastly, there is a tertiary navigation under a "related items" section. For example, under the "Matcha Latte" page, there is a section with the heading "More lattes" and a small list of other latte items.</p>
+
+            <p class="break">Furthermore, the routing system allowed for boundary navigation cases. I built a loading skeleton component, <code>not-found.tsx</code> as a custom <i>page not found</i>, and <code>error.tsx</code> as a custom error page as the general fallback. For example, if the user navigated to a menu item that does not exist (e.g. <code>/menu/latte</code>, <code>/menu/abcd</code>), the user is navigated to <code>/menu/not-found</code> where there is an option to go back to the menu page at <code>/menu</code>. For any other invalid navigations (e.g. <code>/menu123</code>, <code>/aboutabout</code>, <code>/asdf</code>), the user is navigated to <code>/not-found</code>.</p>
+
+            <p class="break">After, I worked on <a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" target="_blank">Lighthouse performance score</a> enhancements.</p>
+            <ul>
+                <li>Used <code>next</code>'s <a href="https://nextjs.org/docs/pages/api-reference/components/image" target="_blank">Image</a> components, added the <code>priority</code> attribute, and reduced image sizes for <b>improved performance</b></li>
+                <li>Implemented <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" target="_blank">ARIA attributes</a> for <b>improved accessibility</b>
+                    <ul>
+                        <li>On the hamburger menu button:
+                            <ul>
+                                <li><code>aria-hidden="true"</code> and <code>disabled</code> on larger device sizes</li>
+                                <li><code>aria-label="Open menu"</code> and <code>aria-expanded="false"</code> by default</li>
+                                <li><code>aria-label="Close menu"</code> and <code>aria-expanded="true"</code> when the menu mobile navigation modal is open</li>
+                                <li><code>aria-controls="primary-hamburger-nav-menu"</code></li>
+                            </ul>
+                        </li>
+                        <li>On the navigation modal: <code>id="primary-hamburger-nav-menu"</code> and <code>aria-modal="true"</code></li>
+                        <li>On the <code>SVG</code> logo that links to the home page: <code>aria-label="Home, First Sip Matcha Bar"</code></li>
+                        <li>On the home page <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/" target="_blank">carousel</a>,
+                            <ul>
+                                <li>On the carousel container: <code>aria-roledescription="carousel"</code></li>
+                                <li>On individual slides: <code>aria-label={`${index + 1} of ${list.length}`}</code> and <code>aria-roledescription="slide"</code></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>Added <code>role="presentation"</code> on <a href="https://www.w3.org/WAI/tutorials/images/decorative/" target="_blank">decorative images</a></li>
+                <li>Added <code>meta</code> descriptions, screen-reader only text in the <code>&lt;a&gt;</code> elements without <a href="https://developer.chrome.com/docs/lighthouse/seo/link-text" target="_blank">descriptive text</a>, and adjusted <code>CSS</code> values for <b>improved SEO</b></li>
+            </ul>
+          </div>
+        </section>
+
+        <section id = "project-angular" class="flex-col">
+          <h2 class="section-title">&#x1F4C8; Full Stack with Next.js (ft. Angular)</h2>
+          <div class="section-body flex-col">
+            <p>As a solo developer, I understood I needed to master the backend as well.</p>
+            <p class="break">Angular was another popular framework that I wanted to try. Since I already built the <code>typescript</code> version, the learning curve was manageable as I did not have to worry about the frontend. I found a full stack e-ecommerce application walkthrough using Angular, Nest.js and GraphQL on YouTube, and transformed the example project to suit mine.</p>
+            <ul>
+                <li><a href="https://nx.dev/concepts/decisions/why-monorepos" target="_blank">Nx monorepo</a> to manage both frontend and backend inside one workspace</li>
+                <li><a href="https://angular.dev/" target="_blank">Angular</a> frontend framework
+                  <ul>
+                    <li><a href="https://angular.dev/tutorials/first-app/09-services" target="_blank">Service</a> and <a href="https://ngrx.io/guide/signals/signal-store" target="_blank">SignalStore</a> injections for data sharing</li>
+                  </ul>
+                </li>
+                <li><a href="https://nestjs.com/" target="_blank">Nest.js</a> backend</li>
+                <li><a href="https://www.prisma.io/" target="_blank">Prisma ORM</a> to connect backend to <a href="https://www.postgresql.org/" target="_blank">Postgres</a> database
+                  <ul>
+                    <li>Use <code>typescript</code> functions to interact with database</li>
+                    <li>No <code>SQL</code> queries needed</li>
+                  </ul>
+                </li>
+                <li><a href="https://graphql.org/" target="_blank">GraphQL</a> to connect frontend to backend
+                  <ul>
+                    <li><a href="https://the-guild.dev/graphql/apollo-angular/docs" target="_blank">Apollo Client</a> for Angular</li>
+                  </ul>
+                </li>
+                <li>Set up for <a href="https://jestjs.io/" target="_blank">Jest Testing</a></li>
+            </ul>
+
+            <div class="panel-container">
+                <div class = "panel" id="expand-angular-adventure">
+                    <div class="panel-items">
+                        <p class="break">First, I created a <code>nx</code> workspace, and added a <code>nest</code> backend application. Then, I integrated <code>prisma</code> and created a free <a href="https://neon.com/" target="_blank">Neon Postgres</a> project database. With <code>prisma</code>, I defined a schema that modelled after the <code>json</code> files.</p>
+
+                        <pre>// schema.prisma
+model Category { // define Category
+    id              String      @id @default(uuid())
+    name            String
+    description     String?
+    list            Item[]      // each category has a list of items
+}
+
+model Item { // define menu Item
+    itemId          String      @id
+    name            String
+    description     String
+    price           Float
+    tags            String[]
+    img             String
+    catId           String      // each item belongs to a category
+    Category        Category    @relation(fields: [catId], references: [id])
+}
+
+// TODO: define Tag object</pre>
+
+                        <p class="break">After creating a script to populate the categories and items, I imported the <code>ApolloDriver</code> as a <code>GraphQLModule</code>. Then, I built the <code>Item</code> resource with <code>nx g resource item/item</code> in the console, and defined the <code>Item</code> entity.</p>
+
+                        <p class="break">Then, I modified the service and resolver files for <code>Item</code> for specific situations. For example, the client can search a particular item by item name or by the tag name.</p>
+
+            <pre>// item.service.ts
+@Injectable()
+export class ItemsService {
+    //...
+    async searchItems(term: string): Promise<Item[]> { // 'term' param is the term to search in the database
+        const lowercaseTerm = term.toLowerCase();
+        return this.prisma.item.findMany({ // find all items that have 'term' in the name or description
+            where: {
+                OR: [
+                    { name: { contains: lowercaseTerm, mode: 'insensitive' } },
+                    { description: { contains: lowercaseTerm, mode: 'insensitive' } },
+                ],
+            },
+        });
+    }
+
+    async searchTag(tag: string): Promise<Item[]> { // 'tag' param is the tag name to search in the database
+        const lowercaseTerm = tag.toLowerCase();
+        
+        return this.prisma.item.findMany({ // find all items that have the specific tag
+            where: {
+                tags:{ has: lowercaseTerm }
+            },
+        });
+    }
+}           </pre>
+
+                        <p>At this point, we can <code>nx serve fsm-be</code> on the console to run the backend and use the GraphQL Playground at <code>localhost</code>.</p>
+
+            <pre># GraphQL Playground
+query GetItems { # get all items from the database
+    items {
+        itemId
+        name
+        description
+        price
+        tags
+        img
+        catId
+    }
+}
+
+query SearchItems { # get all items from the database that have 'latte' in the name or description
+    searchItems(term: "latte") {
+        itemId
+        name
+        description
+        price
+        tags
+        img
+        catId
+    }
+}
+
+query SearchTag { # get all items from the database that have a tag named 'latte'
+    searchTag(tag: "latte") {
+        itemId
+        name
+        description
+        price
+        tags
+        img
+        catId
+    }
+}</pre>
+                        <p class="break">With the backend foundation, I added an <code>angular</code> frontend application. I enabled <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a> and <a href="https://sass-lang.com/" target="_blank">SCSS</a>, and configured the routing inside <code>app.routes.ts</code>.</p>
+                        <p>Then, I translated all previously established <code>typescript</code> pages and components into <code>angular</code> code. </p>
+
+                        <p class="break">The menu page that shows all items will need <code>graphql</code>, so I built an injectable <code>MenuService</code>.</p>
+
+                        <pre>// menuItem.service.ts
+const GET_ITEMS = gql`
+    query GetItems {
+        items {
+        itemId
+        name
+        description
+        price
+        tags
+        img
+        catId
+        }
+    }
+`;
+
+//...
+
+@Injectable({
+    providedIn: 'root'
+})
+export class MenuService { // inject into component to access the service
+    //...
+    loadItems() {
+        this.loading = true;
+        this.error = null;
+        this.apollo
+        .query<{ items: Item[] }>({
+            query: GET_ITEMS,
+        })
+        .pipe(
+            map(({ data }) => {
+            this.items = data.items;
+            this.loading = false;
+            }),
+            catchError((error) => {
+            this.error = error.message;
+            this.loading = false;
+            return EMPTY;          
+            })
+        )
+        .subscribe();
+    }
+
+    searchItems(term: string) { ... }
+
+    searchTag(tag: string) { ... }
+    // ...
+}         </pre>
+
+            <pre>// menu.ts
+//...
+export class Menu {
+    menuItems = inject(MenuService);
+    constructor() {
+        this.menuItems.loadItems();
+    }
+}         </pre>
+
+        <pre>&lt;!-- menu.html -->
+&lt;!-- ... -->
+&lt;ul *ngIf="!menuItems.loading" class="menu-category-list">
+    @for (item of menuItems.items; track item.itemId){ ... }
+&lt;/ul>
+&lt;!-- ... --></pre>
+
+        <p class="break">For the individual item pages, I added a specific path routing and injected the <code>MenuService</code>. The <code>itemId</code> is obtained from the route path and is used to get the specific <code>Item</code> object.</p>
+
+        <pre>// app.routes.ts
+{
+    path: 'menu/:itemId',
+    //...
+}        </pre>
+
+        <pre>// menu_item.ts, for example: /menu/matcha-latte
+//...
+export class MenuItem {
+    //...
+    item = inject(MenuService);
+
+    constructor(private titleService: Title, private route: ActivatedRoute) {
+        this.route.paramMap.subscribe((params) => {
+            this.itemId = params.get('itemId'); // "matcha-latte"
+            this.item.getItem(this.itemId); // get the item that has the itemId
+            //...
+        });
+    }
+}         </pre>
+                    </div>
+                </div>
+                <button class="btn-primary panel-control" value="#expand-angular-adventure"> Show/Hide for addition, non-critical, information!
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.646 15.146 5.854 9.354a.5.5 0 0 1 .353-.854h11.586a.5.5 0 0 1 .353.854l-5.793 5.792a.5.5 0 0 1-.707 0Z"></path></svg>
+                </button>
+            </div>
+
+            <p class="break">The Angular tutorial served as a good lesson as to the different integrations used to build a full stack application. The tutorial also featured session management with customer data like login and list of orders.</p>
+            <p>As this was a simple demonstration project, I believe user login was not needed at this stage. However, I thought the ability for non-developers to be able to contribute to the web application was a valuable aspect.</p>
+            <p>I researched into content management systems (CMS) and found <a href="https://payloadcms.com/" target="_blank">Payload</a>, an open-source Next.js native CMS. A CMS would allow users without coding experience to create, manage, and publish digital content for a digital platform.</p>
+
+            <p class="break">I decided to continue with <code>next</code>, as I could integrate Payload CMS later on, and committed to building a <a href="https://nextjs.org/docs/app/guides/backend-for-frontend" target="_blank">backend with Next.js</a>.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-file-architecture.png" alt="An image of the file architecture for the backend of the web application.">
+                <figcaption>[IMAGE TBA] Next.js backend file architecture inside the <i>app</i> folder</figcaption>
+            </figure>
+
+            <ul>
+                <li>Server Actions: execute asynchronous functions on the server (e.g. fetching/mutating data, form submissions)</li>
+                <li>Route Handlers: handle requests using <a href="https://developer.mozilla.org/docs/Web/HTTP/Methods" target="_blank">HTTP methods</a></li>
+                <li>Middleware: execute custom server-side logic before routes are rendered</li>
+            </ul>
+            
+            <p class="break">First, I established the <code>prisma</code> database using a free <a href="https://neon.com/" target="_blank">Neon Postgres</a> project database. I translated the <code>json</code> database into its own schema:</p>
+
+            <pre>// schema.prisma
+model MenuCategory { // define MenuCategory
+    id              Int         @id @default(autoincrement())
+    name            String
+    description     String?
+    list            Item[]      // each menu category has a list of items
+}
+
+model MenuItem { // define MenuItem
+    itemId          String      @id @unique
+    name            String
+    description     String
+    price           Float
+    tags            ItemTag[]
+    img             String
+    catId           Int         // each menu item belongs to a menu category
+    menuCategory    MenuCategory @relation(fields: [catId], references: [id])
+}
+
+model Tag { // define Tag
+    tagId       String      @id @unique
+    icon        String?     // html code for a display icon
+    items       ItemTag[]
+}
+
+model ItemTag { // help define many-to-many relationship
+    id          Int         @id @default(autoincrement())
+    itemId      String?
+    tagId       String?
+    menuItem    MenuItem?   @relation(fields: [itemId], references: [itemId])
+    tag         Tag?        @relation(fields: [tagId], references: [tagId])
+}           </pre>
+          </div>
+        </section>
+
+        <section id = "project-testing" class="flex-col">
+          <h2 class="section-title">&#x1F52C; Testing</h2>
+          <div class="section-body flex-col">
+            <p>TBA</p>
+          </div>
+        </section>
+  
+        <section id = "project-final-designs" class="flex-col">
+          <h2 class="section-title">&#x2B50; Final Designs</h2>
+          <div class="section-body flex-col">
+            <p>TBA</p>
+          </div>
+        </section>
+
+        <section id = "project-next" class="flex-col">
+          <h2 class="section-title">&#x1F4AD; Next Steps</h2>
+          <div class="section-body flex-col">
+            <p>TBA</p>
+          </div>
+        </section>
+      </main>
+
+      <section class = "extra">
+        <p>Last modified: October 1, 2025</p>
+      </section>
+    </div>
+
+    <footer class = "footer">
+      <div class="footer-sitemap">
+        <nav class = "footer-primary">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="cv.html">cv</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-secondary">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/nancyhao/" target="_blank" class="btn-icon"> <!-- linkedin -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+              </div>
+              /nancyhao
+            </a></li>
+            <li><a href="https://github.com/nenceh" target="_blank" class="btn-icon"> <!-- github -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+              </div>
+              /nenceh
+            </a></li>
+            <li><a href="https://www.figma.com/@nenceh" target="_blank" class="btn-icon"> <!-- figma -->
+              <div class="btn-icon-padding">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+            <li><a href="https://www.youtube.com/@nenceh" target="_blank" class="btn-icon"> <!-- youtube -->
+              <div class="btn-icon-padding">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+              </div>
+              /@nenceh
+            </a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
