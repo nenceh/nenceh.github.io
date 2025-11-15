@@ -57,7 +57,7 @@
       <div id="project-info">
         <div class="project-info-item flex-col">
           <p class="subtitle">TIMELINE</p>
-          <p>Aug'25 - Present</p>
+          <p>Sep'25 - Present</p>
         </div>
 
         <div class="project-info-item flex-col">
@@ -67,13 +67,13 @@
 
         <div class="project-info-item flex-col">
           <p class="subtitle">ROLE</p>
-          <p> Full Stack Developer</p>
+          <p> UX Designer, Fullstack Dev</p>
         </div>
 
         <div class="project-info-item flex-col">
           <p class="subtitle">DELIVERABLE</p>
-          <a href="https://nenceh.github.io/firstsipmatcha/" target="_blank">
-            <p class = "link"><i>📎</i> Web Application (v2.0)</p>
+          <a href="https://firstsipmatcha.vercel.app" target="_blank">
+            <p class = "link"><i>📎</i> Vercel Web App (v3.0)</p>
           </a>
         </div>
       </div>
@@ -87,9 +87,12 @@
           <li><a href="#project-introduction" class="in-page-link"> Introduction </a></li>
           <li><a href="#project-goal" class="in-page-link"> Project Goals </a></li>
           <li><a href="#project-typescript" class="in-page-link"> TypeScript (Next.js) </a></li>
-          <li><a href="#project-angular" class="in-page-link"> Full Stack (with Next.js) </a></li>
-          <li><a href="#project-testing" class="in-page-link"> Testing </a></li>
-          <li><a href="#project-final-designs" class="in-page-link"> Final Design </a></li>
+          <li><a href="#project-fullstack" class="in-page-link"> Full Stack (Next.js) </a></li>
+          <li><a href="#project-backend" class="in-page-link"> "Backend for Frontend" </a></li>
+          <li><a href="#project-ecommerce-journey" class="in-page-link"> Building the Ecommerce Journey </a></li>
+          <li><a href="#project-middleware-rest" class="in-page-link"> Middleware & REST </a></li>
+          <li><a href="#project-ux" class="in-page-link"> Usability Heuristics </a></li>
+          <li><a href="#project-vercel" class="in-page-link"> Vercel Deployment </a></li>
           <li><a href="#project-next" class="in-page-link"> Next Steps </a></li>
         </ol>
       </nav>
@@ -108,6 +111,8 @@
                 <li><a href="https://www.prisma.io/" target="_blank">Prisma</a>: connect backend to a <a href="https://www.postgresql.org/" target="_blank">Postgres</a> database</li>
                 <li>Set up for <a href="https://payloadcms.com/" target="_blank">Payload CMS</a> and <a href="https://jestjs.io/" target="_blank">Jest Testing</a> integrations</li>
             </ul>
+
+            <p class="break">Version 3.0 of the <code>firstsipmatcha</code> website has an ecommerce integration utilizing <a href="https://developer.squareup.com/docs/checkout-api" target="_blank">Square Checkout API</a> for payments. User sessions are maintained via cookie-based authentication and are stored in an external database.</p>
 
             <p class="disclaimer">Check out the previous write-up: <a href="firstsipmatcha-website.html">Website for a Small Business (Front-End version)</a> to see the early development stages of the application. I discuss the initial designs built with Figma, transition to basic HTML, CSS and JS, and <code>git push</code> updates that detail the migration to React.js and then Next.js using TypeScript.</p>
 
@@ -147,9 +152,9 @@
                 <div class = "panel" id="expand-intro">
                     <div class="panel-items">
                         <p>Specifically, I learned about the lifecycle of a <code>react</code> component versus an <i>effect</i>, <code>react</code> <i>states</i> and <i>hooks</i>, and the overall concept of a single-page application (SPA).</p>
-                        <p>Honestly, it was a lot of fun learning and building with <code>react</code> due to the ease of file-based routing, responsiveness and user interactivity.</p>
+                        <p>It was a lot of fun learning and building with <code>react</code> due to the ease of file-based routing, responsiveness and user interactivity.</p>
                         <p>I also learned the differences in how a webpage is rendered. The usage of states and hooks is primarily client-side rendering (CSR), where rendering happens on the browser. Later, I will dive into prerendering.</p>
-                        <p><code>React</code> was beneficial for me to examine the different JS frameworks, and how powerful they can be.</p>
+                        <p><code>React</code> was beneficial for me to examine the different JavaScript frameworks, and how powerful they can be.</p>
                     </div>
                 </div>
                 <button class="btn-primary panel-control" value="#expand-intro"> Show/Hide for addition, non-critical, information!
@@ -157,9 +162,9 @@
                 </button>
             </div>
 
-            <p>Performance and accessibility implementations became more intuitive. For example, I built a hamburger menu button for mobile navigation via this <a href="https://blog.logrocket.com/creating-animated-hamburger-menu-icon-react/" target="_blank">LogRocket blog post</a> by Ibadehin Mojeed. The mobile navigation modal along with the button will have different styling and <code>ARIA</code> attributes based on the device size. This also applies to every responsive design because of how easy it was to make UI changes based on the browser client.</p>
+            <p>Performance and accessibility implementations became more intuitive. For example, I built a hamburger menu button for mobile navigation via this <a href="https://blog.logrocket.com/creating-animated-hamburger-menu-icon-react/" target="_blank">LogRocket blog post</a> by Ibadehin Mojeed. The mobile navigation modal along with the button will have different styling and <code>ARIA</code> attributes based on the device size. Various styling choices also applied to every responsive design because of the ease of making UI changes based on the browser client.</p>
 
-            <p>With <code>BrowserRouter</code> and <code>Routes</code>, I performed some routing/paths proofing, like redirects and catch-all routing. However, a major drawback was that a <code>react</code> router application doesn't go harmoniously together with GitHub Pages since GitHub Pages doesn't support single-page applications (SPA). To keep all my projects available and functional on GitHub, I used <a href="https://github.com/rafgraph/spa-github-pages" target="_blank">this solution</a> by rafgraph. At this point, I knew that <code>react</code> was not going to be where I stopped when it came to building web applications.</p>
+            <p>With <code>BrowserRouter</code> and <code>Routes</code>, I performed some routing/paths proofing, like redirects, 'Not Found' pages and catch-all routing. However, a major drawback was that a <code>react</code> router application does not go harmoniously together with GitHub Pages since GitHub Pages does not support single-page applications (SPA). To keep all my projects available and functional on GitHub, I used <a href="https://github.com/rafgraph/spa-github-pages" target="_blank">this solution</a> by rafgraph. At this point, I knew that <code>react</code> was not going to be where I stopped when it came to building web applications.</p>
 
             <p class="break">Thinking ahead, I built a mock <code>SQL</code> database by moving all information about the beverage menu into its own <code>json</code> file. Each item belongs under a specific category of drinks and has relevant tags for easy look-up and filtering.</p>
 
@@ -170,7 +175,7 @@
 
             <p class="break">Then, I made improvements to the landing/home page. To showcase multiple announcements or news-like content, I built a carousel in the hero section such that users can view these information pieces in a circular rotation. To improve the user experience, I made the carousel infinite in both backward and forward directions, adjusted responsive behaviour at the pre-established breakpoints, added a pagination (visual indication of the number of information pieces/slides), and prevented the backward and forward buttons to fire again too quickly after a previous interaction.</p>
             
-            <p class="break">I also made design improvements to the menu page. To prepare for individual item pages and to declutter the interface, I removed the description attached to each item, and enlargened the image and the font size of the item name. To enhance the visual design, I added a white oval shape behind the entire item to better convey the size of the interactive HTML element, and increased the distance between the image and the item name.</p>
+            <p class="break">I also made design improvements to the menu page, the page listing all items on the menu. To prepare for individual item pages and to declutter the interface, I removed the description attached to each item, and enlargened the image and the font size of the item name. To enhance the visual design, I added a white oval shape behind the entire item to better convey the size of the interactive HTML element, and increased the distance between the image and the item name.</p>
 
             <figure class="media">
               <img class = "portfolio-entry-img" src="../images/portfolio/firstsipmatcha-website/menu-design-changes.png" alt="An image of the comparison between the old and new designs of the menu page.">
@@ -181,20 +186,20 @@
 
             <figure class="media">
                 <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-file-architecture.png" alt="An image of the file architecture for the new Next.js version of the web application.">
-                <figcaption>Next.js file architecture inside the <i>app</i> folder</figcaption>
+                <figcaption>Next.js file architecture using the <a href='https://nextjs.org/docs/app' target="_blank">App Router</a> file-system</figcaption>
             </figure>
             
-            <p>Now, it was more intuitive to define client components with CSR and components that can be prerendered. For example, server-side render (SSR), and static site generation (SSG).</p>
-            <p>For the aforementioned dynamic pages, I implemented static <a href="https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes" target="_blank">dynamic route segments</a> using <code>generateStaticParams()</code>. I extended the menu <code>json</code> database to include a unique <code>id</code> attribute per menu item. For example, "Matcha Latte" has <code>id: matcha-latte</code>. I retrieved menu information from the <code>json</code> files using <code>readFileSync()</code> and <code>JSON.parse()</code>.</p>
+            <p>Now, it was more intuitive to define client components with client-side rendering (CSR) versus components that can be prerendered. For example, server-side render (SSR), and static site generation (SSG).</p>
+            <p>For the aforementioned dynamic pages, I implemented static <a href="https://nextjs.org/docs/app/api-reference/file-conventions/dynamic-routes" target="_blank">dynamic route segments</a> using <code>generateStaticParams()</code>. I extended the menu <code>json</code> database to include a unique <code>id</code> attribute per menu item. For example, "Matcha Latte" has <code>id: matcha-latte</code>.</p>
 
             <figure class="media">
-                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-build-dynamic-ssg.png" alt="A screenshot of the console displaying the generated sitemap.">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-build-dynamic-ssg.png" alt="A screenshot of the console displaying the generated sitemap after building the web application.">
                 <!-- <figcaption></figcaption> -->
             </figure>
 
             <p>Each menu item has a specific page design/layout located at <code>/menu/&lt;itemId&gt;</code>. The main information of the item is located at the top of the page, which includes a display image, the item name as the <code>&lt;h1&gt;</code> heading, and the item description. There is also a breadcrumbs component that serves as the secondary navigation. The rest of the page contains the information specific to the item, which is still currently under development. Lastly, there is a tertiary navigation under a "related items" section. For example, under the "Matcha Latte" page, there is a section with the heading "More lattes" and a small list of other latte items.</p>
 
-            <p class="break">Furthermore, the routing system allowed for boundary navigation cases. I built a loading skeleton component, <code>not-found.tsx</code> as a custom <i>page not found</i>, and <code>error.tsx</code> as a custom error page as the general fallback. For example, if the user navigated to a menu item that does not exist (e.g. <code>/menu/latte</code>, <code>/menu/abcd</code>), the user is navigated to <code>/menu/not-found</code> where there is an option to go back to the menu page at <code>/menu</code>. For any other invalid navigations (e.g. <code>/menu123</code>, <code>/aboutabout</code>, <code>/asdf</code>), the user is navigated to <code>/not-found</code>.</p>
+            <p class="break">Furthermore, the routing system allowed for boundary navigation cases. I created <code>not-found.tsx</code> as a custom <i>page not found</i>, and <code>error.tsx</code> as a custom general fallback error page. For example, if the user navigated to a menu item that does not exist (e.g. <code>/menu/latte</code>, <code>/menu/abcd</code>), the user is navigated to <code>/menu/not-found</code> where there is an option to go back to the menu page at <code>/menu</code>. For any other invalid navigations (e.g. <code>/menu123</code>, <code>/aboutabout</code>, <code>/asdf</code>), the user is navigated to <code>/not-found</code>.</p>
 
             <p class="break">After, I worked on <a href="https://developer.chrome.com/docs/lighthouse/performance/performance-scoring" target="_blank">Lighthouse performance score</a> enhancements.</p>
             <ul>
@@ -225,11 +230,11 @@
           </div>
         </section>
 
-        <section id = "project-angular" class="flex-col">
+        <section id = "project-fullstack" class="flex-col">
           <h2 class="section-title">&#x1F4C8; Full Stack with Next.js (ft. Angular)</h2>
           <div class="section-body flex-col">
-            <p>As a solo developer, I understood I needed to master the backend as well.</p>
-            <p class="break">Angular was another popular framework that I wanted to try. Since I already built the <code>typescript</code> version, the learning curve was manageable as I did not have to worry about the frontend. I found a full stack e-ecommerce application walkthrough using Angular, Nest.js and GraphQL on YouTube, and transformed the example project to suit mine.</p>
+            <p>As a solo developer, I needed to master the backend as well.</p>
+            <p class="break">Angular was another popular framework that I wanted to try. Since I already built the <code>typescript</code> version, the learning curve was manageable as I did not have to worry about the frontend. I found a full stack ecommerce application walkthrough using Angular, Nest.js and GraphQL on YouTube, and transformed the example project to suit mine.</p>
             <ul>
                 <li><a href="https://nx.dev/concepts/decisions/why-monorepos" target="_blank">Nx monorepo</a> to manage both frontend and backend inside one workspace</li>
                 <li><a href="https://angular.dev/" target="_blank">Angular</a> frontend framework
@@ -447,83 +452,621 @@ export class MenuItem {
             </div>
 
             <p class="break">The Angular tutorial served as a good lesson as to the different integrations used to build a full stack application. The tutorial also featured session management with customer data like login and list of orders.</p>
-            <p>As this was a simple demonstration project, I believe user login was not needed at this stage. However, I thought the ability for non-developers to be able to contribute to the web application was a valuable aspect.</p>
+            <p>As this was a simple demonstration project, I believed user login was not needed at this stage. However, I thought the ability for non-developers to be able to contribute to the web application was a valuable aspect.</p>
             <p>I researched into content management systems (CMS) and found <a href="https://payloadcms.com/" target="_blank">Payload</a>, an open-source Next.js native CMS. A CMS would allow users without coding experience to create, manage, and publish digital content for a digital platform.</p>
+          </div>
+        </section>
 
-            <p class="break">I decided to continue with <code>next</code>, as I could integrate Payload CMS later on, and committed to building a <a href="https://nextjs.org/docs/app/guides/backend-for-frontend" target="_blank">backend with Next.js</a>.</p>
+        <section id="project-backend" class="flex-col">
+          <h2 class="section-title">&#x1F4BB; "Backend for Frontend"</h2>
+          <div class="section-body flex-col">
+            <p>I continued with <code>next</code>, as I could integrate Payload CMS later on, and committed to building a <a href="https://nextjs.org/docs/app/guides/backend-for-frontend" target="_blank">backend with Next.js</a>. To integrate ecommerce into the website, I created a mock shopping system where users can view and add products to a shopping cart, and fulfil checkouts with Square.</p>
 
             <figure class="media">
-                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-website/nextjs-file-architecture.png" alt="An image of the file architecture for the backend of the web application.">
-                <figcaption>[IMAGE TBA] Next.js backend file architecture inside the <i>app</i> folder</figcaption>
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/nextjs-file-architecture-backend.png" alt="An image of the file architecture for the backend of the web application.">
+                <figcaption>Next.js backend file architecture inside the <i>app</i> folder</figcaption>
             </figure>
 
             <ul>
-                <li>Server Actions: execute asynchronous functions on the server (e.g. fetching/mutating data, form submissions)</li>
-                <li>Route Handlers: handle requests using <a href="https://developer.mozilla.org/docs/Web/HTTP/Methods" target="_blank">HTTP methods</a></li>
+                <li><a href="https://nextjs.org/docs/app/getting-started/updating-data#what-are-server-functions" target="_blank">Server Actions</a>: execute asynchronous functions on the server (e.g. fetching/mutating data, form submissions)</li>
+                <li><a href="https://nextjs.org/docs/app/getting-started/route-handlers" target="_blank">Route Handlers</a>: handle requests using <a href="https://developer.mozilla.org/docs/Web/HTTP/Methods" target="_blank">HTTP methods</a></li>
                 <li>Middleware: execute custom server-side logic before routes are rendered</li>
             </ul>
             
-            <p class="break">First, I established the <code>prisma</code> database using a free <a href="https://neon.com/" target="_blank">Neon Postgres</a> project database. I translated the <code>json</code> database into its own schema:</p>
+            <p class="break">First, I established the <code>prisma</code> database using a free <a href="https://neon.com/" target="_blank">Neon Postgres</a> project database. I translated the previous <code>json</code> database into its own schema:</p>
 
             <pre>// schema.prisma
 model MenuCategory { // define MenuCategory
-    id              Int         @id @default(autoincrement())
-    name            String
-    description     String?
-    list            Item[]      // each menu category has a list of items
+  id              Int         @id @default(autoincrement())
+  name            String
+  description     String?
+  list            Item[]      // each menu category has a list of items
 }
 
 model MenuItem { // define MenuItem
-    itemId          String      @id @unique
-    name            String
-    description     String
-    price           Float
-    tags            ItemTag[]
-    img             String
-    catId           Int         // each menu item belongs to a menu category
-    menuCategory    MenuCategory @relation(fields: [catId], references: [id])
+  itemId          String      @id @unique
+  name            String
+  description     String
+  price           Float
+  tags            ItemTag[]
+  img             String
+  catId           Int         // each menu item belongs to a menu category
+  archived        Boolean     // if the item is curently unavailable (Square allows an item to be "archived")
+  menuCategory    MenuCategory @relation(fields: [catId], references: [id])
 }
 
 model Tag { // define Tag
-    tagId       String      @id @unique
-    icon        String?     // html code for a display icon
-    items       ItemTag[]
+  tagId       String      @id @unique
+  icon        String?     // html code for a display icon
+  items       ItemTag[]
 }
 
 model ItemTag { // help define many-to-many relationship
-    id          Int         @id @default(autoincrement())
-    itemId      String?
-    tagId       String?
-    menuItem    MenuItem?   @relation(fields: [itemId], references: [itemId])
-    tag         Tag?        @relation(fields: [tagId], references: [tagId])
+  id          Int         @id @default(autoincrement())
+  itemId      String?
+  tagId       String?
+  menuItem    MenuItem?   @relation(fields: [itemId], references: [itemId])
+  tag         Tag?        @relation(fields: [tagId], references: [tagId])
 }           </pre>
+
+            <p class="break">To maintain a user's shopping cart information, I learned how to read and write information about a user session using cookie-based authentication.</p>
+            <p>Websites use "tokens" for user authentication (e.g. OAuth, Auth0) and access to protected resources, and overall improve the ecommerce user journey. A token acts as a credential saved as a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Cookies" target="_blank">HTTP cookie</a> that contains a set amount of user information required to determine the user's identity or authorize actions.</p>
+            <p>Credits to the <a href="https://docs.secureauth.com/ciam/en/refresh-token-flow.html" target="_blank">Refresh Token Flow</a> article by SecureAuth for helping me understand the process with <i>access</i> and <i>refresh</i> tokens. With the usage of tokens, the web application could maintain a user's shopping cart by saving an access token as a <code>cookie</code>. This access token is connected to a user's session stored in the Neon database. When a page is loaded, the shopping cart information is retrieved in the background.</p>
+
+            <pre>// schema.prisma
+model Session {
+  refreshToken  String     @id @unique      // refresh token
+  accessToken   String     @unique          // access token
+  accessExpired Boolean    @default(false)  // if the access token is expired or not
+  expiryDate    DateTime                    // session expiry date
+  cartItems     CartItem[]                  // list of items in the shopping cart
+  orders        Order[]                     // Orders associated with the user
+}           </pre>
+
+            <p class="break">Now, I can define the eccomerce products, cart items and orders.</p>
+
+            <pre>// schema.prisma
+model ProductCategory { // define ProductCategory
+  id          String        @id @unique
+  name        String
+  description String?
+  list        ProductItem[]
+}
+
+model ProductItem { // define ProductItem
+  id              String          @id @unique   // Square Item id
+  productId       String          @unique       // e.g. "matcha-latte"
+  cartItems       CartItem[]
+  catId           String
+  productCategory ProductCategory @relation(fields: [catId], references: [id])
+}
+
+model CartItem { // define CartItem
+  id             String      @id @unique @default(uuid())
+  quantity       Int
+  productId      String
+  indexVariation Int         // index number of the Square product variation
+  indexModifiers Int[]       // list of index numbers of the Square product modifiers
+  refreshToken   String
+  addedAt        DateTime    @default(now())
+  updatedAt      DateTime?
+  productItem    ProductItem @relation(fields: [productId], references: [productId])
+  session        Session     @relation(fields: [refreshToken], references: [refreshToken], onDelete: Cascade)
+
+  @@unique([refreshToken, productId, indexVariation, indexModifiers]) // ensures a unique combination of cart and product
+}
+
+model Order { // define Order
+  orderId      String   @id @unique     // Square Order id
+  iKey         String                   // idempotency key
+  SPL_id       String   @unique         // Square Payment Link id
+  SPL_url      String                   // Square Payment Link url
+  totalAmount  Float                    // Square Order total amount (Canadian dollars)
+  status       String                   // Square Order fulfillment status
+  refreshToken String
+  session      Session  @relation(fields: [refreshToken], references: [refreshToken], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}           </pre>
+            
+            <p class="break">Utilizing the <a href="https://developer.squareup.com/docs/get-started/create-account-and-application" target="_blank">Square Developer</a> platform, I made a new account to learn about the different APIs and test the relevant functionalities with the <a href="https://developer.squareup.com/docs/devtools/sandbox/overview" target="_blank">Square Sandbox</a> environment.</p>
+            <ul>
+              <li><a href="https://developer.squareup.com/explorer/square" target="_blank">API Explorer</a></li>
+              <li><a href="https://developer.squareup.com/docs/build-basics/general-considerations/collecting-information" target="_blank">Best Practices for Collecting Information</a></li>
+              <li>[Discussion Forum] <a href="https://developer.squareup.com/forums/t/authorizing-users-and-connecting-to-square-api-customer-object/6673" target="_blank">Authorizing Users and connecting to Square API Customer Object</a></li>
+              <li><a href="https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors" target="_blank">Handling Errors</a></li>
+            </ul>
+
+            <figure class="iframe media">
+              <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/board/8X9uEuQnIfNexYCiT5FjjD/Brainstorm?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+              <figcaption>User flow charts for user actions like:
+                <ul>
+                  <li>shop products</li>
+                  <li>placing an order</li>
+                  <li>fulfil an order via a Square <a href="https://developer.squareup.com/reference/square/checkout-api/create-payment-link" target="_blank">payment link</a></li>
+                </ul>
+              </figcaption>
+            </figure>
+
+            <p>Figma's FigJam feature served as a great tool for brainstorming. Feel free to browse around my FigJam file with the embedded Figma component above! It includes my inital frontend brainstorm, as well as several user flow charts for various user actions.</p>
+
+            <p class="break">With the addition of an ecommerce section, I adjusted the frontend file architecture to include <a href="https://nextjs.org/docs/app/api-reference/file-conventions/route-groups" target="_blank">route groups</a> for better organization. The base pages like <code>/about</code> and <code>/menu</code> were grouped in <code>/(market)</code>. All the <code>/shop</code> pages were grouped in <code>/(shop)</code>.</p>
+
+            <p>Because my free project database has a limit, the database is only used for getting a simplified list of items and modifying session data. I store all information regarding the products on Square, such that retrieving a Square product will contain all information necessary to make a purchase of said product.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/nextjs-file-architecture-frontend.png" alt="An image of the file architecture for the updated frontend of the web application.">
+                <figcaption>Next.js updated frontend file architecture inside the <i>app</i> folder</figcaption>
+            </figure>
+
+            <p>The new <code>/shop</code> routes:</p>
+            <ul>
+              <li><code>/shop</code>: page showcasing all sellable products</li>
+              <li><code>/shop/[productId]</code>: individual product page
+                <ul>
+                  <li>contains information about the product (e.g. price, description, related products)</li>
+                  <li>contains product modifiers and variations (e.g. size selection)</li>
+                  <li>contains quantity selection & button to add the product to the user's shopping cart</li>
+                </ul>
+              </li>
+              <li><code>/shop/cart</code>: shopping cart page
+                <ul>
+                  <li>displays list of cart items</li>
+                  <li>can modify each cart item (e.g. adjust quantity, remove from cart)</li>
+                  <li>contains button to proceed to checkout (i.e. place an order)</li>
+                </ul>
+              </li>
+              <li><code>/shop/checkout</code>: checkout page
+                <ul>
+                  <li>navigated here after successfully generating an order</li>
+                  <li>route only reachable from <code>/shop/cart</code>; otherwise, redirect to <code>/shop/cart</code></li>
+                </ul>
+              </li>
+              <li><code>/shop/checkout/[orderId]</code>: page for a successful order fulfillment with Square
+                <ul>
+                  <li><code>orderId</code>: the ID of the order generated by Square</li>
+                  <li>redirected here from a <a href="https://developer.squareup.com/reference/square/checkout-api/create-payment-link" target="_blank">payment link</a> after the order has been fulfilled with Square (i.e. user pays for the order)</li>
+                  <li>route only reachable if there exists an order with the associated <code>orderId</code> and the order has been fulfilled; otherwise, redirect to <code>/shop/cart</code></li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </section>
 
-        <section id = "project-testing" class="flex-col">
-          <h2 class="section-title">&#x1F52C; Testing</h2>
+        <section id="project-ecommerce-journey" class="flex-col">
+          <h2 class="section-title">&#x1F6D2; Building the Ecommerce Journey</h2>
           <div class="section-body flex-col">
-            <p>TBA</p>
+            <p>After setting up my Square account and <a href="https://developer.squareup.com/docs/catalog-api/build-with-catalog" target="_blank">creating a product catalog</a> for all the existing menu items, I built custom functions to utilize the Square APIs with the <a href="https://www.npmjs.com/package/square" target="_blank">Square TypeScript library</a>.</p>
+
+            <pre>// prisma.ts
+let PRISMA: PrismaClient;
+
+if (process.env.NODE_ENV === 'production') {
+  PRISMA = new PrismaClient();
+} else {
+  if (!global.PRISMA) {
+    global.PRISMA = new PrismaClient();
+  }
+  PRISMA = global.PRISMA;
+}
+
+export const getMenu = async() => {
+  return await PRISMA.menuItem.findMany();
+};
+
+export const getMenuItem = async(id: string) => {
+  return await PRISMA.menuItem.findFirst({
+    where: { itemId: id },
+  });
+};
+
+export const getShop = async() => {
+  return await PRISMA.productItem.findMany();
+};
+
+export const getProductItem = async(id: string) => {
+  return await PRISMA.productItem.findFirst({
+    where: { productId: id },
+  });
+};
+
+export const createSession = async() => {
+  const newAccessToken = generateUUID(); // generates a random UUID string
+  const newRefreshToken = generateUUID();
+  const newExpiryDate = new Date(Date.now() + EXPIRY_DURATION);
+  const cart: SquareCartItem[] = [];
+
+  try{
+    await PRISMA.session.create({
+      data: {
+        refreshToken: newRefreshToken,
+        accessToken: newAccessToken,
+        expiryDate: newExpiryDate,
+      },
+    }); 
+    return { newAccessToken, newRefreshToken, newExpiryDate, cart };
+  } catch(e){ console.log(e); return undefined; }
+}
+// ...      </pre>
+
+            <pre>// square.ts
+// "Sandbox" is the term used for Square's developer testing playground
+const SQUARE = new SquareClient({
+  token: process.env.NEXT_PUBLIC_SQUARE_SANDBOX_ACCESS_TOKEN,
+  environment: SquareEnvironment.Sandbox,
+});
+
+// Square uses type BigInt for price and money
+(BigInt.prototype as any).toJSON = function () {
+  return Number(this);
+};
+
+export const getCatalogShop = async() => {
+  // returns all sellable products in the shop
+}
+
+// <a href="https://developer.squareup.com/reference/square/objects/CatalogObject" target="_blank">CatalogObject</a>
+export const getCatalogItem = async(id: string) => {
+  // returns the product with the associated id
+}           </pre>
+            
+            <p>And so, server components can utilize these server functions.</p>
+
+            <ul>
+              <li><code>/menu/page.tsx</code>: <code>await getMenu();</code></li>
+              <li><code>/menu/[itemId]/page.tsx</code>: <code>await getMenuItem(itemId);</code></li>
+              <li><code>/shop/page.tsx</code>: <code>await getCatalogShop();</code></li>
+              <li><code>/shop/[productId]/page.tsx</code>: <code>await getCatalogItem(productId);</code></li>
+            </ul>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/sketch-product-page.png" alt="A sketch of the general product page.">
+                <figcaption>Sketch of the layout of a product page, for example <code>/shop/matcha-latte</code>
+                    <ul>
+                        <li>Left: page layout for larger device sizes</li>
+                        <li>Right: page layout for smaller device sizes</li>
+                    </ul>
+                </figcaption>
+            </figure>
+            
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/shop-quantity-control.png" alt="A sketch of the CTA of /shop/[productId].">
+                <figcaption>CTA of the product page
+                  <ul>
+                    <li>Left: <code>QtyCtrl.tsx</code>, client component that controls the quantity based on user inputs</li>
+                    <li>Right: <i>Add to Cart</i> button, which calls a method to add the current product and the quantity desired to the session shopping cart</li>
+                  </ul>
+                </figcaption>
+            </figure>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/shop-add-session-cart.png" alt="Written process of adding an item to the shopping cart.">
+                <figcaption>Process of adding an item to the shopping cart</figcaption>
+            </figure>
+
+            <p class="break">To share the state of the session shopping cart, I used <a href="https://vercel.com/guides/react-context-state-management-nextjs" target="_blank">React Context for State Management</a>.</p>
+
+            <pre>// CartContext.tsx
+const initialState: CartContextState = {
+  cart: undefined,
+  error: null,
+}
+
+// React <a href="https://react.dev/reference/react/useReducer" target="_blank">useReducer</a>
+const reducer = (state: any, action: any) => { ... }
+
+export const CartProvider = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+
+  useEffect(() => {
+    init_context();
+  }, []);
+
+  const init_context = () => {
+    startTransition(async() => {
+      const res = await fetch(`/api/shop`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+
+      if(res.ok){
+        const data = await res.json();
+        dispatch({
+          type: DispatchActionType.INITIALIZE,
+          payload: data,
+        });
+      }
+    });
+  }
+
+  // add a product to the shopping cart
+  const addToSessionCart = (item: SessionCartItem) => {
+    startTransition(async() => {
+      const res = await fetch('/api/shop', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          item: item,
+        }),
+      });
+
+      if(res.ok){
+        dispatch({
+          type: DispatchActionType.ADD_ITEM,
+          payload: item,
+        });
+
+        pageNoteDispatch({
+          type: DispatchActionType.SET_CART_CONFIRMATION,
+          payload: item,
+        });
+      } else{
+        // display error
+      }
+    });
+  }
+
+  // update the quantity of a product in the shopping cart
+  const updateQuantitySessionCart = (item: SessionCartItem, quantity: number) => { ... }
+
+  // remove the product from the shopping cart
+  const removeFromSessionCart = (items: SessionCartItem[]) => { ... }
+
+  // ...
+}
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+  return context;
+};
+
+// ...      </pre>
+            
+            <p class="break">The state is used in a navigation component for <code>/shop</code> routes. This is a secondary navigation header located at the top of the page below the primary navigation header.</p>
+
+            <p>This secondary navigation contains breadcrumbs and a link to the shopping cart. The link has the appearance of a button, and visually contains a <a href="https://fontawesome.com/icons/bag-shopping?f=classic&s=solid" target="_blank">shopping bag icon</a>.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/sketch-navshop.png" alt="A sketch of the navigation header present on all pages inside /shop.">
+                <figcaption>Sketch of the secondary navigation for all <code>/shop</code> pages, includes: breadcrumbs and a link to the shopping cart</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/sketch-cart-page.png" alt="A sketch of the shopping cart page.">
+                <figcaption>Sketch of the layout of the shopping cart page at <code>/shop/cart</code>
+                    <ul>
+                        <li>Left: page layout for larger device sizes</li>
+                        <li>Right: page layout for smaller device sizes</li>
+                    </ul>
+                </figcaption>
+            </figure>
+
+            <p class="break">Pages like <code>/shop</code>, <code>/shop/[productId]</code> and <code>/shop/cart</code> can receive updates to their content. For example, if a product was recently sold out, the corresponding pages should automatically reflect the updated information..</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/shop-product-page-soldout.png" alt="A screenshot of the Hojicha Latte product page with the large size variation sold out.">
+                <figcaption>Example of the Hojicha Latte product page, but the large size variation is currently sold out</code></figcaption>
+            </figure>
+
+            <p>This is achieved through <a href="https://nextjs.org/docs/app/guides/incremental-static-regeneration" target="_blank">incremental static regeneration</a> (ISR), the ability to update content without rebuilding or redeploying the entire website. Because the pages are pulling information from Square, all ecommerce information can be directly managed on Square. After an increment amount of time, a page will generate a new version and invalidate the old cached version.</p>
+
+            <p>ISR will also allow fewer requests made to both Square and the external database by using cached versions.</p>
+
+            <ul>
+              <li><code>/menu</code>: <code>export const revalidate = 86400</code>, 86400 seconds = 1 day</li>
+              <li><code>/menu/[itemId]</code>: <code>export const revalidate = 86400</code></li>
+              <li><code>/shop</code>: <code>export const revalidate = 600</code>, 600 seconds = 10 minutes</li>
+              <li><code>/shop/[productId]</code>: <code>export const revalidate = 600</code></li>
+              <li><code>/shop/cart</code>: <code>next: { revalidate: 200 }</code>, inside <code>fetch</code></li>
+            </ul>
           </div>
         </section>
-  
-        <section id = "project-final-designs" class="flex-col">
-          <h2 class="section-title">&#x2B50; Final Designs</h2>
+
+        <section id="project-middleware-rest" class="flex-col">
+          <h2 class="section-title">&#x1F6A7; Middleware & REST API</h2>
           <div class="section-body flex-col">
-            <p>TBA</p>
+            <p>The <a href="https://nextjs.org/docs/app/api-reference/file-conventions/proxy" target="_blank">Middleware</a> is used to protect routes and verify the user session data. For the <code>/shop</code> routes, the user session should be maintained (i.e. should always exist a session cookie, refresh session data if needed). For a specific path like <code>/shop/checkout</code>, the route should not be accessed unless coming from <code>/shop/cart</code>.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/middleware.png" alt="Written process of the middleware.">
+                <figcaption>Middleware:
+                  <ul>
+                    <li><code>matcher</code>: array of paths for the middleware to run on</li>
+                  </ul>
+                  <ol style="list-style-type: lower-roman;">
+                    <li>check if the current path is a request for an API route</li>
+                    <li>otherwise, if the current path starts with <code>/shop/checkout</code></li>
+                    <li>otherwise, if the current path starts with <code>/shop</code></li>
+                    <li>otherwise, continue</code></li>
+                  </ol>
+                </figcaption>
+            </figure>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/nextjs-file-architecture-api.png" alt="An image of the file architecture for the API routes of the web application.">
+                <figcaption>API routes inside the <i>app</i> folder</figcaption>
+            </figure>
+
+            <ul>
+                <li><code>/api/config</code>: custom rate limiter of the entire web application
+                    <ul>
+                        <li>using the <a href="https://www.npmjs.com/package/rate-limiter-flexible" target="_blank">rate-limiter-flexible</a> library</li>
+                        <li>applies rate limit to <code>fetch</code> calls and server actions</li>
+                        <li>applies rate limit to <code>fetch</code> calls and server actions</li>
+                        <li>used in <code>middleware.ts</code></li>
+                    </ul>
+                </li>
+                <li><code>/api/refresh</code>: POST route to refresh session token data
+                    <ul>
+                        <li>e.g. if the user session or <code>accessToken</code> has expired</li>
+                    </ul>
+                </li>
+                <li><code>/api/revalidate</code>: GET route to on-demand invalidate cached data for the given current page, path or tag
+                    <ul>
+                        <li><a href="https://nextjs.org/docs/app/api-reference/functions/revalidatePath" target="_blank">revalidatePath</a></li>
+                        <li><a href="https://nextjs.org/docs/app/api-reference/functions/revalidateTag" target="_blank">revalidateTag</a></li>
+                    </ul>
+                </li>
+                <li><code>/api/shop</code>:
+                    <ul>
+                        <li>GET route to obtain session data (i.e. shopping cart)</li>
+                        <li>POST route to update session data (i.e. add, update or remove from shopping cart)</li>
+                    </ul>
+                </li>
+                <li><code>/api/validate</code>: GET route to validate session token data</li>
+                <li><code>/api/validate/order</code>: PUT route to validate or update an Order</li>
+            </ul>
+
+            <!-- ux improvements: action feedback (add to cart confirmation, pagenotes), loading skeletons, html attributes, SQUARE RATE LIMITING?, secondary nav # of cart items text (and it has a visible text element to denote the shopping cart quantity) -->
+
+            <p class="break">The choice to apply a custom rate limiter was inspired by Square's <a href="https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors#rate-limiting-errors" target="_blank">rate limiting errors</a> article. In the event my application gets rate limited due to sending a high number of requests to the Square APIs (which should not happen if my application is not being used on a large scale), I modified my algorithms to accommodate for errors with a <code>429</code> status code.</p>
+            <p>The article suggested "a retry mechanism with an exponential backoff schedule to resend the requests at an increasingly slower rate." For every request, it is called from inside a loop with a maximum number of total tries. If a <code>429</code> error is returned, retry the request after a delay. If the total number of attempts was reached, then we can return the rate limited error.</p>
+
+            <pre>// square.ts
+const fetchSquareObject = async(...) => {
+  const baseDelay = 1000; // 1 second
+  let attempt = 0;
+
+  while(attempt <= SQUARE_ATTEMPT_LIMIT){
+    let res;
+    try{
+      // request Square API
+      return NextResponse.json(res, { status: 200 });
+    }
+    catch(e){
+      if(e.statusCode === 429){
+        attempt++;
+
+        if(attempt > SQUARE_ATTEMPT_LIMIT){
+          return NextResponse.json(null, {
+            status: e.statusCode,
+            statusText: e.errors.detail,
+          });
+        }
+
+        const jitter = Math.random() * 500;
+        const delay = baseDelay * Math.pow(2, attempt - 1) + jitter;
+
+        await new Promise((res) => setTimeout(res, delay)); // delay
+      } else { // some other error
+        return NextResponse.json(null, {
+          status: e.statusCode,
+          statusText: e.errors ? e.errors[0].detail : e.statusText,
+        });
+      }
+    }
+  }
+  
+  return NextResponse.json(null, {
+    status: 500,
+    statusText: 'There was an unexpected error.',
+  });
+}
+// ...      </pre>
+          </div>
+        </section>
+
+        <section id = "project-ux" class="flex-col">
+          <h2 class="section-title">&#x1F4CA; Applying Usability Heuristics for UI Design</h2>
+          <div class="section-body flex-col">
+            <p>According to the <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">10 Usability Heuristics for User Interface Design</a> by the Nielson Norman Group (NNg), <b>appropriate communication and feedback should be presented clearly and immediately to users</b>. Knowing the current status of a system helps users understand prior actions and determine next steps.</p>
+
+            <p class="break">After adding an item to the shopping cart, I designed a <a href="https://www.nngroup.com/articles/indicators-validations-notifications/" target="_blank">passive notification</a> as a visual confirmation of the user action. For example, the website communicates that the user attempted to add a product to the shopping cart. Initially, I debated on a persistent feedback component (i.e. permanently in view until navigating away from page) versus a disappearing overlay like a temporary popup. They both have pros and cons, however, a major drawback of disappearing feedback is it can cause cognitive load or stress for users trying to read the feedback in time.</p>
+            
+            <p>By my own research (i.e. visiting my favourite ecommerce stores) and this <a href="https://www.nngroup.com/articles/cart-feedback/" target="_blank">cart feedback</a> article by NNg, I chose the passive notification to be a banner that appears on top of the product page. Additionally, I added a quantity badge indicator on the cart icon on the secondary navigation component. This badge denotes the total number of distinct products in the shopping cart.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/example-shop-add-to-cart-success.gif" alt="GIF of a successful user attempt at adding the Matcha Latte product to the shopping cart.">
+                <figcaption>Successful attempt at adding the Matcha Latte product to the cart
+                  <ul>
+                    <li>Banner with appropriate feedback appears at top of page</li>
+                    <li>Page is automatically scrolled to the top</li>
+                    <li>Cart badge indicator is updated</li>
+                  </ul>
+                </figcaption>
+            </figure>
+
+            <p>For successful user actions or affirmative notices, the banner notification uses a green colour palette and usually is accompanied with a checkmark icon ✔️.</p>
+
+            <p>For unsuccessful user actions or alert notices, the banner notification uses a yellow-orange colour palette and usually is accompanied with an exclamation mark icon ❗.</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/example-cart-page-update-error.gif" alt="GIF of an unsuccessful user attempt at updating the quantity of the White Mocha Matcha Latte product in the shopping cart.">
+                <figcaption>Unsuccessful attempt at updating the quantity of the White Mocha Matcha Latte in the shopping cart</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/example-cart-page-outofstock-notice.gif" alt="Shopping cart notice of cart items that are no longer available.">
+                <figcaption>Alert notice: some cart items are no longer available and have been removed</figcaption>
+            </figure>
+
+            <p class="break">Another method of providing sufficient communication is <a href="https://www.nngroup.com/articles/progress-indicators/" target="_blank">progress indicators</a>, where users are able to understand that progress is being made. Specifically, I implemented visual <a href="https://www.nngroup.com/articles/skeleton-screens/" target="_blank">loading skeletons</a> as placeholders while a page or component loads. The <code>css</code> styling creates a subtle grey-coloured pulsating gradient.</p>
+
+            <pre>// _skeleton.scss
+@keyframes pulse { // animation
+    50% {
+        opacity: .5;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+// ...      </pre>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/example-shop-page-loading.gif" alt="GIF of loading the shop page.">
+                <figcaption>Arriving at the <code>/shop</code> page; skeleton loading component for each product</figcaption>
+            </figure>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/example-cart-page-loading.gif" alt="GIF of loading the shopping cart page.">
+                <figcaption>Arriving at the <code>/shop/cart</code> page with items</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id = "project-vercel" class="flex-col">
+          <h2 class="section-title">&#x1F310; Vercel Deployment</h2>
+          <div class="section-body flex-col">
+            <p>The new fullstack web application is now available at <a href="https://firstsipmatcha.vercel.app" target="_blank">https://firstsipmatcha.vercel.app</a>.</p>
+
+            <p class="break">Previously, the frontend version was deployed on GitHub Pages as a <a href="https://nextjs.org/docs/app/guides/static-exports" target="_blank">static export</a> of the web application. For simplicity and to keep my portfolio mainly on GitHub, a static export was sufficient. However, with the amount of <a href="https://nextjs.org/docs/app/guides/static-exports#unsupported-features" target="_blank">unsupported dynamic features</a> for static exports (e.g. ISR, cookies, middleware), it was no longer ideal to host on GitHub.</p>
+
+            <p><a href="https://vercel.com/" target="_blank">Vercel</a> is a popular cloud platform for deploying <code>next</code> web applications. For a small fullstack application like mine, <code>vercel</code> was an easy choice as all that was required was linking to a GitHub repository (and setting up a few command lines and the environment variables).</p>
+
+            <p class="break">I <code>git push</code>-ed the latest version to a new <code>vercel</code> branch of the existing <a href="https://github.com/nenceh/firstsipmatcha" target="_blank">repository</a>. After testing the middleware and going through the ecommerce user journey on several devices, I am pleased to present the new fullstack application (AKA version 3.0).</p>
+
+            <figure class="media">
+                <img class = "portfolio-entry-img" src="/images/portfolio/firstsipmatcha-fullstack/nextjs-build.png" alt="A screenshot of the console displaying the generated sitemap after building the web application.">
+                <!-- <figcaption></figcaption> -->
           </div>
         </section>
 
         <section id = "project-next" class="flex-col">
           <h2 class="section-title">&#x1F4AD; Next Steps</h2>
           <div class="section-body flex-col">
+            <!-- Batch/Bulk endpoints (https://developer.squareup.com/docs/build-basics/general-considerations/handling-errors#rate-limiting-errors) -->
+
+            <!-- Square & GraphQL -->
             <p>TBA</p>
           </div>
         </section>
       </main>
 
       <section class = "extra">
-        <p>Last modified: October 1, 2025</p>
+        <p>Last modified: November 13, 2025</p>
       </section>
     </div>
 

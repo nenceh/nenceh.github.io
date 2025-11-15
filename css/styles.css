@@ -542,11 +542,15 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   transition: border-left-color 0.4s ease-in;
   position: absolute;
   left: -16px;
-  top: calc(50% - 6px);
+  top: 6px;
   border-bottom: 6px solid transparent;
   border-left: 8px solid #FFF;
   border-top: 6px solid transparent;
   content: "";
+}
+body pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .flex-col {
@@ -554,428 +558,120 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   flex-flow: column;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 383px) {
+  .page-banner {
+    padding: 24px 28px;
+  }
+  .body-content .toc ol {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+@media screen and (min-width: 384px) {
+  .page-banner {
+    padding: 24px 40px;
+  }
+  .body-content .toc ol {
+    display: block;
+    -moz-column-count: 2;
+         column-count: 2;
+    gap: 0;
+  }
+  .body-content .toc ol li {
+    margin-left: 8px;
+    max-height: 48px;
+    margin-bottom: 16px;
+  }
+  .body-content .toc ol li a {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .body-content, .info-container {
+    margin: 0 24px;
+  }
   .topnav-container {
-    padding: 0 20px;
+    padding: 0 24px;
     position: absolute;
   }
   .body-content {
     justify-content: center;
     margin: 0 24px;
   }
-}
-@media screen and (min-width: 892px) {
+  .body-content button.panel-control {
+    padding-right: 28px;
+  }
   #find-me {
-    bottom: 140px;
+    bottom: 124px;
+    right: 1px;
   }
   #find-me a {
-    padding: 12px;
+    padding: 8px;
   }
   #find-me a svg {
-    height: 24px;
-    width: 24px;
-  }
-  body {
-    margin: 40px auto 0;
-  }
-  body .topnav-container, body p, body li, body img, body label, body span {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0.5px;
-    font-family: "Trebuchet MS";
-  }
-  body h1 {
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 64px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body h2 {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 48px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body h3 {
-    font-size: 27px;
-    font-weight: 800;
-    line-height: 40px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body h4 {
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 32px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body h5 {
-    font-size: 19px;
-    font-weight: 800;
-    line-height: 32px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body h6 {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 16px;
-    letter-spacing: 0;
-    font-family: "Trebuchet MS";
-  }
-  body button#to-top, body figcaption, body figcaption li, body ul.toggle-filters label, body sup, body .footer-primary li, body .footer-secondary a {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0.35px;
-    font-family: "Trebuchet MS";
-  }
-  body .formula {
-    width: 100%;
-    text-align: center;
-    margin-top: 64px;
-    margin-bottom: 24px;
-  }
-  body .formula + .formula {
-    margin-top: 0;
-  }
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-  .btn-icon, .btn-secondary, .btn-primary, button#to-top {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    font-family: "Trebuchet MS";
-    padding: 12px 20px;
-  }
-  .btn-icon svg, .btn-secondary svg, .btn-primary svg, button#to-top svg {
-    top: calc(50% - 12px);
-  }
-  button#to-top {
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 20px;
-    letter-spacing: 0.35px;
-    font-family: "Trebuchet MS";
-    padding: 10px 20px;
-    bottom: 40px;
-    right: 70px;
-    gap: 4px;
-  }
-  button.panel-control {
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 20px;
-    letter-spacing: 0.35px;
-    font-family: "Trebuchet MS";
-    padding: 8px 20px;
-  }
-  .body-content p, .extra p, figcaption, .panel-control, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .early-regex {
-    width: 100%;
-  }
-  .body-content main, .page-banner p.desc, .info-container > .info, .footer-sitemap {
-    width: calc(6 * (100% + 24px) / 12 - 24px);
-  }
-  .topnav-container {
-    padding: 0 88px;
-  }
-  .page-banner {
-    padding: 64px 100px;
-    gap: 16px;
-  }
-  .page-banner ul.breadcrumbs {
-    gap: 26px;
+    height: 16px;
+    width: 16px;
   }
   .info-container #project-info {
-    margin: 40px 0 120px;
-  }
-  .info-container .info {
-    gap: 8px;
-    margin: 40px 0 80px;
+    margin: 24px 0 64px;
   }
   footer.footer {
-    margin-top: 80px;
-    padding: 80px 100px 100px;
+    padding: 40px 24px 80px;
   }
-  footer.footer li {
-    height: 48px;
+  #ts-albums .gen-text {
+    height: 180px;
+    padding: 16px;
   }
-  .body-content {
-    flex-direction: row-reverse;
-    margin: 0 100px;
-    gap: 24px;
-    align-items: flex-start;
+  #yt-titles .gen-text {
+    height: 240px;
+    padding: 0 16px;
   }
-  .body-content.landing {
-    padding-top: 80px;
-    padding-bottom: 80px;
+  section#about-me .section-body #about-me-pic {
+    max-width: 60%;
   }
-  .body-content main {
-    gap: 120px;
+}
+@media screen and (min-width: 480px) {
+  .topnav-container {
+    padding: 0 40px;
   }
-  .body-content main p.break {
-    margin-top: 28px;
+  .body-content, .info-container {
+    margin: 0 40px;
   }
-  .body-content main p.disclaimer {
-    padding: 40px 18px 24px;
-    line-height: 32px;
-    font-style: italic;
+}
+@media screen and (max-width: 631px) {
+  .info-container #project-info {
+    margin: 24px 0 80px;
   }
-  .body-content main span.highlight {
-    padding-bottom: 2px;
-    background: linear-gradient(to bottom, transparent 50%, #FCE04F 50%);
+  footer.footer {
+    padding: 40px 40px 80px;
   }
-  .body-content main section {
-    scroll-margin-top: 64px;
-    gap: 20px;
-  }
-  .body-content main section .section-body {
-    gap: 16px;
-  }
-  .body-content main figure {
-    padding: 24px 0;
-  }
-  .body-content main figure.media {
-    gap: 12px;
-  }
-  .body-content main figure.restrict img {
-    max-height: 600px;
-  }
-  .body-content main figure.iframe iframe {
-    height: 400px;
-  }
-  .body-content ul, .body-content ol {
-    gap: 16px;
-    padding-left: 32px;
-  }
-  .body-content ul li, .body-content ol li {
-    line-height: 24px;
-  }
-  .body-content ul ul, .body-content ul ol, .body-content ol ul, .body-content ol ol {
-    width: 100%;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  .body-content ul + p, .body-content ol + p {
-    padding-top: 8px;
-  }
-  .body-content figcaption ul, .body-content figcaption ol {
-    gap: 8px;
-    padding-top: 8px;
-    padding-bottom: 12px;
-  }
-  .body-content .toc {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 28px;
-    letter-spacing: 0.5px;
-    font-family: "Trebuchet MS";
-    top: 80px;
-    position: sticky;
-    padding-left: 64px;
-  }
-  .body-content .toc .toc-label {
-    padding-bottom: 8px;
-  }
-  .body-content .toc ol {
-    flex-flow: column nowrap;
-    gap: 0;
-    padding-left: 3px;
-  }
-  .body-content .toc ol li {
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 20px;
-    letter-spacing: 0.35px;
-    font-family: "Trebuchet MS";
-    line-height: 16px;
-    list-style-type: none;
-  }
-  .body-content .toc ol li::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(58, 58, 58, 0.92);
-    width: 1px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
-  .body-content .toc ol li a {
-    vertical-align: top;
-    padding: 12px 8px 12px 16px;
-    min-height: 48px;
-    text-decoration: none;
-  }
-  .body-content .toc ol li a.in-page-current {
-    color: #211CAD;
-  }
-  .body-content .toc ol li a.in-page-current:after {
-    content: "";
-    position: absolute;
-    background-color: #2E27F3;
-    left: 0;
-    top: 2px;
-    bottom: 2px;
-    width: 5px;
-  }
-  .body-content .toc ol, .body-content .toc li {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  nav[role=navigation], .extra {
-    width: calc(3 * (100% + 24px) / 12 - 24px);
-  }
-  .extra {
-    align-self: flex-end;
-  }
-  .panel-container .panel {
-    margin-top: 16px;
-  }
-  .entry-list {
-    gap: 40px;
+  footer.footer .footer-secondary {
+    padding-right: 24px;
   }
   section#about-me .section-body {
     flex-direction: column-reverse;
-    gap: 24px;
   }
   section#about-me .section-body #about-me-pic {
-    width: 280px;
-  }
-  .early-regex .input {
-    margin-top: 8px;
-  }
-  .early-regex .input input {
-    padding: 8px;
-    padding-left: 16px;
-  }
-  .early-regex-result {
-    margin: 20px 16px 0;
-  }
-  #ts-albums .gen-text {
-    height: 200px;
-    padding: 16px 24px;
-  }
-  #ts-albums .gen-text #generate-lyric {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 32px;
-    letter-spacing: 1.5px;
-    font-family: "Libre Bodoni", serif;
-  }
-  #yt-titles .gen-text {
-    height: 280px;
-    padding: 0 40px;
-  }
-  #yt-titles .gen-text #generate-title {
-    font-size: 21px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: 0;
-    font-family: "Roboto", "Arial", sans-serif;
-    padding: 20px 4px 12px;
-  }
-  #yt-titles .gen-text #generate-views {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0;
-    font-family: "Roboto", "Arial", sans-serif;
-    padding: 0 4px;
-  }
-  #yt-titles .gen-text .screen {
-    border-radius: 12px;
-    height: 120px;
-  }
-  #yt-titles .gen-text .control {
-    padding: 16px 24px;
-    border-top-width: 12px;
-  }
-  #yt-titles .gen-text .control div {
-    gap: 16px;
-  }
-  #yt-titles .gen-text .control div svg {
-    width: 20px;
-    height: 20px;
-  }
-  ul.toggle-filters li {
-    margin: 0;
-    margin-right: 8px;
-    line-height: 32px;
-  }
-  ul.toggle-filters li label {
-    padding: 6px 12px;
-  }
-}
-@media screen and (max-width: 1102px) {
-  #project-info, nav[role=navigation], .entry-list, .page-banner p.desc, .info-container > .info, .section-title, .body-content p, .extra p, figcaption, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .footer-sitemap, .early-regex {
-    width: calc(6 * (100% + 24px) / 8 - 24px);
-  }
-  .info-container .info {
-    margin-bottom: 0;
-  }
-  .body-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 64px;
-  }
-  .body-content:not(.landing) main {
-    width: 100%;
-  }
-  .body-content .toc {
-    border: none;
-    position: static;
-    padding-left: 0;
-  }
-  .body-content .toc .toc-label {
-    padding-bottom: 16px;
-  }
-  .body-content .toc ol {
-    flex-flow: column wrap;
-    max-height: 160px;
-    gap: 0;
-    width: 100%;
-    padding-left: 16px;
-  }
-  .body-content .toc ol li {
-    min-width: 20%;
-    width: auto;
-    border: none;
-    list-style-type: decimal;
-  }
-  .body-content .toc ol li::before {
-    content: none;
-  }
-  .body-content .toc ol li a {
-    padding: 0;
-    text-decoration: underline;
-  }
-  .body-content .toc ol li a.in-page-current {
-    color: #0D0D0D;
-  }
-  .body-content .toc ol li a.in-page-current:after {
-    content: none;
-  }
-  .extra {
-    width: 100%;
-    align-self: flex-start;
-  }
-  section#about-me .section-body {
-    flex-direction: row;
-    gap: 40px;
-  }
-  section#about-me .section-body #about-me-pic {
-    width: 260px;
+    max-width: 50%;
   }
   .entry-list {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 632px) {
+  .topnav-container {
+    padding: 0 70px;
+  }
+  .body-content, .info-container {
+    margin: 0 70px;
+  }
+  .page-banner {
+    padding: 40px 70px;
+  }
+  .body-content .toc ol {
+    -moz-column-count: 3;
+         column-count: 3;
   }
 }
 @media screen and (max-width: 891px) {
@@ -1048,7 +744,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     letter-spacing: 0.5px;
     font-family: "Trebuchet MS";
   }
-  body #project-info, body nav[role=navigation], body .entry-list, body .page-banner p.desc, body .info-container > .info, body .section-title, body .body-content p, body .extra p, body figcaption, body .panel-container, body .section-body ul, body .section-body ol, body .early-regex, body .section-body hr, body div.gen-text, body .footer-sitemap {
+  body #project-info, body nav[role=navigation], body .entry-list, body .page-banner p.desc, body .info-container > .info, body .section-title, body .body-content p, body .body-content pre, body .extra p, body figcaption, body .panel-container, body .section-body ul, body .section-body ol, body .early-regex, body .section-body hr, body div.gen-text, body .footer-sitemap {
     max-width: 499px;
     width: 100%;
   }
@@ -1083,7 +779,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     letter-spacing: 0.5px;
     font-family: "Trebuchet MS";
     gap: 4px;
-    padding: 12px 20px;
+    padding: 12px 22px;
     right: 16px;
     bottom: 16px;
   }
@@ -1095,18 +791,11 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     font-family: "Trebuchet MS";
     padding: 8px 16px;
   }
-  .topnav-container {
-    padding: 0 70px;
-  }
   .page-banner {
-    padding: 40px 70px;
     gap: 8px;
   }
   .page-banner ul.breadcrumbs {
     gap: 27px;
-  }
-  .info-container {
-    margin: 0 70px;
   }
   .info-container #project-info {
     margin: 24px 0 80px;
@@ -1124,7 +813,6 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
   .body-content {
     gap: 80px;
-    margin: 0 70px;
   }
   .body-content.landing {
     padding-top: 40px;
@@ -1159,9 +847,6 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     line-height: 16px;
     letter-spacing: 0.5px;
     font-family: "Trebuchet MS";
-  }
-  .body-content .toc li a {
-    height: 36px;
   }
   .body-content main {
     gap: 80px;
@@ -1272,85 +957,437 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
     gap: 40px;
   }
 }
-@media screen and (max-width: 631px) {
+@media screen and (min-width: 892px) {
+  .body-content, .info-container {
+    margin: 0 100px;
+  }
+  #find-me {
+    bottom: 140px;
+  }
+  #find-me a {
+    padding: 12px;
+  }
+  #find-me a svg {
+    height: 24px;
+    width: 24px;
+  }
+  body {
+    margin: 40px auto 0;
+  }
+  body .topnav-container, body p, body li, body img, body label, body span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    font-family: "Trebuchet MS";
+  }
+  body h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 64px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body h2 {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 48px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body h3 {
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body h4 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body h5 {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body h6 {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    letter-spacing: 0;
+    font-family: "Trebuchet MS";
+  }
+  body button#to-top, body figcaption, body figcaption li, body ul.toggle-filters label, body sup, body .footer-primary li, body .footer-secondary a {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.35px;
+    font-family: "Trebuchet MS";
+  }
+  body .formula {
+    width: 100%;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+  body .formula + .formula {
+    margin-top: 0;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  .btn-icon, .btn-secondary, .btn-primary, button#to-top {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-family: "Trebuchet MS";
+    padding: 12px 20px;
+  }
+  .btn-icon svg, .btn-secondary svg, .btn-primary svg, button#to-top svg {
+    top: calc(50% - 12px);
+  }
+  button#to-top {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.35px;
+    font-family: "Trebuchet MS";
+    padding: 10px 24px;
+    bottom: 40px;
+    right: 70px;
+    gap: 4px;
+  }
+  button.panel-control {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.35px;
+    font-family: "Trebuchet MS";
+    padding: 8px 20px;
+  }
+  .body-content p, .body-content pre, .extra p, figcaption, .panel-control, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .early-regex {
+    width: 100%;
+  }
+  .body-content main, .page-banner p.desc, .info-container > .info, .footer-sitemap {
+    width: calc(6 * (100% + 24px) / 12 - 24px);
+  }
   .topnav-container {
-    padding: 0 40px;
+    padding: 0 88px;
   }
   .page-banner {
-    padding: 24px 40px;
+    padding: 64px 100px;
+    gap: 16px;
   }
-  .info-container {
-    margin: 0 40px;
+  .page-banner ul.breadcrumbs {
+    gap: 26px;
   }
   .info-container #project-info {
-    margin: 24px 0 80px;
+    margin: 40px 0 120px;
+  }
+  .info-container .info {
+    gap: 8px;
+    margin: 40px 0 80px;
   }
   footer.footer {
-    padding: 40px 40px 80px;
+    margin-top: 80px;
+    padding: 80px 100px 100px;
   }
-  footer.footer .footer-secondary {
-    padding-right: 24px;
-  }
-  section#about-me .section-body {
-    flex-direction: column-reverse;
-  }
-  section#about-me .section-body #about-me-pic {
-    max-width: 50%;
+  footer.footer li {
+    height: 48px;
   }
   .body-content {
-    margin: 0 40px;
+    flex-direction: row-reverse;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .body-content.landing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .body-content main {
+    gap: 120px;
+  }
+  .body-content main p.break {
+    margin-top: 28px;
+  }
+  .body-content main p.disclaimer {
+    padding: 40px 18px 24px;
+    line-height: 32px;
+    font-style: italic;
+  }
+  .body-content main span.highlight {
+    padding-bottom: 2px;
+    background: linear-gradient(to bottom, transparent 50%, #FCE04F 50%);
+  }
+  .body-content main section {
+    scroll-margin-top: 64px;
+    gap: 20px;
+  }
+  .body-content main section .section-body {
+    gap: 16px;
+  }
+  .body-content main figure {
+    padding: 24px 0;
+  }
+  .body-content main figure.media {
+    gap: 12px;
+  }
+  .body-content main figure.restrict img {
+    max-height: 600px;
+  }
+  .body-content main figure.iframe iframe {
+    height: 400px;
+  }
+  .body-content ul, .body-content ol {
+    gap: 16px;
+    padding-left: 32px;
+  }
+  .body-content ul li, .body-content ol li {
+    line-height: 24px;
+  }
+  .body-content ul ul, .body-content ul ol, .body-content ol ul, .body-content ol ol {
+    width: 100%;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .body-content ul + p, .body-content ol + p {
+    padding-top: 8px;
+  }
+  .body-content figcaption ul, .body-content figcaption ol {
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+  .body-content .toc {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    font-family: "Trebuchet MS";
+    top: 64px;
+    position: sticky;
+    padding-left: 64px;
+  }
+  .body-content .toc .toc-label {
+    padding-bottom: 8px;
   }
   .body-content .toc ol {
-    max-height: 200px;
+    padding-left: 3px;
+  }
+  .body-content .toc ol li {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0.35px;
+    font-family: "Trebuchet MS";
+    line-height: 16px;
+    list-style-type: none;
+  }
+  .body-content .toc ol li::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(58, 58, 58, 0.92);
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .body-content .toc ol li a {
+    vertical-align: top;
+    padding: 12px 4px 12px 16px;
+    min-height: 48px;
+    text-decoration: none;
+  }
+  .body-content .toc ol li a.in-page-current {
+    color: #211CAD;
+  }
+  .body-content .toc ol li a.in-page-current:after {
+    content: "";
+    position: absolute;
+    background-color: #2E27F3;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 5px;
+  }
+  .body-content .toc ol, .body-content .toc li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  nav[role=navigation], .extra {
+    width: calc(3 * (100% + 24px) / 12 - 24px);
+  }
+  .extra {
+    align-self: flex-end;
+  }
+  .panel-container .panel {
+    margin-top: 16px;
   }
   .entry-list {
     gap: 40px;
   }
-}
-@media screen and (max-width: 479px) {
-  #find-me {
-    bottom: 124px;
-    right: 1px;
-  }
-  #find-me a {
-    padding: 8px;
-  }
-  #find-me a svg {
-    height: 16px;
-    width: 16px;
-  }
-  .topnav-container {
-    padding: 0 24px;
-  }
-  .info-container {
-    margin: 0 24px;
-  }
-  .info-container #project-info {
-    margin: 24px 0 64px;
-  }
-  footer.footer {
-    padding: 40px 24px 80px;
-  }
-  .body-content {
-    margin: 0 24px;
-  }
-  #ts-albums .gen-text {
-    height: 180px;
-    padding: 16px;
-  }
-  #yt-titles .gen-text {
-    height: 240px;
-    padding: 0 16px;
+  section#about-me .section-body {
+    flex-direction: column-reverse;
+    gap: 24px;
   }
   section#about-me .section-body #about-me-pic {
-    max-width: 60%;
+    width: 280px;
+  }
+  .early-regex .input {
+    margin-top: 8px;
+  }
+  .early-regex .input input {
+    padding: 8px;
+    padding-left: 16px;
+  }
+  .early-regex-result {
+    margin: 20px 16px 0;
+  }
+  #ts-albums .gen-text {
+    height: 200px;
+    padding: 16px 24px;
+  }
+  #ts-albums .gen-text #generate-lyric {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 1.5px;
+    font-family: "Libre Bodoni", serif;
+  }
+  #yt-titles .gen-text {
+    height: 280px;
+    padding: 0 40px;
+  }
+  #yt-titles .gen-text #generate-title {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: 20px 4px 12px;
+  }
+  #yt-titles .gen-text #generate-views {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: 0 4px;
+  }
+  #yt-titles .gen-text .screen {
+    border-radius: 12px;
+    height: 120px;
+  }
+  #yt-titles .gen-text .control {
+    padding: 16px 24px;
+    border-top-width: 12px;
+  }
+  #yt-titles .gen-text .control div {
+    gap: 16px;
+  }
+  #yt-titles .gen-text .control div svg {
+    width: 20px;
+    height: 20px;
+  }
+  ul.toggle-filters li {
+    margin: 0;
+    margin-right: 8px;
+    line-height: 32px;
+  }
+  ul.toggle-filters li label {
+    padding: 6px 12px;
+  }
+}
+@media screen and (max-width: 1102px) {
+  #project-info, nav[role=navigation], .entry-list, .page-banner p.desc, .info-container > .info, .section-title, .body-content p, .body-content pre, .extra p, figcaption, .panel-container, .section-body ul, .section-body ol, .section-body hr, div.gen-text, .footer-sitemap, .early-regex {
+    width: calc(6 * (100% + 24px) / 8 - 24px);
+  }
+  .info-container .info {
+    margin-bottom: 0;
+  }
+  .body-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+  .body-content:not(.landing) main {
+    width: 100%;
+  }
+  .body-content .toc {
+    border: none;
+    position: static;
+    padding-left: 0;
+  }
+  .body-content .toc .toc-label {
+    padding-bottom: 16px;
+  }
+  .body-content .toc ol {
+    width: 100%;
+  }
+  .body-content .toc ol li {
+    width: auto;
+    border: none;
+    list-style-type: decimal;
+  }
+  .body-content .toc ol li::before {
+    content: none;
+  }
+  .body-content .toc ol li a {
+    padding: 0;
+    text-decoration: underline;
+  }
+  .body-content .toc ol li a.in-page-current {
+    color: #0D0D0D;
+  }
+  .body-content .toc ol li a.in-page-current:after {
+    content: none;
+  }
+  .extra {
+    width: 100%;
+    align-self: flex-start;
+  }
+  section#about-me .section-body {
+    flex-direction: row;
+    gap: 40px;
+  }
+  section#about-me .section-body #about-me-pic {
+    width: 260px;
+  }
+  .entry-list {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1103px) {
+  .body-content .toc {
+    padding-left: 40px;
+  }
+  .body-content .toc ol {
+    display: flex;
+    flex-direction: column;
+    -moz-column-count: unset;
+         column-count: unset;
+  }
+  .body-content .toc ol li {
+    margin: unset;
+    min-width: unset;
+    max-height: unset;
+  }
+  .body-content .toc ol li a {
+    margin: unset;
   }
 }
 @media screen and (min-width: 1150px) {
   .toc ol {
     list-style-type: none;
-    display: flex;
-    flex-flow: column nowrap;
   }
 }
 @media screen and (min-width: 1441px) {
@@ -1372,6 +1409,7 @@ body .page-banner ul.breadcrumbs li:not(:first-child):before {
   }
   button#to-top:hover {
     background-color: #0D0D0D;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
   }
   .page-banner:hover {
     background-color: #F69051;
@@ -1456,6 +1494,7 @@ body main code, body main pre {
   align-items: center;
 }
 .body-content main section .section-body {
+  max-width: 100%;
   align-items: center;
 }
 .body-content main section .section-title {
@@ -1500,13 +1539,16 @@ body main code, body main pre {
   width: fit-content;
 }
 .body-content .toc ol {
-  display: flex;
-  padding: 0 16px;
+  padding-left: 16px;
+  padding-right: 8px;
 }
 .body-content .toc ol li {
   text-underline-offset: 2px;
   font-weight: bold;
   position: relative;
+}
+.body-content .toc ol li > * {
+  vertical-align: top;
 }
 .body-content .toc ol li:first-child:before {
   top: 2px;
