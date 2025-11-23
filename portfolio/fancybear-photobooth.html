@@ -16,10 +16,10 @@
 
   <header class = "topnav-container">
     <nav class = "topnav">
-      <a id = "index" href="../index.html">nancy hao</a>
+      <a id="index" href="https://nenceh.github.io/">nancy hao</a>
       <ul>
-        <li><a id="portfolio" href="../portfolio.html">portfolio</a></li>
-        <li><a id="cv" href="../cv.html">cv</a></li>
+        <li><a id="portfolio" href="https://nenceh.github.io/portfolio.html">portfolio</a></li>
+        <li> <a id="cv" href="https://nenceh.github.io/cv.html">cv</a></li>
       </ul>
     </nav>
   </header>
@@ -63,7 +63,7 @@
 
         <div class="project-info-item flex-col">
           <p class="subtitle">PLATFORM</p>
-          <p>Figma, ReactJS, CSS, Git<p>
+          <p>ReactJS, CSS, Git<p>
         </div>
 
         <div class="project-info-item flex-col">
@@ -576,9 +576,9 @@
             <p class="break">Next, I refined the code for drawing images on a <code>canvas</code> during the customization step. I also implemented two-finger scaling for resizing stickers, which involved adding three new <code>EventListener</code> functions:</p>
 
             <ul>
-              <li><code>gesturestart</code>: touch surface registers multiple touch points (which triggers a touch gesture)</li>
-              <li><code>gestureend</code>: touch surface does not have multiple touch points</li>
-              <li><code>gesturechange</code>: touch points move along touch surface during a touch gesture</li>
+              <li><code>gesturestart</code>: touch surface registers multiple touch points (e.g. index and middle fingers on the screen), triggering a touch gesture</li>
+              <li><code>gestureend</code>: touch surface does not have multiple touch points (e.g. zero or one fingers on the screen)</li>
+              <li><code>gesturechange</code>: touch points move along touch surface during a touch gesture (e.g. index and middle finger move in opposite directions)</li>
             </ul>
 
             <div class="panel-container">
@@ -617,11 +617,11 @@
                   <p>Essentially, after a short while, as the sticker moved on the <code>canvas</code>, it looked like there was an extreme drop in frame rate.</p>
                   <p>I learned that drawing on the <code>canvas</code> is quite an expensive operation. The issue was that the drawing function was unable to keep up with the frequency of user inputs because it was drawing so many things each time.</p>
 
-                  <p>To address this, I optimized the drawing function by introducing a second <code>canvas</code> object to create a two-layer structure. The top layer held the sticker most recently added or interacted with (i.e. the last sticker in the list). The bottom layer held all the remaining stickers. Therefore, when interacting with one sticker, the program only needed to redraw that one sticker on the top layer, rather than redrawing the entire list each time.</p>
+                  <p>To address this, I optimized the drawing function by introducing a second <code>canvas</code> object to create a two-layer structure. The top layer held the sticker most recently added or interacted with (i.e. the last sticker in the list). The bottom layer held all the remaining stickers. Therefore, when interacting with one sticker, the program only needed to redraw that one sticker on the top layer, rather than redrawing the entire list of stickers each time.</p>
 
                   <p>Furthermore, during transformations, the drawing function will no longer draw the associated interactive tools. Only when a sticker was stationary and selected will the function draw the tools. As well, I went through the logic from the beginning and prevented extra unnecessary draws.</p>
 
-                  <p>These major modifications significantly improved the drawing performance, and it no longer "lagged" on mobile.</p>
+                  <p>These major modifications significantly improved the drawing performance by decreasing the amount of drawings, and it no longer "lagged" on mobile.</p>
                 </div>
               </div>
               <button class="btn-primary panel-control" value="#expand-optimize"> Show/Hide for addition, non-critical, information!
@@ -631,7 +631,7 @@
 
             <p class="break">I also added loading indicators and modal instructions:</p>
             <ul>
-              <li>Integrated <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a> by <i>dvtng</i> at multiple touch points
+              <li>Integrated <a href="https://github.com/dvtng/react-loading-skeleton" target="_blank">react-loading-skeleton</a> by <i>dvtng</i> at multiple touchpoints throughout the user journey
                 <ul>
                   <li>Prompt users to enable camera permissions to continue</li>
                   <li>Loading states for the camera feed</li>
@@ -647,7 +647,7 @@
               </li>
             </ul>
 
-            <p class="break">Then, I implemented undo and redo functionalities and quite enjoyed planning the logic for them. Basically, after each user action, the current "state" of the <code>canvas</code> is stored in an 'actions' list. If undo is triggered, the current state is moved to a new 'redo' list, and the <code>canvas</code> reverts to the previous state. If redo is triggered, the state is restored and returned to the 'actions' list. If a user performs a new action after undoing, then the 'redo' list is cleared.</p>
+            <p class="break">Then, I implemented undo and redo functionalities and quite enjoyed planning the logic. Basically, after each user action, the current "state" of the <code>canvas</code> is stored in an 'actions' list. If undo is triggered, the current state is moved to a new 'redo' list, and the <code>canvas</code> reverts to the previous state. If redo is triggered, the state is restored and returned to the 'actions' list. If a user performs a new action following an undo, then the 'redo' list is cleared.</p>
 
             <figure class="media">
               <img class = "portfolio-entry-img" src="../images/portfolio/fancybear-photobooth/example-undo_redo.gif" alt="Undo and redo demo.">
@@ -758,9 +758,9 @@
       <div class="footer-sitemap">
         <nav class = "footer-primary">
           <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="portfolio.html">portfolio</a></li>
-            <li><a href="cv.html">cv</a></li>
+            <li><a href="https://nenceh.github.io/">home</a></li>
+            <li><a href="https://nenceh.github.io/portfolio.html">portfolio</a></li>
+            <li><a href="https://nenceh.github.io/cv.html">cv</a></li>
           </ul>
         </nav>
         <nav class="footer-secondary">
