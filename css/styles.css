@@ -191,6 +191,9 @@ main#cv {
   -webkit-hyphens: auto;
           hyphens: auto;
 }
+.cv-grid-item .item {
+  width: 100%;
+}
 .cv-grid-item .item .info {
   display: flex;
   flex-direction: column;
